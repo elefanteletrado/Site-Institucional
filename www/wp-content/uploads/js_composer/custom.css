@@ -1,0 +1,13 @@
+.social-link li a:hover{
+    color: #C0E1D7 !important;
+}
+ul.footer-menu li:hover > a {
+    color: #C0E1D7 !important;
+}
+
+.entry-content input[type="submit"]{
+    background-color: #e3328b !important;
+}
+.footer-copyright {
+    display: none !important;
+}
