@@ -1,0 +1,77 @@
+/**
+ * 10.12 - Gallery
+ * ----------------------------------------------------------------------------
+ */
+.cupid-gallery .gallery-load-more-wrapper{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: inline-block;
+  width: 100%;
+}
+
+.fullwidth .vc_row-fluid .cupid-gallery{
+  margin-right: -1px;
+  margin-left: -1px;
+}
+.gallery-wrapper .gallery-item{
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+}
+.gallery-wrapper .gallery-col-3{
+  float: left;
+  width: 33.33333333%;
+}
+.gallery-wrapper .gallery-col-4{
+  float: left;
+  width: 25%;
+}
+.gallery-wrapper .gallery-item img{
+  max-width: 100%;
+  display: block;
+}
+.gallery-wrapper .gallery-item .class-name{
+  font-weight: 700;
+  color: #fff;
+}
+.gallery-wrapper .gallery-item span.class-title{
+  font-weight: normal;
+}
+.gallery-wrapper .gallery-item span.excerpt{
+  font-size: 15px;
+  line-height: 1.6;
+  display: block;
+  max-height: 72px;
+  overflow: hidden;
+}
+.gallery-wrapper .entry-thumbnail-hover .entry-hover-inner a{
+  display: block;
+  text-decoration: none;
+}
+
+div.light_rounded .pp_description, div.light_square .pp_description{
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+@media only screen and (min-width: 460px) and (max-width: 950px) {
+  .gallery-wrapper .gallery-col-3, .gallery-wrapper .gallery-col-4{
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 459px) {
+  .gallery-wrapper .gallery-col-3, .gallery-wrapper .gallery-col-4{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px){
+  .pp_pic_holder .pp_details .pp_nav .pp_description{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1920px){
+  .gallery-wrapper .gallery-item img{
+    width: 100%;
+  }
+}
