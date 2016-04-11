@@ -65,8 +65,26 @@ function rSubs(&$data, $find, $replace) {
  * @return mixed Unserialized data can be any type.
  */
 function maybe_unserialize( $original ) {
-	if ( is_serialized( $original ) ) // don't attempt to unserialize data that wasn't serialized going in
-		return @unserialize( $original );
+	// don't attempt to unserialize data that wasn't serialized going in
+	if ( is_serialized( $original ) ) {
+		$return = @unserialize( $original );
+		if ($return) {
+			return $return;
+		}
+		
+		$originalBkp = $original;
+		preg_match_all('@s:\d+:(""|"[^\\\\]"|".+?[^\\\\]");@s', $original, $matches);
+		foreach($matches[0] as $match) {
+			preg_match('@(s:)(\d+)(:")(.*)(";)@s', $match, $matchesItem);
+			unset($matchesItem[0]);
+			$matchesItem[2] = strlen($matchesItem[4]);
+			$original = str_replace($match, implode('', $matchesItem), $original);
+		}
+		$return = @unserialize( $original );
+		if (!$return && $original != 'a:0:{}') {
+			throw new Exception('ERROR UNSERIALIZE');
+		}
+	}
 	return $original;
 }
 
@@ -95,43 +113,150 @@ try {
 } catch (PDOException $e) {
 	exit('Connection failed: ' . $e->getMessage());
 }
-$tables = array('wp_options');
-foreach($tables as $table) {
+
+function wpReplaceIterable($params, $from, $to, $removeNotUpdated = false) {
+	$updated = false;
+	if ($params) {
+		foreach($params as $name => &$value) {
+			$old = $value;
+			$value = str_replace($from, $to, $value);
+
+			if($old != $value) {
+				$updated = true;
+			} else if($removeNotUpdated) {
+				if(is_object($params)) {
+					unset($params->$name);
+				} else {
+					unset($params[$name]);
+				}
+			}
+		}
+		unset($value);
+	}
+
+	if($updated) {
+		return $params;
+	}
+
+	return null;
+}
+
+foreach($replaces as $from => $to) {
+	echo "FROM $from TO $to".PHP_EOL.PHP_EOL.PHP_EOL;
+
+	$table = 'wp_revslider_slides';
 	$sth = $dbh->prepare("SELECT * FROM $table");
 	$sth->execute();
 	$rows = $sth->fetchAll(PDO::FETCH_CLASS, 'stdClass');
 	foreach($rows as $row) {
-		$data = maybe_unserialize(utf8_encode($row->option_value));
-		rSubs($data, $from, $to);
-		if(strpos($row->option_value, $from)) {
-			$result = utf8_decode(serialize($data));
-			//echo "$row->option_value\n\n\n";
-			//echo "$result\n\n\n";
-		} else {
-			$result = str_replace($from, $to, $row->option_value);
+		$bind = array();
+
+		$params = wpReplaceIterable(json_decode($row->params), $from, $to);
+		if($params) {
+			$bind['params'] = json_encode($params);
 		}
-		if($result && $result != $row->option_value/* && $row->option_id != 242*/) {
-			$sth = $dbh->prepare("UPDATE $table SET option_value = '" . $result . "' WHERE option_id = $row->option_id");
-			$sth->execute();
+
+		$layers = json_decode($row->layers);
+		if(is_object($layers)) {
+			$layers = wpReplaceIterable($layers, $from, $to);
+			if($layers) {
+				$bind['layers'] = json_encode($layers);
+			}
+		} else if(is_array($layers)) {
+			$updated = false;
+			foreach($layers as $pos => $layer) {
+				$layer = wpReplaceIterable($layer, $from, $to);
+				if($layer) {
+					$updated = true;
+					$layers[$pos] = $layer;
+				}
+			}
+			if($updated) {
+				$bind['layers'] = json_encode($layers);
+			}
+		}
+		if($bind) {
+			$sets = array();
+			foreach(array_keys($bind) as $name) {
+				$sets[] = "{$name} = :{$name}";
+			}
+			$bind['id'] = $row->id;
+			$sth = $dbh->prepare("UPDATE $table SET ".implode(', ', $sets)." WHERE id = :id");
+			$sth->execute($bind);
+
+			echo "Table: $table id: {$bind['id']}" . PHP_EOL;
+		}
+	}
+
+	$tables = array('wp_options');
+	foreach($tables as $table) {
+		$sth = $dbh->prepare("SELECT * FROM $table");
+		$sth->execute();
+		$rows = $sth->fetchAll(PDO::FETCH_CLASS, 'stdClass');
+		foreach($rows as $row) {
+			$data = maybe_unserialize(utf8_encode($row->option_value));
+			rSubs($data, $from, $to);
+			if(strpos($row->option_value, $from)) {
+				$result = utf8_decode(serialize($data));
+			} else {
+				$result = str_replace($from, $to, $row->option_value);
+			}
+			if($result && $result != $row->option_value) {
+				$sql = "UPDATE $table SET option_value = :option_value WHERE option_id = :option_id";
+				$bind = array('option_value' => $result, 'option_id' => $row->option_id);
+				$sth = $dbh->prepare($sql);
+				$sth->execute($bind);
+
+				echo "Table: $table option_id: {$bind['option_id']}" . PHP_EOL;
+			}
+		}
+	}
+
+	$tables = array('wp_posts');
+	foreach($tables as $table) {
+		$sth = $dbh->prepare("SELECT * FROM $table");
+		$sth->execute();
+		$rows = $sth->fetchAll(PDO::FETCH_CLASS, 'stdClass');
+		foreach($rows as $row) {
+			$id = $row->ID;
+			$return = wpReplaceIterable($row, $from, $to, true);
+			if($return) {
+				$row = get_object_vars($row);
+				$sets = array();
+				foreach($row as $name => $value) {	
+					$sets[] = "{$name} = :{$name}";
+				}
+				$row['ID'] = $id;
+				$sql = "UPDATE $table SET ".implode(', ', $sets)." WHERE id = :ID";
+				$sth = $dbh->prepare($sql);
+				$sth->execute($row);
+			}
+		}
+	}
+
+	$tables = array('wp_postmeta');
+	foreach($tables as $table) {
+		$sth = $dbh->prepare("SELECT * FROM $table");
+		$sth->execute();
+		$rows = $sth->fetchAll(PDO::FETCH_CLASS, 'stdClass');
+		foreach($rows as $row) {
+			$data = maybe_unserialize($row->meta_value);
+			rSubs($data, $from, $to);
+			$dataBkp = $data;
+			if(strpos($row->meta_value, $from)) {
+				$result = utf8_decode(serialize($data));
+			} else {
+				$result = str_replace($from, $to, $row->meta_value);
+			}
+			if($result && $result != $row->meta_value) {
+				$sql = "UPDATE $table SET meta_value = :meta_value WHERE meta_id = :meta_id";
+				$bind = array('meta_value' => $result, 'meta_id' => $row->meta_id);
+				$sth = $dbh->prepare($sql);
+				$sth->execute($bind);
+
+				echo "Table: $table meta_id: {$bind['meta_id']}" . PHP_EOL;
+			}
 		}
 	}
 }
-
-$tables = array('wp_posts');
-foreach($tables as $table) {
-	$sth = $dbh->prepare("UPDATE $table
-		SET
-			post_title = REPLACE(post_title, '$from', '$to'),
-			post_content = REPLACE(post_content, '$from', '$to'),
-			guid = REPLACE(guid, '$from', '$to');");
-	$sth->execute();
-}
-$tables = array('wp_postmeta');
-foreach($tables as $table) {
-	$sth = $dbh->prepare("UPDATE $table
-		SET
-			meta_value = REPLACE(meta_value, '$from', '$to');");
-	$sth->execute();
-}
-
 echo 'Banco de dados atualizado!';
