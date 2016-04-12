@@ -1,0 +1,21 @@
+sudo wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
+sudo mkdir /usr/share/yui-compressor
+sudo mv yuicompressor-2.4.8.jar /usr/share/yui-compressor/yui-compressor.jar
+
+mkdir bkp
+mkdir -p bkp/wp-content/uploads/2015/08
+mkdir -p bkp/wp-content/uploads/2016/04
+mkdir -p bkp/wp-content/uploads/2015/09
+cp wp-content/uploads/2015/08/elefante-letrado-biblioteca-virtual-livros-infantis-jogos-educativos-logo.png bkp/wp-content/uploads/2015/08/elefante-letrado-biblioteca-virtual-livros-infantis-jogos-educativos-logo.png
+cp wp-content/uploads/2016/04/bt-invista-agora1.png bkp/wp-content/uploads/2016/04/bt-invista-agora1.png
+cp wp-content/uploads/2016/04/bt-experimente-gratis1.png bkp/wp-content/uploads/2016/04/bt-experimente-gratis1.png
+cp wp-content/uploads/2015/09/Logo-Elefante-Letrado.png bkp/wp-content/uploads/2015/09/Logo-Elefante-Letrado.png
+
+mkdir new
+mkdir -p new/wp-content/uploads/2015/08
+mkdir -p new/wp-content/uploads/2016/04
+mkdir -p new/wp-content/uploads/2015/09
+cp image/elefante-letrado-biblioteca-virtual-livros-infanti.png new/wp-content/uploads/2015/08/elefante-letrado-biblioteca-virtual-livros-infantis-jogos-educativos-logo.png
+cp image/bt-invista-agora1.png new/wp-content/uploads/2016/04/bt-invista-agora1.png
+cp image/bt-experimente-gratis1.png new/wp-content/uploads/2016/04/bt-experimente-gratis1.png
+cp image/Logo-Elefante-Letrado.png new/wp-content/uploads/2015/09/Logo-Elefante-Letrado.png
