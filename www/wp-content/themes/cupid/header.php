@@ -128,9 +128,6 @@
     }
     ?>
 
-    <!-- R7 -->
-    <script type="text/javascript" id="r7barrautil" src="http://barra.r7.com/barra.js">{responsivo:true ,banner:false ,submenu:false}</script>
-
     <?php wp_head(); ?>
 </head>
 
@@ -140,3 +137,4 @@
 <div id="wrapper" class="clearfix <?php echo esc_attr($show_loading == 1 ? 'animsition' : '');?>">
 	<?php get_template_part('templates/header/header','template' ); ?>
 	<div id="wrapper-content">
+

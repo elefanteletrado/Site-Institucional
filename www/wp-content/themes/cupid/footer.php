@@ -36,8 +36,5 @@ src="https://www.facebook.com/tr?id=523749501121316&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
-<!-- R7 -->
-<script id="r7-footer-portal" src="http://barra.r7.com/footer/footer-portal/footer-portal.js" charset="UTF-8">{showPane:false, bgC:'#e2e2e2', isPartner:true, partnerLabel:'ENTRETENIMENTO'}</script>
-
 </body>
 </html> <!-- end of site. what a ride! -->
