@@ -3364,6 +3364,27 @@ input[type="button"].btn-block {
   font-family: "ProximaNovaA-Regular";
   font-size: 12px; }
 
+.fade-effect {
+  opacity: 0 !important;
+  filter: alpha(opacity=0) !important;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.fade-in {
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s; }
+
+.fade-in-fast {
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
 .el-icon-round, .el-icon-round-reverse {
   width: 24px;
   height: 24px;
@@ -3387,7 +3408,15 @@ input[type="button"].btn-block {
 
 .el-icon-auxiliary {
   float: right;
-  margin-left: 12px; }
+  margin-left: 12px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .el-icon-auxiliary:hover {
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
 
 .layout-featured, .el-header-auxiliary {
   background: #E3388C;
@@ -3403,6 +3432,8 @@ input[type="button"].btn-block {
     display: table; }
   .el-header-auxiliary:after {
     clear: both; }
+  .el-header-auxiliary a:hover {
+    color: #FFF; }
 
 .el-header-phone {
   display: none;
@@ -3619,8 +3650,14 @@ input[type="button"].btn-block {
 .el-email {
   word-wrap: break-word; }
 
+.page-title-wrapper {
+  -webkit-box-shadow: inset 0px 30px 50px -46px rgba(1, 1, 1, 0.4);
+  box-shadow: inset 0px 30px 50px -46px rgba(1, 1, 1, 0.4); }
+
 .el-banner-container {
-  position: relative; }
+  position: relative;
+  opacity: 0;
+  filter: alpha(opacity=0); }
   .el-banner-container .el-img {
     display: none; }
   .el-banner-container .el-content {

@@ -1,47 +1,14 @@
-	<footer class="el-footer el-footer-page">
-		<div>
-			<div class="el-footer-logo">
-				<a href="" title="Ir para a Página Inicial">Elefante Letrado</a>
-			</div>
-			<nav class="row">
-				<div class="col-sm-3">
-					<?php
-					wp_nav_menu( array(
-						'menu_id' => 'main-menu',
-						'theme_location' => 'el-footer-menu-main'
-					) );
-					?>
-				</div>
-				<div class="col-sm-3">
-					<?php
-					wp_nav_menu( array(
-						'menu_id' => 'main-menu',
-						'theme_location' => 'el-footer-menu-auxiliary'
-					) );
-					?>
-				</div>
-				<div class="col-sm-3">
-					<p>
-						Contato<br />
-						+55 51 3407-8090<br />
-						<span class="el-email">contato@elefanteletrado.com.br</span><br />
-						Av. Carlos Gomes, 1.492/709<br />
-						Porto Alegre/ RS
-					</p>
-				</div>
-				<div class="col-sm-3">
-					<h3>Redes Sociais</h3>
-					<?php
-					wp_nav_menu( array(
-						'menu_id' => 'main-menu',
-						'theme_location' => 'el-footer-menu-social-networks'
-					) );
-					?>
-				</div>
-			</nav>
-		</div>
-	</footer>
-</div>
+<?php
+global $cupid_data;
+?>
+</div><!-- end #wapper-content-->
+<?php get_template_part('templates/footer/footer', 'template'); ?>
+</div><!-- end #wapper-->
+<?php if($cupid_data['show-back-to-top']==1): ?>
+	<a id="go-top" class="gotop" href="javascript:;" title="<?php _e('Go top','cupid') ?>">
+		<i class="fa fa-arrow-up"></i>
+	</a>
+<?php endif ?>
 <?php wp_footer(); ?>
 <script type="text/javascript" async="true" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/7cb53d67-e1e5-499d-82ec-539141b6842b-loader.js"></script>
 <script>
@@ -70,4 +37,4 @@
 <!-- End Facebook Pixel Code -->
 
 </body>
-</html>
+</html> <!-- end of site. what a ride! -->

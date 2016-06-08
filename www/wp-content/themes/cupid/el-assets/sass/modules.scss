@@ -1,6 +1,7 @@
 // BEGIN MAIN BANNER
 .el-banner-container{
   position: relative;
+  @include opacity(0);
 
   .el-img{
     display: none;

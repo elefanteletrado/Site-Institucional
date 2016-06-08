@@ -1,15 +1,15 @@
 <?php
 /**
- * Template Name: :: Conteúdo
+ * Template Name: :: Escolas
  */
 ?>
 <?php get_template_part('el-templates/header'); ?>
 <main>
-	<div class="el-page-banner-max" style="background-image: url('<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/bg-use-recommendation.jpg');">
+	<div class="el-page-banner-max" style="background-image: url('<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/banner-escolas.jpg');">
 		<div class="el-page-banner-effect"></div>
 	</div>
 	<article class="el-page-content el-page-use-recommendation">
-		<h1>Saiba como utilizar todos os benefícios do Elefante Letrado</h1>
+		<h1>O Elefante Letrado está presente em mais de 160 escolas no Brasil e no mundo</h1>
 		<p>
 			Contamos com uma seleção de centenas de obras dos principais autores da literatura infantil brasileira em nossa biblioteca digital.
 			O professor tem à disponibilidade de trabalhar com livros, tipologias e gêneros textuais de sua preferência, proporcionando o apliamento

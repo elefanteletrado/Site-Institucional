@@ -5,9 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<?php
+	global $wp_version;
 	$arrImages = wp_get_attachment_image_src(get_post_thumbnail_id(),'full');
 	$image = $arrImages[0];
-	?>
+	if (version_compare($wp_version,'4.1','<')): ?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<?php endif; ?>
+
 	<meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
 	<meta property="og:url" content="<?php echo esc_url(get_the_permalink())?>" />
 
@@ -49,6 +53,7 @@
 	} else {
 		$favicon = get_template_directory_uri() . "/assets/images/favicon.ico";
 	}
+
 	?>
 
 	<link rel="shortcut icon" href="<?php echo esc_url($favicon);?>" type="image/x-icon">
@@ -129,5 +134,7 @@
 <body <?php body_class($body_class); ?>>
 <!-- Document Wrapper
    ============================================= -->
-<div class="el-layout">
-	<?php get_template_part('el-templates/header-content' ); ?>
+<div id="wrapper" class="clearfix <?php echo esc_attr($show_loading == 1 ? 'animsition' : '');?>">
+	<?php get_template_part('templates/header/header','template' ); ?>
+	<div id="wrapper-content">
+

@@ -3,6 +3,19 @@
   font-size: 12px;
 }
 
+.fade-effect{
+  @include opacity-important(0);
+  @include transition(1s);
+}
+.fade-in{
+  @include opacity-important(1);
+  @include transition(2s);
+}
+.fade-in-fast{
+  @include opacity-important(1);
+  @include transition(1s);
+}
+
 .el-icon-round{
   @include square(24px);
   font-size: 15px !important;
@@ -32,6 +45,12 @@
 .el-icon-auxiliary{
   float: right;
   margin-left: 12px;
+  @include transition(0.5s);
+
+  &:hover{
+    background: rgba(255, 255, 255, 0.8);
+    @include transition(0.5s);
+  }
 }
 
 .layout-featured{
@@ -47,6 +66,10 @@
   @extend .layout-featured;
   @include clearfix;
   padding: 12px 30px;
+
+  a:hover{
+    color: $color-contrast;
+  }
 }
 
 .el-header-phone{

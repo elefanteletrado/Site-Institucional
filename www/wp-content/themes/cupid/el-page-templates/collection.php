@@ -1,3 +1,9 @@
+<?php
+/**
+ * Template Name: :: Acervo
+ */
+?>
+<?php get_template_part('el-templates/header'); ?>
 <main>
 	<div class="el-page-banner" style="background-color: #FAF901; background-image: url('<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/banner-menino-maluquinho.jpg');">
 		<div class="el-page-banner-effect"></div>
@@ -198,3 +204,5 @@
 		</ul>
 	</article>
 </main>
+<?php get_template_part('el-templates/popup-contact'); ?>
+<?php get_template_part('el-templates/footer-inside-page'); ?>

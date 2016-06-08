@@ -1,3 +1,10 @@
+@mixin opacity-important($opacity) {
+  opacity: $opacity !important;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100) !important;
+  filter: alpha(opacity=($opacity * 100)) !important;
+}
+
 @mixin el-button($background, $color, $border, $backgroundhover, $colorhover, $borderhover, $minwidth: 205px){
   @include box-sizing(border-box);
   @include transition(all 0.2s linear);

@@ -5,7 +5,7 @@
 ?>
 <?php get_template_part('el-templates/header'); ?>
 <main>
-	<section class="el-banner-container">
+	<section id="main-banner" class="el-banner-container">
 		<div class="el-content" style="background-image: url('<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/banner-main.jpg');">
 			<div>
 				<div>
@@ -42,7 +42,7 @@
 			<a href="" class="el-btn-contrast">Saiba mais</a>
 		</div>
 	</article>
-	<section class="el-section-quote">
+	<section class="el-section-quote fade-effect">
 		<div>
 			<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/layout/icon-book.svg" width="100" height="61" />
 			<p class="el-author-quote">
@@ -109,7 +109,7 @@
 			<a href="" class="el-btn-contrast">Mais funcionalidades</a>
 		</div>
 	</article>
-	<section class="el-section-impact" style="background-image: url(<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/bg-books.jpg)">
+	<section class="el-section-impact fade-effect" style="background-image: url(<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/bg-books.jpg)">
 		<div>
 			<div>
 				<p>Ziraldo, Monteiro Lobato, Irmãos Grimm, Charles Perrault e muito mais</p>
@@ -148,7 +148,7 @@
 			<a href="" class="el-btn-contrast">Saiba mais</a>
 		</div>
 	</article>
-	<section class="el-section-impact" style="background-image: url(<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/bg-use-recommendation.jpg)">
+	<section class="el-section-impact fade-effect" style="background-image: url(<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/bg-use-recommendation.jpg)">
 		<div>
 			<div>
 				<p>Conheça as recomendações de uso da ferramenta em aula</p>

@@ -51,7 +51,11 @@ $header_class[] = 'header-' . $header_layout;
 					<?php
 					wp_nav_menu( array(
 						'menu_id' => 'main-menu',
+						'container' => 'div',
+						'container_class' => 'collapse yamm navbar-collapse ' . esc_attr($menu_margin_right),
 						'theme_location' => 'primary',
+						'menu_class' => 'nav navbar-nav main-menu',
+						'walker' => new G5Plus_Mega_Menu_Walker(),
 					) );
 					?>
 				<?php endif; ?>
