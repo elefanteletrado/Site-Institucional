@@ -1,0 +1,40 @@
+/**
+ * 10.8 - Heading
+ * ----------------------------------------------------------------------------
+ */
+.cupid-heading
+{
+  text-align: left;
+  h2{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    display: inline;
+    padding-right: 18px;
+    position: relative;
+    color: @bold_color;
+    &:before{
+      content: "";
+      width: 13px;
+      height: 13px;
+      .rounded(50%);
+      background-color: @bullet_color;
+      display: inline-block;
+      margin-right: 9px;
+      margin-bottom: 3px;
+    }
+  }
+  h2 + span{
+    font-size: 15px;
+    font-weight: 400;
+    display: inline;
+    color: @text_color;
+    vertical-align: text-bottom;
+  }
+}
+
+@media (max-width: 480px) {
+  .cupid-heading h2 {
+    display: block;
+  }
+}

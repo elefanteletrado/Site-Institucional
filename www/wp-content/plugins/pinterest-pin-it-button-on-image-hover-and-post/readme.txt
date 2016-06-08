@@ -5,8 +5,8 @@ Contributors: weblizar
 Donate link: http://www.weblizar.com/
 Tags: pinterest, pin images, pin photo, pinterest photo share plugin, pin it button, pin plugin, pinterest button, pinterest pin button, wordpress pinterest plugin, pinterest pin it button on hover, pin it on hover, pin it button on post and page
 Requires at least: 3.5
-Tested up to: 4.4.2
-Stable tag: 2.3.6.1
+Tested up to: 4.5.2
+Stable tag: 2.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Pinterest pin it button on image hover plugin provides facility to pins your blo
 == Changelog ==
 
 For more information, see [Weblizar](http://wwww.weblizar.com/).
+
+= Version 2.3.7 16/05/2016 =
+* small update
 
 = Version 2.3.6.1 08-Feb-2016 =
 * Bug: setting was not saving 

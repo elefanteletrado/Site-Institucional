@@ -1,0 +1,14 @@
+<?php
+global $cupid_data;
+?>
+		</div><!-- end #wapper-content-->
+		<?php get_template_part('templates/footer/footer', 'template'); ?>
+	</div><!-- end #wapper-->
+	<?php if($cupid_data['show-back-to-top']==1): ?>
+		<a id="go-top" class="gotop" href="javascript:;" title="<?php _e('Go top','cupid') ?>">
+			<i class="fa fa-arrow-up"></i>
+		</a>
+	<?php endif ?>
+	<?php wp_footer(); ?>
+</body>
+</html> <!-- end of site. what a ride! -->

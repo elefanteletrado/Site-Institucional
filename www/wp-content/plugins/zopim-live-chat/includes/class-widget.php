@@ -5,8 +5,7 @@ class Zopim_Widget
   // We need some CSS to position the paragraph
   public static function zopimme()
   {
-    global $current_user;
-    get_currentuserinfo();
+    $current_user = wp_get_current_user();
 
     $code = get_option( Zopim_Options::ZOPIM_OPTION_CODE );
 

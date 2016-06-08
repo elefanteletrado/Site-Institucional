@@ -1,0 +1,55 @@
+@mixin el-button($background, $color, $border, $backgroundhover, $colorhover, $borderhover, $minwidth: 205px){
+  @include box-sizing(border-box);
+  @include transition(all 0.2s linear);
+  background: $background;
+  color: $color;
+  border: 1px solid $border;
+  border-radius: 30px;
+  font-size: 18px;
+  font-family: $font-semibold;
+  padding: 4px 10px;
+  min-width: $minwidth;
+  display: inline-block;
+  text-align: center;
+
+  &:hover{
+    @include transition(all 0.2s linear);
+    background: $backgroundhover;
+    color: $colorhover;
+    border: 1px solid $borderhover;
+    text-decoration: none;
+  }
+}
+
+@mixin vertical-middle{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin h1-article($fontsize: $font-size-title, $font-size-xs: $font-size-title-xs){
+  font-size: $font-size-xs;
+  color: $main-color;
+  text-align: center;
+  @media (min-width: $screen-sm-min) {
+    font-size: $fontsize;
+  }
+}
+
+@mixin box-shadow-image{
+  @include box-shadow(inset 0px 30px 28px -28px rgba(1, 1, 1, 0.4));
+}
+
+@mixin close-button($font-family, $font-size, $right, $top){
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color-article;
+  position: absolute;
+  right: $right;
+  top: $top;
+  background: none;
+  border: none;
+}
+@mixin box-shadow-page{
+  @include box-shadow(inset 0px 30px 28px -28px rgba(1, 1, 1, 0.4));
+}

@@ -1,0 +1,720 @@
+// BEGIN MAIN BANNER
+.el-banner-container{
+  position: relative;
+
+  .el-img{
+    display: none;
+  }
+  .el-content{
+    @include box-shadow-image;
+    width: 100%;
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    > div{
+      background: $color-overlay;
+
+      > div {
+        padding: 115px 0;
+      }
+    }
+  }
+
+  .el-buttons{
+    @include center-block;
+    text-align: center;
+    margin-top: 50px;
+
+    .el-btn-contrast, .el-btn-outline{
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-bottom: 25px;
+    }
+  }
+  h2{
+    font-family: $font-bold;
+    font-size: $banner-main-h2-xs;
+    text-align: center;
+    color: $color-contrast;
+    margin-top: 0;
+    padding: 0 $margin-lr;
+  }
+  p{
+    font-size: 18px;
+    color: $color-contrast;
+    text-align: center;
+    max-width: 645px;
+    margin-top: 20px;
+    padding: 0 $margin-lr;
+
+    @include center-block;
+  }
+  @media (min-width: $screen-custom2) {
+    .el-content {
+      background-size: 100% auto;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    h2 {
+      font-size: $banner-main-h2-md;
+    }
+    .el-content {
+      background-size: 100% auto;
+    }
+  }
+  @media (min-width: $screen-custom3) {
+    h2 {
+      font-size: $banner-main-h2-lg;
+    }
+  }
+}
+// END MAIN BANNER
+
+// BEGIN ARTICLE
+.el-article{
+  @extend .container-fluid;
+
+  h1{
+    @include h1-article;
+    margin-top: 55px;
+    margin-bottom: 40px;
+  }
+  p{
+    font-size: 17px;
+    text-align: center;
+    color: $color-article;
+  }
+  > p{
+    @include center-block;
+    max-width: 980px;
+  }
+  > .img-style-1{
+    @include center-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+  .el-box-special{
+    @include make-row;
+
+    > h2{
+      @include make-sm-column(4);
+      @include make-sm-column-offset(1);
+      color: $main-color;
+      font-size: $font-size-title-xs;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-title;
+        text-align: right;
+      }
+    }
+    .el-content{
+      @extend .col-sm-7;
+      padding-top: 7px;
+
+      p{
+        text-align: justify;
+        @media (min-width: $screen-sm-min) {
+          max-width: 473px;
+        }
+      }
+    }
+  }
+}
+// END ARTICLE
+
+// BEGIN SECTION REFERENCE
+.el-section-quote{
+  background: $main-color;
+
+  > div{
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  > div > img{
+    @include center-block;
+  }
+
+  .el-author-quote, .el-author-name{
+    @include center-block;
+    max-width: 570px;
+    font-size: 25px;
+    color: $color-contrast;
+  }
+
+  .el-author-quote{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-left: $margin-lr;
+    padding-right: $margin-lr;
+    text-align: center;
+  }
+
+  .el-author-name{
+    font-family: $font-light-italic;
+    text-align: right;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+// END SECTION REFERENCE
+
+// BEGIN SECTION IMPACT
+.el-section-impact{
+  background-size: auto 100%;
+  background-position: center;
+  height: 350px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 470px;
+  }
+
+  > div{
+    background: $color-overlay;
+    height: 100%;
+  }
+  > div > div{
+    @include vertical-middle;
+  }
+  p{
+    font-size: $font-size-xs;
+    text-align: center;
+    color: $color-contrast;
+    max-width: 880px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-title;
+    }
+  }
+  .el-buttons{
+    margin-top: 45px;
+    text-align: center;
+  }
+}
+// END SECTION IMPACT
+
+// BEGIN ARTICLE STYLE 2
+.el-article-style-2{
+  @extend .container-fluid;
+  background: #F6F6F6;
+
+  h1{
+    @include h1-article;
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 90px;
+      margin-bottom: 50px;
+    }
+  }
+  h2{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  p{
+    font-size: 16px;
+    text-align: center;
+  }
+  > .row > div{
+    margin-bottom: 20px;
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 70px;
+    }
+  }
+}
+.el-icon-col-container{
+  height: 70px;
+  width: 70px;
+  position: relative;
+  margin: auto;
+
+  > img{
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+}
+// END ARTICLE STYLE 2
+
+// BEGIN SECTION CLIENTS
+.el-section-clients{
+  @extend .container-fluid;
+
+  h1{
+    @include h1-article;
+    @include center-block;
+    max-width: 430px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 90px;
+      margin-bottom: 100px;
+    }
+  }
+  > .row > div{
+    line-height: 130px;
+    text-align: center;
+  }
+  > .row > div{
+    @include opacity(0.6);
+  }
+  .el-read-more {
+    margin-top: 45px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 85px;
+    }
+  }
+}
+// END SECTION CLIENTS
+
+// BEGIN SECTION TEAM
+.el-section-team{
+  @extend .container-fluid;
+
+  h1{
+	@include h1-article;
+	@include center-block;
+	max-width: 430px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 90px;
+      margin-bottom: 100px;
+    }
+  }
+  h2{
+    font-size: 18px;
+	text-align: center;
+	color: $color-article;
+  }
+  p{
+    font-size: 15px;
+	color: $color-article;
+  }
+  > img{
+	@include center-block;
+  }
+  .row{
+	margin-left: -30px;
+	margin-right: -30px;
+	max-width: 1300px;
+	@include center-block;
+  }
+  .row > div{
+	padding-left: 30px;
+	padding-right: 30px;
+  }
+  .el-read-more {
+	margin-top: 45px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 115px;
+    }
+  }
+}
+.el-section-team-img{
+  @include center-block;
+}
+.el-section-team-job{
+  text-align: center;
+}
+// END SECTION TEAM
+
+// MENU SECTION CONTACT
+.el-section-contact{
+  @extend .container-fluid;
+  background: $main-color;
+  padding-top: 25px;
+
+  h1{
+	font-size: $font-size-title-xs;
+	color: $color-contrast;
+	text-align: center;
+	margin-top: 21px;
+	margin-bottom: 30px;
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-title;
+    }
+  }
+  input{
+	font-size: 15px;
+	padding: 14px 24px;
+	height: auto;
+	margin-bottom: 15px;
+	border: none;
+	border-radius: 0;
+  }
+  input:last-child{
+	margin-bottom: 15px;
+  }
+  textarea{
+	height: 242px;
+	border: none;
+	border-radius: 0;
+	font-size: 15px;
+	padding: 14px 24px;
+  }
+  p{
+	font-size: 18px;
+	text-align: center;
+	color: $color-contrast;
+  }
+  .el-section-contact-form{
+	margin-top: 40px;
+  }
+  .el-buttons{
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 35px;
+  }
+  > img{
+	@include center-block;
+	padding-top: 43px;
+  }
+  ul{
+	@include list-unstyled;
+  }
+}
+// END SECTION CONTACT
+
+// BEGIN MODAL
+.el-modal{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+
+  > div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: table;
+  }
+  .el-close{
+    @include close-button($font-regular, 15px, 10px, 10px);
+  }
+}
+
+.el-modal-dialog{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.el-modal-content{
+  @include box-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+  max-width: 558px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #F6F6F6;
+  padding: 45px 25px;
+  position: relative;
+  border-radius: 5px;
+
+  h4{
+    @include h1-article(38px);
+    margin-top: 0;
+    margin-bottom: 36px;
+    font-family: $font-regular;
+  }
+  input, textarea{
+    border: 1px solid #D3D3D3;
+    @include placeholder($color-article);
+    font-face: $font-light;
+  }
+  .submit-button{
+    @include el-button($main-color, $color-contrast, $main-color, $main-color-hover, $color-contrast, $main-color-hover, 121px);
+    @include center-block;
+    margin-top: 35px;
+  }
+  .submit-ok{
+    @include el-button($main-color, $color-contrast, $main-color, $main-color-hover, $color-contrast, $main-color-hover, 74px);
+    @include center-block;
+    margin-top: 35px;
+  }
+  .row{
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 10px;
+  }
+  .row > div{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  p{
+    font-family: $font-light;
+    font-size: 18px;
+    text-align: center;
+    color: $color-article;
+  }
+}
+.el-modal-content-msg{
+  max-width: 470px;
+}
+// END MODAL
+
+// BEGIN PAGE BANNER
+.el-page-banner{
+  position: relative;
+  background-size: auto 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 224px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 324px;
+  }
+}
+.el-page-banner-max{
+  position: relative;
+  background-size: auto 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 224px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 324px;
+  }
+  @media (min-width: 990px) {
+    background-size: 100% auto;
+  }
+}
+.el-page-banner-effect{
+  @include box-shadow-image;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include square(100%);
+}
+// END PAGE BANNER
+
+// BEGIN PAGE CONTENT
+.el-page-content{
+  padding: 0 15px;
+
+  h1{
+    @include center-block;
+    margin-top: 60px;
+    margin-bottom: 35px;
+    max-width: 1000px;
+  }
+  h1, h2{
+    @include h1-article;
+  }
+  > p{
+    @include center-block;
+    color: $color-article;
+    font-size: $font-size-page-content;
+    font-family: $font-light;
+    max-width: $screen-size-max;
+    text-align: center;
+  }
+}
+.el-list-authors{
+  @include list-unstyled;
+  @include make-row;
+  @include center-block;
+  max-width: $screen-size-max;
+
+  li{
+    @include make-sm-column(6);
+    @include make-md-column(3);
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 100px;
+    }
+
+    > img{
+      @include center-block;
+      margin-bottom: 20px;
+    }
+  }
+}
+.el-list-partners{
+  @include list-unstyled;
+  @include make-row;
+  @include center-block;
+  max-width: $screen-size-max;
+
+  li {
+    @include make-sm-column(6);
+    @include make-md-column(3);
+    text-align: center;
+
+    margin-bottom: 25px;
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 75px;
+    }
+  }
+}
+.el-box-info{
+  border-bottom-left-radius: 15px;
+  position: absolute;
+  width: 273px;
+  background: rgba(153, 153, 153, 0.7);
+  z-index: 5;
+  right: 0;
+  padding: 20px 25px 12px 12px;
+  min-height: 135px;
+  display: none;
+
+  &.el-left{
+    left: 0;
+    right: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 15px;
+  }
+  p{
+    font-family: $font-light;
+    font-size: 17px;
+    text-align: left;
+  }
+  .el-close{
+    @include close-button($font-light, 18px, 4px, 3px);
+  }
+}
+.el-box-info-container{
+  position: relative;
+  display: inline-block;
+  color: $color-article;
+  font-size: 25px;
+  text-align: center;
+  font-family: $font-light;
+}
+// END PAGE CONTENT
+
+// BEGIN PAGE FAQ
+.el-page-faq{
+  @include box-shadow-page;
+
+  h1{
+    margin-top: 0;
+    padding-top: 35px;
+    margin-bottom: 15px;
+  }
+}
+.el-list-faq{
+  margin-top: 30px;
+  margin-left: 0;
+  padding-right: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
+
+  list-style-type: none;
+
+  li{
+    counter-increment: step-counter;
+    font-family: $font-light;
+    font-size: $font-size-page-content;
+    color: $color-article;
+    padding-left: 35px;
+    position: relative;
+
+    p{
+      margin-bottom: 20px;
+    }
+    span{
+      font-family: $font-regular;
+      color: $main-color;
+    }
+
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: counter(step-counter);
+      font-size: 18px;
+      font-family: 'COCOGOOSE';
+      color: $color-contrast;
+      border-radius: 29px;
+      width: 29px;
+      height: 29px;
+      text-align: center;
+      line-height: 29px;
+      background-color: $main-color;
+      display: inline-block;
+    }
+  }
+}
+// END PAGE FAQ
+
+//  BEGIN TEAM
+.el-page-team{
+  @include box-shadow-page;
+
+  h1{
+    margin-top: 0;
+    padding-top: 80px;
+    margin-bottom: 60px;
+  }
+  h2{
+    margin-bottom: 60px;
+  }
+}
+.el-list-team{
+  @include list-unstyled;
+  @include make-row;
+  @include center-block;
+  max-width: $screen-size-max;
+
+  li{
+    @include make-sm-column(6);
+    @include make-md-column(3);
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 100px;
+    }
+
+    > img{
+      @include center-block;
+      margin-bottom: 20px;
+    }
+  }
+  li.el-first-3{
+    @media (min-width: $screen-sm-min) {
+      margin-left: 12.5%;
+    }
+  }
+}
+// END TEAM
+
+// BEGIN PAGE USE RECOMMENDATION
+.el-page-use-recommendation{
+  > p{
+    margin-bottom: 90px;
+  }
+  .row > div{
+    margin-bottom: 80px;
+    img{
+      @include center-block;
+      margin-bottom: 35px;
+      max-width: 100%;
+    }
+    p{
+      color: $color-article;
+      font-size: $font-size-page-content;
+      font-family: $font-light;
+      text-align: center;
+    }
+  }
+}
+// END PAGE USE RECOMMENDATION

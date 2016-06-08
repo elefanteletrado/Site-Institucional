@@ -1,0 +1,60 @@
+/**
+ * 10.10 - Contact Info
+ * ----------------------------------------------------------------------------
+ */
+.cupid-contact-info
+{
+  .rounded(50%);
+  width: 370px;
+  height: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  text-align: center;
+  .contact-icon i{
+    color: #A273B9;
+    font-size: 45px;
+    padding-top: 83px;
+  }
+  h4{
+    font-size: 22px;
+    font-weight: 400;
+    color: @bold_color;
+    margin: 0;
+    padding-top: 15px;
+    &:after{
+      content: "";
+      border-bottom: 1px solid @border_color;
+      width: 85%;
+      display: inline-block;
+      padding-top: 33px;
+    }
+  }
+  .contact-info
+  {
+    padding-top: 20px;
+    i{
+      color: #FFA63B;
+      vertical-align: top;
+      padding-top: 3px;
+    }
+    p{
+      color: @text_color;
+      font-size: 14px;
+      font-weight: 400;
+      display: inline-block;
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .cupid-contact-info
+  {
+    width: 280px;
+    height: 280px;
+    .contact-icon i{
+      padding-top: 30px;
+    }
+  }
+}

@@ -5,13 +5,13 @@ Plugin Name: Zopim Widget
 Plugin URI: http://www.zopim.com/?iref=wp_plugin
 Description: Zopim is an award winning chat solution that helps website owners to engage their visitors and convert customers into fans!
 Author: Zopim
-Version: 1.4.2
+Version: 1.4.3
 Author URI: http://www.zopim.com/?iref=wp_plugin
 Text Domain: zopim
 Domain path: /language
 */
 
-define( 'VERSION_NUMBER', "1.4.2" );
+define( 'VERSION_NUMBER', "1.4.3" );
 define( 'ZOPIM_BASE_URL', "https://www.zopim.com/" );
 define( 'ZOPIM_ACCOUNT_URL', "https://account.zopim.com/" );
 define( 'ZOPIM_SIGNUP_REDIRECT_URL', ZOPIM_ACCOUNT_URL . "?aref=MjUxMjY4:1TeORR:9SP1e-iPTuAVXROJA6UU5seC8x4&visit_id=6ffe00ec3cfc11e2b5ab22000a1db8fa&utm_source=account%2Bsetup%2Bpage&utm_medium=link&utm_campaign=wp%2Bsignup2#signup" );

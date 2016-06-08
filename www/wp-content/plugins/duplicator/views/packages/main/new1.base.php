@@ -18,8 +18,6 @@ if (isset($_POST['action']))
 DUP_Util::InitSnapshotDirectory();
 
 $Package = DUP_Package::GetActive();
-//RSR REMOVED $package_hash = $Package->MakeHash();	
-
 $dup_tests = array();
 $dup_tests = DUP_Server::GetRequirements();
 $default_name = DUP_Package::GetDefaultName();
@@ -77,12 +75,11 @@ TOOL BAR: STEPS -->
 
 <!-- ============================
 SYSTEM REQUIREMENTS -->
-<div class="dup-box">
+<div class="dup-box dup-box-fancy">
     <div class="dup-box-title dup-box-title-fancy">
-        <i class="fa fa-check-square-o"></i>
         <?php
-        _e("Requirements:", 'duplicator');
-        echo ($dup_tests['Success']) ? ' <div class="dup-sys-pass">Pass</div>' : ' <div class="dup-sys-fail">Fail</div>';
+			_e("Requirements:", 'duplicator');
+			echo ($dup_tests['Success']) ? ' <div class="dup-sys-pass">Pass</div>' : ' <div class="dup-sys-fail">Fail</div>';
         ?>
         <div class="dup-box-arrow"></div>
     </div>
@@ -187,7 +184,10 @@ SYSTEM REQUIREMENTS -->
             </div>
             <div class="dup-sys-info dup-info-box">
                 <?php if ($dup_tests['RES']['INSTALL'] == 'Pass') : ?>
-                        <?php _e("None of the reserved files [{$dup_intaller_files}] where found from a previous install.  This means you are clear to create a new package.", 'duplicator'); ?>
+                        <?php 
+							_e("None of the reserved files where found from a previous install.  This means you are clear to create a new package.", 'duplicator');
+							echo "  [{$dup_intaller_files}]";
+						?>
                     <?php else: 
                         $duplicator_nonce = wp_create_nonce('duplicator_cleanup_page');
                     ?> 

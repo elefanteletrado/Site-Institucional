@@ -41,6 +41,8 @@ function cupid_include_one() {
 		'lib/inc-functions/menu-mega.php', // Plugin installation and activation for WordPress themes
         'lib/woocommerce-lib.php', // Plugin installation and activation for WordPress themes
 
+		'el-lib/theme-setup.php',
+		'el-lib/inc-functions/enqueue-script-css.php'
 	);
 
 	foreach ( $cupid_includes as $file ) {
