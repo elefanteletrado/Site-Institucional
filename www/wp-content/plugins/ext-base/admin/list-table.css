@@ -1,0 +1,29 @@
+.ext-list-table .publish-button{margin-left: 16px;}
+.ext-list-table .publish-button .loading{
+	background-image: url("../../../../wp-admin/images/wpspin_light.gif");
+	width: 16px; height: 16px; display: none;
+}
+.ext-list-table a.publish-on{
+	background-image: url("images/stars.png");
+	background-repeat: no-repeat; display: block; background-position: -5px 1px;
+	width: 21px; height: 21px; text-decoration: none; text-decoration: none;
+}
+.ext-list-table a.publish-on:hover{
+	background-position: -5px -18px;
+}
+.ext-list-table a.publish-off{
+	background-image: url("images/stars.png");
+	background-repeat: no-repeat; display: block; background-position: -5px -18px;
+	width: 21px; height: 21px; text-decoration: none; text-decoration: none;
+}
+.ext-list-table a.publish-off:hover{
+	background-position: -5px 1px;
+}
+
+.ext-list-table ::-webkit-input-placeholder{color: #B1B1B1;}
+.ext-list-table input:-moz-placeholder{color: #B1B1B1;}
+.ext-list-table input:-ms-input-placeholder{color: #B1B1B1;}
+.ext-list-table input.placeholder{color: #B1B1B1;}
+
+.ext-list-table select.placeholder-selected, .ext-list-table .placeholder-selected { color: #B1B1B1; }
+.ext-list-table select option { color: #000; }

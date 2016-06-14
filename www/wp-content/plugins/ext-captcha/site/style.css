@@ -1,0 +1,10 @@
+.ext-captcha-img-update{
+	background-image: url("images/loading.gif");
+	background-repeat: no-repeat; background-position: center center;
+	width: 290px; height: 80px; display: none;
+}
+.ext-captcha-update{
+	color: #4B7FC0; font-family: Arial; font-size: 11px;
+	background-image: url("images/reload.png"); background-repeat: no-repeat;
+	padding: 3px 0 0 20px; height: 16px; display: block;
+}
