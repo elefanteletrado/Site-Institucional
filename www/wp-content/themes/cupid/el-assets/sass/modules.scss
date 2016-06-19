@@ -719,3 +719,71 @@
   }
 }
 // END PAGE USE RECOMMENDATION
+.el-section-impact{
+  background-size: auto 100%;
+  background-position: center;
+  height: 350px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 470px;
+  }
+
+  > div{
+    background: $color-overlay;
+    height: 100%;
+  }
+  > div > div{
+    @include vertical-middle;
+  }
+  p{
+    font-size: $font-size-xs;
+    text-align: center;
+    color: $color-contrast;
+    max-width: 880px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-title;
+    }
+  }
+  .el-buttons{
+    margin-top: 45px;
+    text-align: center;
+  }
+}
+// SECTION COLLECTION AUTHOR
+#el-collection-rotate{
+  position: relative;
+  height: 525px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  .el-section-collection-content{
+    display: none;
+    @media (min-width: $screen-sm-min) {
+      display: block;
+      position: absolute;
+      background: transparent url("../images/fake/collection-rotate.jpg") repeat-x top left;
+      height: 525px;
+      width: 7980px;
+      text-indent: -9999px;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+#el-collection-rotate.el-section-collection-state-one{
+  .el-section-collection-content{
+    left: 0px;
+  }
+}
+#el-collection-rotate.el-section-collection-state-two{
+  .el-section-collection-content{
+    left: -3990px;
+    transition: left 10s ease-in-out  ;
+  }
+}
+// END SECTION COLLECTION AUTHOR

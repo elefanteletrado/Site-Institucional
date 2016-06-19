@@ -1,13 +1,13 @@
-<div class="el-modal" style="display: none">
+<div id="popup-contact" class="el-modal" style="display: none">
 	<div>
 		<div class="el-modal-dialog">
 			<section class="el-modal-content">
 				<div class="el-modal-header">
-					<button type="button" class="el-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
+					<button type="button" class="el-close popup-contact-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
 					<h4 class="el-modal-title">Por favor preencha o formulário abaixo:</h4>
 				</div>
 				<div class="el-modal-body">
-					<form method="post">
+					<form class="form-contact" method="post">
 						<div class="row">
 							<div class="col-sm-12">
 								<label for="modal-contsct-name" class="sr-only">Nome completo</label>
@@ -46,19 +46,19 @@
 		</div>
 	</div>
 </div>
-<div class="el-modal" style="display: none">
+<div id="popup-contact-message" class="el-modal" style="display: none">
 	<div>
 		<div class="el-modal-dialog">
 			<section class="el-modal-content el-modal-content-msg">
 				<div class="el-modal-header">
-					<button type="button" class="el-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
+					<button type="button" class="el-close popup-contact-message-ok" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
 					<h4 class="el-modal-title">Obrigado!</h4>
 				</div>
 				<div class="el-modal-body">
 					<p>
 						Entraremos em contato o mais rápido possível.
 					</p>
-					<button class="submit-ok">OK</button>
+					<button class="submit-ok popup-contact-message-ok">OK</button>
 				</div>
 				<div class="el-modal-footer">
 

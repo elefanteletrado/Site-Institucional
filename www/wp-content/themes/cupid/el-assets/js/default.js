@@ -79,6 +79,7 @@ function onInputTel(input) {
     $(".form-contact").submit(function () {
         var $button = $(this).find("button[type='submit']");
         $button.attr("disabled", true);
+        $button.attr("data-text-original", $button.text());
         $button.html("Enviando...");
 
         $.ajax({
@@ -86,16 +87,66 @@ function onInputTel(input) {
             data: $(this).serialize(),
             type: "POST",
             dataType: 'json',
-            success: $.proxy(function(response) {
-                if(response.status) {
-
-                }
-            }, $(5yiw)),
+            success: function(response) {
+                $button.html($button.attr("data-text-original"));
+                $("#popup-contact-message").fadeIn();
+                $("#popup-contact").hide();
+            },
             error: function() {
-                alert("Ocorreu um erro inesperado ao carregar a lista de cidades. Por favor, contate o administrador do sistema.");
+                $button.html($button.attr("data-text-original"));
+                $("#popup-contact-message").fadeIn();
+                $("#popup-contact").hide();
             }
         });
 
         return false;
     });
+
+    $(".popup-contact-message-ok").click(function () {
+        $("#popup-contact-message").fadeOut();
+    });
+    $(".popup-contact-close").click(function () {
+        $("#popup-contact").fadeOut();
+    });
+    $("#popup-contact-open").click(function () {
+        $("#popup-contact").fadeIn();
+
+        return false;
+    });
+
+    if($(window).width() > 900) {
+        $("#main-banner > div > div").attr("style", "min-height: " + ($(window).height() - $("#main-banner").offset().top) + "px");
+    }
+
+    var theCircle = document.getElementById("el-collection-rotate");
+
+    function setup() {
+        theCircle.addEventListener("transitionend", loopTransition, false);
+        theCircle.addEventListener("webkitTransitionEnd", loopTransition, false);
+        theCircle.addEventListener("mozTransitionEnd", loopTransition, false);
+        theCircle.addEventListener("msTransitionEnd", loopTransition, false);
+        theCircle.addEventListener("oTransitionEnd", loopTransition, false);
+    }
+    setup();
+
+    setTimeout(function() {
+        setInitialClass();
+    }, 500);
+
+    function setInitialClass(e) {
+        theCircle.className = "el-section-collection-state-two";
+    }
+
+    function loopTransition(e) {
+        if (e.propertyName == "left") {
+            if (theCircle.className == "el-section-collection-state-two") {
+                theCircle.className = "el-section-collection-state-one";
+                setTimeout(function() {
+                    setInitialClass();
+                }, 100);
+            } else {
+                theCircle.className = "el-section-collection-state-two";
+            }
+        }
+    }
 })(jQuery);

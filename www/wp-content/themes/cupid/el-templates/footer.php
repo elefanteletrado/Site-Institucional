@@ -1,40 +1,59 @@
-	<footer class="el-footer">
-		<nav class="row">
-			<div class="col-sm-3">
+	<footer class="el-footer el-footer-page">
+		<div>
+			<div class="el-footer-logo">
+				<a href="" title="Ir para a Página Inicial">Elefante Letrado</a>
+			</div>
+			<nav class="row">
+				<div class="col-sm-3">
+					<?php
+					wp_nav_menu( array(
+						'menu_id' => 'main-menu',
+						'theme_location' => 'el-footer-menu-main'
+					) );
+					?>
+				</div>
+				<div class="col-sm-3">
+					<?php
+					wp_nav_menu( array(
+						'menu_id' => 'main-menu',
+						'theme_location' => 'el-footer-menu-auxiliary'
+					) );
+					?>
+				</div>
 				<?php
-				wp_nav_menu( array(
-					'menu_id' => 'main-menu',
-					'theme_location' => 'el-footer-menu-main'
-				) );
+				/*
+				<div class="col-sm-3">
+					<p>
+						Contato<br />
+						+55 51 3407-8090<br />
+						<span class="el-email">contato@elefanteletrado.com.br</span><br />
+						Av. Carlos Gomes, 1.492/709<br />
+						Porto Alegre/ RS
+					</p>
+				</div>
+				*/
 				?>
-			</div>
-			<div class="col-sm-3">
-				<?php
-				wp_nav_menu( array(
-					'menu_id' => 'main-menu',
-					'theme_location' => 'el-footer-menu-auxiliary'
-				) );
-				?>
-			</div>
-			<div class="col-sm-3">
-				<p>
-					Contato<br />
-					+55 51 3407-8090<br />
-					<span class="el-email">contato@elefanteletrado.com.br</span><br />
-					Av. Carlos Gomes, 1.492/709<br />
-					Porto Alegre/ RS
-				</p>
-			</div>
-			<div class="col-sm-3">
-				<h3>Redes Sociais</h3>
-				<?php
-				wp_nav_menu( array(
-					'menu_id' => 'main-menu',
-					'theme_location' => 'el-footer-menu-social-networks'
-				) );
-				?>
-			</div>
-		</nav>
+				<div class="col-sm-3">
+					<h3>Redes Sociais</h3>
+					<?php
+					wp_nav_menu( array(
+						'menu_id' => 'main-menu',
+						'theme_location' => 'el-footer-menu-social-networks'
+					) );
+					?>
+				</div>
+				<div class="col-sm-3">
+					<p>
+						Realização
+					</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/layout/realizacao.jpg" width="228" height="48">
+					<p style="font-size: 9px; white-space: nowrap; margin-top: 10px;">
+						100 livros da plataforma foram apoiados pela Lei Rouanet.<br />
+						Em contrapartida, doamos acesso para 50 escolas públicas.
+					</p>
+				</div>
+			</nav>
+		</div>
 	</footer>
 </div>
 <?php wp_footer(); ?>
