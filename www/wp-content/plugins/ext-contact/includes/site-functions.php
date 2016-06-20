@@ -13,36 +13,36 @@ function ext_contact_save() {
 	);
 	$error_list = array();
 
-	if( !trim( $_REQUEST['nome'] ) ) {
-		$error_list['nome'] = 'O campo "Nome" é obrigatório.';
+	if( !trim( $_REQUEST['name'] ) ) {
+		$error_list['name'] = 'O campo "Nome" é obrigatório.';
 	}
 	if( !Ext_Base_Validate::email( $_REQUEST['email'] ) ) {
 		$error_list['email'] = 'Preencha o campo "E-mail" com um endereço válido.';
 	}
 
-	if( !Ext_Base_Validate::telefone( $_REQUEST['telefone'] ) ) {
-		$error_list['telefone'] = 'Digite um número de telefone válido.';
+	if( !Ext_Base_Validate::telefone( $_REQUEST['phone'] ) ) {
+		$error_list['phone'] = 'Digite um número de telefone válido.';
 	}
 
 	if(EXT_CONTACT_MULTIPLE_SUBJECTS) {
 		$valid = false;
-		if( isset( $_REQUEST['assunto'] ) ) {
-			foreach( $option['subject_list'] as $item ) {
-				if( $item['id'] == $_REQUEST['assunto'] ) {
+		if( isset( $_REQUEST['subject'] ) ) {
+			foreach( $option['subject_l Qist'] as $item ) {
+				if( $item['id'] == $_REQUEST['subject'] ) {
 					$valid = true;
 					break;
 				}
 			}
 		}
 		if( !$valid ) {
-			$error_list['assunto'] = 'O campo "Sobre o que deseja falar?" é obrigatório.';
+			$error_list['subject'] = 'O campo "Sobre o que deseja falar?" é obrigatório.';
 		}
 	} else {
-		$_REQUEST['assunto'] = EXT_CONTACT_CODE_ALL_SUBJECTS;
+		$_REQUEST['subject'] = EXT_CONTACT_CODE_ALL_SUBJECTS;
 	}
 
-	if( strlen( trim( $_REQUEST['mensagem'] ) ) < 4 ) {
-		$error_list['mensagem'] = 'O campo "Mensagem" é obrigatório.';
+	if( strlen( trim( $_REQUEST['message'] ) ) < 4 ) {
+		$error_list['message'] = 'O campo "Mensagem" é obrigatório.';
 	}
 
 	if( !$error_list && isset( $option['active_captcha'] ) ) {
@@ -71,11 +71,12 @@ function ext_contact_save() {
 		$model = Ext_Contact_Model::get_instance();
 
 		$insert = array(
-			'nome' => $_REQUEST['nome'],
+			'nome' => $_REQUEST['name'],
 			'email' => $_REQUEST['email'],
-			'telefone' => preg_replace( '/\\D/', '', $_REQUEST['telefone'] ),
-			'assunto' => $_REQUEST['assunto'],
-			'mensagem' => $_REQUEST['mensagem']
+			'telefone' => preg_replace( '/\\D/', '', $_REQUEST['phone'] ),
+			'assunto' => $_REQUEST['subject'],
+			'escola' => $_REQUEST['school'],
+			'mensagem' => $_REQUEST['message']
 		);
 		foreach( $insert as &$item ) {
 			$item = strip_tags( $item );

@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
                 <label for="contact-message" class="sr-only">Mensagem</label>
-                <textarea class="form-control" id="contact-message" name="message" placeholder="Mensagem:"></textarea>
+                <textarea class="form-control" id="contact-message" name="message" placeholder="Mensagem:" required></textarea>
             </div>
         </div>
         <div class="el-buttons">

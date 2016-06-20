@@ -11,7 +11,7 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<label for="modal-contsct-name" class="sr-only">Nome completo</label>
-								<input class="form-control" id="modal-contsct-name" name="name" type="text" maxlength="100" placeholder="Nome completo">
+								<input class="form-control" id="modal-contsct-name" name="name" type="text" maxlength="100" placeholder="Nome completo" required>
 							</div>
 						</div>
 						<div class="row">
@@ -21,7 +21,7 @@
 							</div>
 							<div class="col-sm-6">
 								<label for="modal-contsct-phone" class="sr-only">Telefone</label>
-								<input class="form-control" id="modal-contsct-phone" name="phone" type="tel" maxlength="20" required placeholder="Telefone">
+								<input class="form-control" id="modal-contsct-phone" name="phone" type="tel" maxlength="20" required oninput="onInputTel(this)" placeholder="Telefone">
 							</div>
 						</div>
 						<div class="row">
@@ -33,7 +33,7 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<label for="modal-contact-message" class="sr-only">Mensagem</label>
-								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem"></textarea>
+								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem" required></textarea>
 							</div>
 						</div>
 						<button type="submit" class="submit-button">Enviar</button>
@@ -46,7 +46,7 @@
 		</div>
 	</div>
 </div>
-<div id="popup-contact-message" class="el-modal" style="display: none">
+<div id="popup-contact-message" class="el-modal el-modal-confirm" style="display: none">
 	<div>
 		<div class="el-modal-dialog">
 			<section class="el-modal-content el-modal-content-msg">

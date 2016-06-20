@@ -26,7 +26,16 @@
 			alunos do 1º ao 5º ano do Ensino Fundamental. Pensando em facilitar e também auxiliar os professores, proporcionamos
 			o acompanhamento do progresso da compreensão leitora de cada criança, através de relatórios e descritores baseados no Saeb.
 		</p>
-		<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/devices.jpg" alt="Todos os dispositivos são compatíveis com o Elefante Letrado" class="img-style-1" />
+		<div class="visible-xs-block">
+			<div id="owl-carousel-devices" class="owl-carousel el-carousel-devices">
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/dispositivos/biblioteca.jpg" width="450" height="453" title="Biblioteca Elefante Letrado">
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/dispositivos/livro.jpg" width="450" height="453" title="Livro do Elefante Letrado">
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/dispositivos/relatorios.jpg" width="450" height="453" title="Relatórios do Elefante Letrado">
+			</div>
+		</div>
+		<div class="visible-sm-block">
+			<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/devices.jpg" alt="Todos os dispositivos são compatíveis com o Elefante Letrado" class="img-style-1" />
+		</div>
 		<div class="el-box-special">
 			<h2><span style="max-width: 350px; display: block; float: right;">Nosso propósito</span><br style="clear: both"> </h2>
 			<div class="el-content">

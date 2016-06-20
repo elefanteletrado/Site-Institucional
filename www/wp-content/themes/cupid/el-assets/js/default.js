@@ -94,8 +94,7 @@ function onInputTel(input) {
             },
             error: function() {
                 $button.html($button.attr("data-text-original"));
-                $("#popup-contact-message").fadeIn();
-                $("#popup-contact").hide();
+                alert("Ocorreu um erro inesperado. Por favor, contate o administrador do sistema.");
             }
         });
 
@@ -118,6 +117,9 @@ function onInputTel(input) {
         $("#main-banner > div > div").attr("style", "min-height: " + ($(window).height() - $("#main-banner").offset().top) + "px");
     }
 
+    $("#owl-example").owlCarousel();
+
+    // BEGIN CAROUSEL COLLECTION
     var theCircle = document.getElementById("el-collection-rotate");
 
     function setup() {
@@ -149,4 +151,5 @@ function onInputTel(input) {
             }
         }
     }
+    // END CAROUSEL COLLECTION
 })(jQuery);
