@@ -27,7 +27,7 @@ function ext_contact_save() {
 	if(EXT_CONTACT_MULTIPLE_SUBJECTS) {
 		$valid = false;
 		if( isset( $_REQUEST['subject'] ) ) {
-			foreach( $option['subject_l Qist'] as $item ) {
+			foreach( $option['subject_list'] as $item ) {
 				if( $item['id'] == $_REQUEST['subject'] ) {
 					$valid = true;
 					break;
@@ -39,6 +39,10 @@ function ext_contact_save() {
 		}
 	} else {
 		$_REQUEST['subject'] = EXT_CONTACT_CODE_ALL_SUBJECTS;
+	}
+
+	if( strlen( trim( $_REQUEST['school'] ) ) < 4 ) {
+		$error_list['escola'] = 'O campo "Escola" é obrigatório.';
 	}
 
 	if( strlen( trim( $_REQUEST['message'] ) ) < 4 ) {
@@ -64,6 +68,7 @@ function ext_contact_save() {
 	}
 
 	if( $error_list ) {
+		$result['title'] = 'Erro';
 		$result['msg'] = 'Os seguintes erros foram encontrados:' . "\n" . implode( "\n", $error_list );
 	} else {
 		require EXT_CONTACT_INCLUDE_DIR . 'class-ext-contact-model.php';
@@ -85,13 +90,15 @@ function ext_contact_save() {
 		if($model->insert($insert)) {
 			Ext_Contact::sendMail($option_id, $insert);
 			$result['status'] = '1';
+			$result['title'] = 'Obrigado!';
 			$result['msg'] = 'Entraremos em contato o mais rápido possível.';
 		} else {
+			$result['title'] = 'Erro';
 			$result['msg'] = 'Ocorreu um erro inesperado. Contate o administrador do sistema.';
 		}
 	}
 	exit(json_encode($result));
 }
 
-add_action('wp_ajax_nopriv_ext_contact_save', 'cbmtbt_site_ext_contact_save');
-add_action('wp_ajax__ext_contact_save', 'cbmtbt_site_ext_contact_save');
+add_action('wp_ajax_nopriv_ext_contact_save', 'ext_contact_save');
+add_action('wp_ajax_ext_contact_save', 'ext_contact_save');

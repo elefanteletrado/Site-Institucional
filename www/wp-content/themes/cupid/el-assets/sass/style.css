@@ -3470,11 +3470,12 @@ input[type="button"].btn-block {
   .el-header-menu ul {
     padding-left: 0;
     list-style: none;
-    display: block; }
+    display: block;
+    overflow: hidden; }
     .el-header-menu ul li {
       float: left;
       margin: 20px 30px 18px 0;
-      font-size: 16px;
+      font-size: 18px;
       height: 24px;
       line-height: 24px;
       display: none; }
@@ -3482,7 +3483,8 @@ input[type="button"].btn-block {
         color: #E3388C;
         -webkit-transition: all 0.5s linear;
         -o-transition: all 0.5s linear;
-        transition: all 0.5s linear; }
+        transition: all 0.5s linear;
+        padding: 2px 0; }
       .el-header-menu ul li a:hover {
         text-decoration: none;
         color: #5D5D5D;
@@ -3498,7 +3500,7 @@ input[type="button"].btn-block {
       display: block; }
       .el-header-menu ul .el-featured a {
         background: #E3388C;
-        padding: 0 22px;
+        padding: 2px 22px;
         border-radius: 24px;
         color: #FFF; }
       .el-header-menu ul .el-featured a:hover {
@@ -3650,10 +3652,21 @@ input[type="button"].btn-block {
   -webkit-box-shadow: inset 0px 30px 50px -46px rgba(1, 1, 1, 0.4);
   box-shadow: inset 0px 30px 50px -46px rgba(1, 1, 1, 0.4); }
 
+.owl-carousel-main .owl-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  .owl-carousel-main .owl-controls .owl-pagination .owl-page span {
+    background: none !important;
+    border: 2px solid #FFF;
+    opacity: 1;
+    width: 17px;
+    height: 17px; }
+  .owl-carousel-main .owl-controls .owl-pagination .owl-page.active span {
+    background-color: #FFF !important; }
+
 .el-banner-container {
-  position: relative;
-  opacity: 0;
-  filter: alpha(opacity=0); }
+  position: relative; }
   .el-banner-container .el-img {
     display: none; }
   .el-banner-container .el-content {
@@ -3664,36 +3677,53 @@ input[type="button"].btn-block {
     background-position: center center;
     background-repeat: no-repeat; }
     .el-banner-container .el-content > div {
-      background: rgba(0, 0, 0, 0.3); }
+      background: rgba(0, 0, 0, 0.05);
+      max-width: 1500px;
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
       .el-banner-container .el-content > div > div {
-        padding: 115px 0; }
+        padding: 70px 0; }
   .el-banner-container .el-buttons {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     margin-top: 50px; }
+    @media (min-width: 768px) {
+      .el-banner-container .el-buttons {
+        text-align: left; } }
     .el-banner-container .el-buttons .el-btn-contrast, .el-banner-container .el-buttons .el-btn-outline {
       margin-left: 25px;
       margin-right: 25px;
       margin-bottom: 25px; }
+      .el-banner-container .el-buttons .el-btn-contrast:first-child, .el-banner-container .el-buttons .el-btn-outline:first-child {
+        margin-left: 15px; }
   .el-banner-container h2 {
-    font-family: "ProximaNovaA-Bold";
-    font-size: 26px;
+    font-family: "ProximaNovaA-Regular";
+    font-size: 32px;
     text-align: center;
     color: #FFF;
     margin-top: 0;
     padding: 0 15px; }
+    .el-banner-container h2 strong {
+      font-family: "ProximaNovaA-Bold";
+      font-weight: normal; }
+    @media (min-width: 768px) {
+      .el-banner-container h2 {
+        max-width: 630px;
+        text-align: left; } }
   .el-banner-container p {
     font-size: 18px;
     color: #FFF;
     text-align: center;
-    max-width: 645px;
+    max-width: 550px;
     margin-top: 20px;
-    padding: 0 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
+    padding: 0 15px; }
+    @media (min-width: 768px) {
+      .el-banner-container p {
+        text-align: left; } }
   @media (min-width: 930px) {
     .el-banner-container .el-content {
       background-size: 100% auto; } }
@@ -3704,7 +3734,23 @@ input[type="button"].btn-block {
       background-size: 100% auto; } }
   @media (min-width: 1280px) {
     .el-banner-container h2 {
-      font-size: 75px; } }
+      font-size: 70px; } }
+  .el-banner-container.el-banner-container-style-2 .el-content > div {
+    background: rgba(0, 0, 0, 0.3); }
+  @media (min-width: 768px) {
+    .el-banner-container.el-banner-container-style-2 .el-buttons {
+      text-align: center; } }
+  .el-banner-container.el-banner-container-style-2 .el-buttons .el-btn-contrast:first-child, .el-banner-container.el-banner-container-style-2 .el-buttons .el-btn-outline:first-child {
+    margin-left: 0; }
+  .el-banner-container.el-banner-container-style-2 h2 {
+    font-family: "ProximaNovaA-Bold"; }
+    @media (min-width: 768px) {
+      .el-banner-container.el-banner-container-style-2 h2 {
+        max-width: none;
+        text-align: center; } }
+  @media (min-width: 768px) {
+    .el-banner-container.el-banner-container-style-2 p {
+      text-align: center; } }
 
 .el-article h1 {
   font-size: 30px;
@@ -3724,7 +3770,7 @@ input[type="button"].btn-block {
   margin-left: auto;
   margin-right: auto;
   max-width: 980px; }
-.el-article > .img-style-1 {
+.el-article .img-style-1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -3934,7 +3980,7 @@ input[type="button"].btn-block {
   margin-top: 45px; }
   @media (min-width: 768px) {
     .el-section-team .el-read-more {
-      margin-top: 115px; } }
+      margin-top: 70px; } }
 
 .el-section-team-img {
   display: block;
@@ -4053,7 +4099,8 @@ input[type="button"].btn-block {
   .el-modal-content input, .el-modal-content textarea {
     border: 1px solid #D3D3D3;
     background: #FFF;
-    font-family: "ProximaNovaA-Light"; }
+    font-family: "ProximaNovaA-Light";
+    font-size: 12px; }
     .el-modal-content input::-moz-placeholder, .el-modal-content textarea::-moz-placeholder {
       color: #5D5D5D;
       opacity: 1; }
@@ -4151,7 +4198,7 @@ input[type="button"].btn-block {
   position: relative;
   background-size: auto 100%;
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   height: 224px; }
   @media (min-width: 768px) {
     .el-page-banner {
@@ -4241,12 +4288,21 @@ input[type="button"].btn-block {
         width: 25%; } }
     @media (min-width: 768px) {
       .el-list-authors li {
-        margin-bottom: 100px; } }
+        margin-bottom: 70px; } }
     .el-list-authors li > img {
       display: block;
       margin-left: auto;
+      margin-right: auto; }
+    .el-list-authors li p {
+      display: block;
+      margin-left: auto;
       margin-right: auto;
-      margin-bottom: 20px; }
+      color: #FFF;
+      padding-right: 10px;
+      margin-top: -24px;
+      max-width: 248px;
+      text-align: right;
+      font-size: 18px; }
 
 .el-list-partners {
   padding-left: 0;
@@ -4272,6 +4328,7 @@ input[type="button"].btn-block {
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
+    line-height: 110px;
     margin-bottom: 25px; }
     @media (min-width: 768px) {
       .el-list-partners li {
@@ -4466,37 +4523,59 @@ input[type="button"].btn-block {
     margin-top: 45px;
     text-align: center; }
 
-#el-collection-rotate {
+.el-collection-rotate {
   position: relative;
-  height: 525px;
   width: 100%;
   overflow: hidden;
   margin-top: 7px;
   margin-bottom: 7px; }
-  #el-collection-rotate .el-section-collection-content {
-    display: none; }
-    @media (min-width: 768px) {
-      #el-collection-rotate .el-section-collection-content {
-        display: block;
-        position: absolute;
-        background: transparent url("../images/fake/collection-rotate.jpg") repeat-x top left;
-        height: 525px;
-        width: 7980px;
-        text-indent: -9999px;
-        top: 0;
-        left: 0; } }
+  .el-collection-rotate .el-section-collection-content {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
-#el-collection-rotate.el-section-collection-state-one .el-section-collection-content {
-  left: 0px; }
+.el-collection-rotate.el-section-collection-state-one .el-section-collection-content {
+  left: 0; }
 
-#el-collection-rotate.el-section-collection-state-two .el-section-collection-content {
-  left: -3990px;
-  transition: left 10s ease-in-out; }
+.el-collection-rotate.el-section-collection-state-two .el-section-collection-content {
+  transition: left 20s ease-in-out; }
+
+.el-page-features {
+  -webkit-box-shadow: inset 0px 30px 28px -28px rgba(1, 1, 1, 0.4);
+  box-shadow: inset 0px 30px 28px -28px rgba(1, 1, 1, 0.4);
+  margin-bottom: 100px; }
+  .el-page-features h1 {
+    margin-top: 0;
+    padding-top: 50px;
+    margin-bottom: 50px; }
+  .el-page-features p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: "ProximaNovaA-Light";
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px; }
+  .el-page-features img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px; }
+  .el-page-features .owl-item img {
+    margin-bottom: 0; }
 
 .el-carousel-devices {
   margin-top: 15px;
   margin-bottom: 20px; }
   .el-carousel-devices .owl-item {
     padding: 10px; }
+
+@media (min-width: 768px) {
+  .el-text-left-1 {
+    max-width: 350px;
+    display: block;
+    float: right; } }
 
 /*# sourceMappingURL=style.css.map */

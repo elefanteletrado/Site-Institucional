@@ -29,127 +29,148 @@ function onInputTel(input) {
 
 (function($){
     $(document).ready(function () {
-        $("#main-banner").addClass("fade-in");
-    });
+        $(window).scroll(function() {
+            $('.fade-effect, .fade-effect-rotate').each(function () {
+                var bottom_of_object = $(this).position().top + $(this).outerHeight() / 2;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-    $(window).scroll(function() {
-        $('.fade-effect').each(function () {
-            var bottom_of_object = $(this).position().top + $(this).outerHeight() / 2;
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            if (bottom_of_window > bottom_of_object) {
-                $(this).addClass('fade-in-fast');
-            } else {
-                $(this).removeClass('fade-in-fast');
-            }
-        });
-    }).scroll();
-
-    var form = {
-        element: $("#form-ext-contact"),
-        processing: false,
-        options: {
-            dataType: 'json',
-            beforeSubmit: function() {
-                form.processing = true;
-                return true;
-            },
-            success: function(data) {
-                form.processing = false;
-                alert(data.msg);
-                if(data.status == "1") {
-                    window.location.href = form.element.attr("data-redirect-url");
+                if($(this).hasClass("el-collection-rotate")) {
+                    $(this).removeClass("el-section-collection-state-one");
+                    $(this).addClass("el-section-collection-state-two");
+                    $(this).children().css('left', $(this).attr("data-left-transition"));
+                } else {
+                    if (bottom_of_window > bottom_of_object) {
+                        $(this).addClass('fade-in-fast');
+                    } else {
+                        $(this).removeClass('fade-in-fast');
+                    }
                 }
-            },
-            error: function() {
-                form.processing = false;
-                $.LoadingOverlay("hide");
+            });
+        }).scroll();
 
-                alert("Ocorreu um erro inesperado. Por favor, contate o administrador do sistema.");
+        var form = {
+            element: $("#form-ext-contact"),
+            processing: false,
+            options: {
+                dataType: 'json',
+                beforeSubmit: function() {
+                    form.processing = true;
+                    return true;
+                },
+                success: function(data) {
+                    form.processing = false;
+                    alert(data.msg);
+                    if(data.status == "1") {
+                        window.location.href = form.element.attr("data-redirect-url");
+                    }
+                },
+                error: function() {
+                    form.processing = false;
+                    $.LoadingOverlay("hide");
+
+                    alert("Ocorreu um erro inesperado. Por favor, contate o administrador do sistema.");
+                }
             }
-        }
-    };
+        };
 
-    form.element.submit(function () {
-        form.element.ajaxSubmit(form.options);
+        form.element.submit(function () {
+            form.element.ajaxSubmit(form.options);
 
-        return false;
-    });
-
-    $(".form-contact").submit(function () {
-        var $button = $(this).find("button[type='submit']");
-        $button.attr("disabled", true);
-        $button.attr("data-text-original", $button.text());
-        $button.html("Enviando...");
-
-        $.ajax({
-            url: $(this).attr("action"),
-            data: $(this).serialize(),
-            type: "POST",
-            dataType: 'json',
-            success: function(response) {
-                $button.html($button.attr("data-text-original"));
-                $("#popup-contact-message").fadeIn();
-                $("#popup-contact").hide();
-            },
-            error: function() {
-                $button.html($button.attr("data-text-original"));
-                alert("Ocorreu um erro inesperado. Por favor, contate o administrador do sistema.");
-            }
+            return false;
         });
 
-        return false;
-    });
+        $(".form-contact").submit(function () {
+            var $form = $(this);
+            var $button = $form.find("button[type='submit']");
+            $button.attr("disabled", true);
+            $button.attr("data-text-original", $button.text());
+            $button.html("Enviando...");
 
-    $(".popup-contact-message-ok").click(function () {
-        $("#popup-contact-message").fadeOut();
-    });
-    $(".popup-contact-close").click(function () {
-        $("#popup-contact").fadeOut();
-    });
-    $("#popup-contact-open").click(function () {
-        $("#popup-contact").fadeIn();
+            $.ajax({
+                url: $(this).attr("action"),
+                data: $(this).serialize(),
+                type: "POST",
+                dataType: 'json',
+                success: function(response) {
+                    var $popupMessage = $("#popup-contact-message");
 
-        return false;
-    });
+                    $button.html($button.attr("data-text-original"));
+                    $popupMessage.find(".el-modal-title").html(response.title);
+                    $popupMessage.find(".el-modal-message").html(response.msg);
+                    $popupMessage.fadeIn();
+                    $button.attr("disabled", false);
 
-    if($(window).width() > 900) {
-        $("#main-banner > div > div").attr("style", "min-height: " + ($(window).height() - $("#main-banner").offset().top) + "px");
-    }
+                    if("1" == response.status) {
+                        $("#popup-contact").hide();
+                        $form.find("input, textarea").val("");
+                    }
+                },
+                error: function() {
+                    $button.html($button.attr("data-text-original"));
+                    $button.attr("disabled", false);
+                    alert("Ocorreu um erro inesperado. Por favor, contate o administrador do sistema.");
+                }
+            });
 
-    $("#owl-example").owlCarousel();
+            return false;
+        });
 
-    // BEGIN CAROUSEL COLLECTION
-    var theCircle = document.getElementById("el-collection-rotate");
+        $(".popup-contact-message-ok").click(function () {
+            $("#popup-contact-message").fadeOut();
+        });
+        $(".popup-contact-close").click(function () {
+            $("#popup-contact").fadeOut();
+        });
+        $("#popup-contact-open").click(function () {
+            $("#popup-contact").fadeIn();
 
-    function setup() {
-        theCircle.addEventListener("transitionend", loopTransition, false);
-        theCircle.addEventListener("webkitTransitionEnd", loopTransition, false);
-        theCircle.addEventListener("mozTransitionEnd", loopTransition, false);
-        theCircle.addEventListener("msTransitionEnd", loopTransition, false);
-        theCircle.addEventListener("oTransitionEnd", loopTransition, false);
-    }
-    setup();
+            return false;
+        });
 
-    setTimeout(function() {
-        setInitialClass();
-    }, 500);
-
-    function setInitialClass(e) {
-        theCircle.className = "el-section-collection-state-two";
-    }
-
-    function loopTransition(e) {
-        if (e.propertyName == "left") {
-            if (theCircle.className == "el-section-collection-state-two") {
-                theCircle.className = "el-section-collection-state-one";
-                setTimeout(function() {
-                    setInitialClass();
-                }, 100);
-            } else {
-                theCircle.className = "el-section-collection-state-two";
+        if($(".owl-carousel-main").length) {
+            $(".owl-carousel-main").owlCarousel({items: 1, singleItem: true, autoPlay: true, autoPlay: 5000});
+            $(".owl-carousel-main").addClass("fade-in");
+            function resize() {
+                var _this = $(".el-banner-container:visible");
+                var offset = _this.offset();
+                if(offset) {
+                    $(".el-banner-container > div > div").attr("style", "min-height: " + ($(window).height() - offset.top) + "px");
+                    $(".el-banner-container .el-content > div > div").css("padding-top", (_this.height() - $(".el-banner-container:visible .el-content > div > div").height()) / 2);
+                }
             }
+
+            $(window).resize(resize);
+            resize();
         }
-    }
-    // END CAROUSEL COLLECTION
+
+        $("#owl-carousel-devices").owlCarousel({items: 1, singleItem: true, autoPlay: true, autoPlay: 5000});
+
+        var firstFeatures = true;
+        function resizeFeatures() {
+            if($(window).height() > 900) {
+                if(firstFeatures) {
+                    firstFeatures = false;
+                    $("#owl-carousel-features").owlCarousel({items: 1, singleItem: true, autoPlay: 10000});
+                }
+                $("#owl-carousel-features img").height($(window).height() - 500);
+            } else {
+                $("#owl-carousel-features img").removeAttr("height");
+            }
+
+            var windowWidth = $(window).width();
+            $(".el-collection-rotate").each(function () {
+                var width = $(this).find("img").attr("width");
+                var left = - width + windowWidth;
+                $(this).attr("data-left-transition", left);
+                if($(this).hasClass("el-section-collection-state-two")) {
+                    var $el = $(this).find(".el-section-collection-content");
+                    $el.css("left", left);
+                }
+            });
+        }
+        $(window).resize(resizeFeatures);
+        resizeFeatures();
+
+        // END CAROUSEL COLLECTION
+    });
 })(jQuery);

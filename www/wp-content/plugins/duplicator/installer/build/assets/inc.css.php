@@ -73,19 +73,22 @@
 	table.s1-opts-dbhost td {padding:0; margin:0}
 	table.s1-advopts td:first-child{width:125px; font-weight:bold}
 	
-	i#dup-step1-sys-req-msg {font-weight:normal; display:block; padding:0px 0 0 20px;}
+	i#s1-sys-req-msg {font-weight:normal; display:block; padding:0px 0 0 20px;}
 	div.circle-pass, div.circle-fail {display:block;width:13px;height:13px;border-radius:50px;font-size:20px;color:#fff;line-height:100px;text-align:center;text-decoration:none;box-shadow:1px 1px 2px #000;background:#207D1D;opacity:0.95; display:inline-block;}
 	div.circle-fail {background:#9A0D1D !important;}
 	select#logging {font-size:11px}
-	div.dup-step1-modes {padding:0px 15px 0 0px;}
-	div#dup-step1-dbconn {margin:auto; text-align:center; margin:15px 0 20px 0px}
+	div.s1-modes {padding:0px 15px 0 0px;}
+	div#s1-dbconn {margin:auto; text-align:center; margin:15px 0 20px 0px}
 	
-	input#dup-step1-dbconn-btn {font-size:11px; height:20px; border:1px solid gray; border-radius:3px; cursor:pointer}
-	input#dup-step1-dbport-btn {font-size:11px; height:20px; border:1px solid gray; border-radius:3px; cursor:pointer; width:80px}
-	div.dup-db-test label{display:inline-block; width:150px; font-weight:bold; white-space:nowrap;}
-	div.dup-db-test small{display:block; margin:5px 0 5px 0px; font-style:italic; color:#444}
+	input.s1-small-btn {font-size:11px; height:20px; border:1px solid gray; border-radius:3px; cursor:pointer}
+	input#s1-dbport-btn { width:80px}
+	div.dup-db-test small{display:block; font-style:italic; color:#333; padding:3px 2px 5px 2px; border-bottom:1px dashed silver; margin-bottom:10px; text-align: center }
+	table.dup-db-test-dtls {text-align: left; margin: auto}
+	table.dup-db-test-dtls td:first-child {font-weight: bold}
 	div#dbconn-test-msg {font-size:12px}
-	div#dup-step1-dbconn-status {border:1px solid silver; border-radius:3px; background-color:#f9f9f9; padding:2px 5px; margin-top:10px; height:125px; overflow-y: scroll}
+	div#s1-dbconn-status {border:1px solid silver; border-radius:3px; background-color:#f9f9f9; padding:2px 5px; margin-top:10px; height:165px; overflow-y: scroll}
+	div#s1-dbconn-status div.warn-msg {text-align: left; padding:5px; margin:10px 0 10px 0}
+	div#s1-dbconn-status div.warn-msg b{color:maroon}
 	
 	/*Warning Area and Message */
 	div.dup-step1-gopro {color: black;font-style: italic;margin-top: 11px; text-align:center;margin-top:30px; padding:5px}
@@ -154,7 +157,7 @@
 
 	/* ============================
 	BUTTONS */	
-	div.dup-footer-buttons {position:absolute; bottom:20px; padding:10px; width:100%; text-align:right;}
+	div.dup-footer-buttons {padding:10px; width:100%; text-align:right;}
 	div.dup-footer-buttons  input, button {
 		color:#000; font-size:12px; border-radius:5px;	padding:6px 8px 4px 8px; border:1px solid #999;
 		background-color:#F1F1F1;

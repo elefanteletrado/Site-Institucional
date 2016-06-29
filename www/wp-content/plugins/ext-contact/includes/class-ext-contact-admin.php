@@ -126,10 +126,8 @@ class Ext_Contact_Admin {
 		);
 		if($this->multiple_subjects) {
 			$type_list[1]['subject_list'] = array(
-					6 => array( 'id' => 6, 'title' => 'Ouvidoria', 'ordering' => 1, 'publish' => 1 ),
-					7 => array( 'id' => 7, 'title' => 'Comercial', 'ordering' => 2, 'publish' => 1 ),
-					8 => array( 'id' => 8, 'title' => 'RH', 'ordering' => 3, 'publish' => 1 ),
-					EXT_CONTACT_CODE_ALL_SUBJECTS => array( 'id' => 9, 'title' => 'Outros Assuntos', 'ordering' => 4, 'publish' => 1 )
+					6 => array( 'id' => 6, 'title' => 'Demonstração', 'ordering' => 6, 'publish' => 1 ),
+					7 => array( 'id' => 7, 'title' => 'Contato', 'ordering' => 7, 'publish' => 1 )
 				);
 		} else {
 			$type_list[1]['subject_list'] = array(
@@ -224,9 +222,10 @@ class Ext_Contact_Admin {
 			//'cpf_cnpj' => 'CPF/CNPJ',
 			'email' => 'E-mail',
 			'telefone' => 'Telefone',
-			//'assunto' => 'Assunto',
+			'assunto' => 'Assunto',
+			'escola' => 'Escola',
 			'created' => 'Data de registro',
-			'link' => 'Responder'
+			//'link' => 'Responder'
 		);
 		$wp_list_table->columns_actions['nome'] = array(
 			'<a title="Visualizar" href="' . $wp_list_table->edit_url . '{' . $this->primary_key . '}">Visualizar</a>'
@@ -260,7 +259,6 @@ class Ext_Contact_Admin {
 			<form action="<?php echo admin_url( 'admin.php?page=ext_contact' ); ?>" method="get">
 				<input type="hidden" name="page" value="<?php echo $_REQUEST['page']; ?>" />
 				<p class="search-box">
-					<?php /*
 					<label class="screen-reader-text" for="search-assunto">Assunto:</label>
 					<select id="search-assunto" name="search-assunto" class="placeholder placeholder-selected">
 						<option value="" class="placeholder-selected">Filtrar por assunto</option>
@@ -268,7 +266,6 @@ class Ext_Contact_Admin {
 						<option value="<?php echo $item['id']; ?>" <?php echo $search_assunto == $item['id'] ? 'selected="selected"' : ''; ?>><?php echo $item['title']; ?></option>
 						<?php endforeach; ?>
 					</select>
- 					*/ ?>
 					<label class="screen-reader-text" for="search-nome">Nome:</label>
 					<input type="search" id="search-text" name="search-nome" value="<?php echo $search_nome; ?>" placeholder="Filtrar por nome" />
 					<?php /*
@@ -294,7 +291,7 @@ class Ext_Contact_Admin {
 				foreach( $wp_list_table->items as &$item ) {
 					$item->telefone = Ext_Base_Format::telefone( $item->telefone );
 					$item->assunto = $this->option['subject_list'][$item->assunto]['title'];
-					$item->link = '<a href="' . admin_url( 'admin-ajax.php?action=ext_contact_email_link&page=' . $_REQUEST['page'] . '&id=' . $item->contato_id ) . '" class="ext_contact_email_link">Responder</a>';
+					//$item->link = '<a href="' . admin_url( 'admin-ajax.php?action=ext_contact_email_link&page=' . $_REQUEST['page'] . '&id=' . $item->contato_id ) . '" class="ext_contact_email_link">Responder</a>';
 				}
 				$wp_list_table->display();
 			}
@@ -336,14 +333,12 @@ class Ext_Contact_Admin {
 					<?php echo Ext_Base_Format::telefone( $item->telefone ); ?>
 				</td>
 			</tr>
-			<?php /*
 			<tr class="form-field">
 				<th scope="row" valign="top"><label for="assunto">Assunto</label></th>
 				<td>
 					<?php echo $this->option['subject_list'][$item->assunto]['title']; ?>
 				</td>
 			</tr>
- 			*/ ?>
 			<tr class="form-field">
 				<th scope="row" valign="top"><label for="escola">Escola</label></th>
 				<td>
@@ -390,7 +385,7 @@ class Ext_Contact_Admin {
 			'title' => 'Título',
 			'to' => 'Destinatários'
 		);
-		if($this->multiple_subjects) {
+		if(EXT_CONTACT_SUBJECT_EDIT) {
 			$wp_list_table->columns['ordering'] = 'Ordem';
 			$wp_list_table->columns['publish'] = 'Publicado';
 		}
@@ -398,7 +393,7 @@ class Ext_Contact_Admin {
 		$wp_list_table->columns_actions['title'] = array(
 			'edit' => '<a class="row-edit-link" href="' . $wp_list_table->edit_url . '{id}">' . __( 'Edit' ) . '</a>'
 		);
-		if($this->multiple_subjects) {
+		if(EXT_CONTACT_SUBJECT_EDIT) {
 			$wp_list_table->columns_actions['title']['delete'] = '<a class="row-delete-link submitdelete" href="' . $wp_list_table->delete_url . '{id}" onclick="' . $delete_onclick . '">' . __( 'Delete' ) . '</a>';
 		}
 		$page_num = $wp_list_table->get_pagenum();
@@ -437,7 +432,7 @@ class Ext_Contact_Admin {
 				<div id="<?php echo $this->prefix; ?>-list-loading" class="alignleft" style="display: none;">
 					Atualizando lista...
 				</div>
-				<?php if($this->multiple_subjects): ?>
+				<?php if(EXT_CONTACT_SUBJECT_EDIT): ?>
 				<div class="alignright">
 					<a href="#" id="<?php echo $this->prefix; ?>-button-add" class="button button-primary">Adicionar assunto</a>
 				</div>
@@ -472,7 +467,7 @@ class Ext_Contact_Admin {
 									<textarea name="subject-to" id="subject-to" rows="5" cols="40" aria-required="true"></textarea>
 									<p>Lista de e-mails (um por linha) que deve ser enviado o aviso de nova mensagem.</p>
 								</div>
-								<?php if($this->multiple_subjects): ?>
+								<?php if(EXT_CONTACT_SUBJECT_EDIT): ?>
 									<div class="form-field form-required">
 										<label for="subject-ordering">Ordem</label>
 										<input name="subject-ordering" id="subject-ordering" type="text" value="" size="40" aria-required="true">
@@ -528,11 +523,11 @@ class Ext_Contact_Admin {
 			'type' => $type,
 			'publish' => isset( $_REQUEST['publish'] ) ? 1 : 0
 		);
-		if($this->multiple_subjects) {
+		if(EXT_CONTACT_SUBJECT_EDIT) {
 			$data['ordering'] = $_REQUEST['ordering'];
 			$data['publish'] = isset( $_REQUEST['publish'] ) ? 1 : 0;
 		} else {
-			$data['ordering'] = 1;
+			$data['ordering'] = $id;
 			$data['publish'] = 1;
 		}
 		foreach( $data['to'] as &$item ) {

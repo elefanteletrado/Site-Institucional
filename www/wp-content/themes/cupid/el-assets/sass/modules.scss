@@ -1,7 +1,29 @@
 // BEGIN MAIN BANNER
+.owl-carousel-main{
+  .owl-controls{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .owl-pagination{
+      .owl-page{
+        span{
+          background: none !important;
+          border: 2px solid #FFF;
+          opacity: 1;
+          width: 17px;
+          height: 17px;
+        }
+      }
+      .owl-page.active{
+        span{
+          background-color: #FFF !important;
+        }
+      }
+    }
+  }
+}
 .el-banner-container{
   position: relative;
-  @include opacity(0);
 
   .el-img{
     display: none;
@@ -14,10 +36,13 @@
     background-repeat: no-repeat;
 
     > div{
-      background: $color-overlay;
+      background: rgba(0, 0, 0, 0.05);
+      max-width: 1500px;
+      width: 100%;
+      @include center-block;
 
       > div {
-        padding: 115px 0;
+        padding: 70px 0;
       }
     }
   }
@@ -26,30 +51,48 @@
     @include center-block;
     text-align: center;
     margin-top: 50px;
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
 
     .el-btn-contrast, .el-btn-outline{
       margin-left: 25px;
       margin-right: 25px;
       margin-bottom: 25px;
+
+      &:first-child{
+        margin-left: 15px;
+      }
     }
   }
   h2{
-    font-family: $font-bold;
+    font-family: $font-regular;
     font-size: $banner-main-h2-xs;
     text-align: center;
     color: $color-contrast;
     margin-top: 0;
     padding: 0 $margin-lr;
+
+    strong{
+      font-family: $font-bold;
+      font-weight: normal;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 630px;
+      text-align: left;
+    }
   }
   p{
     font-size: 18px;
     color: $color-contrast;
     text-align: center;
-    max-width: 645px;
+    max-width: 550px;
     margin-top: 20px;
     padding: 0 $margin-lr;
-
-    @include center-block;
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
   }
   @media (min-width: $screen-custom2) {
     .el-content {
@@ -67,6 +110,37 @@
   @media (min-width: $screen-custom3) {
     h2 {
       font-size: $banner-main-h2-lg;
+    }
+  }
+  &.el-banner-container-style-2{
+    .el-content{
+      > div{
+        background: $color-overlay;
+      }
+    }
+    .el-buttons{
+      @media (min-width: $screen-sm-min) {
+        text-align: center;
+      }
+
+      .el-btn-contrast, .el-btn-outline{
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+    h2 {
+      font-family: $font-bold;
+
+      @media (min-width: $screen-sm-min) {
+        max-width: none;
+        text-align: center;
+      }
+    }
+    p{
+      @media (min-width: $screen-sm-min) {
+        text-align: center;
+      }
     }
   }
 }
@@ -90,7 +164,7 @@
     @include center-block;
     max-width: 980px;
   }
-  > .img-style-1{
+  .img-style-1{
     @include center-block;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -320,7 +394,7 @@
 	margin-top: 45px;
 
     @media (min-width: $screen-sm-min) {
-      margin-top: 115px;
+      margin-top: 70px;
     }
   }
 }
@@ -450,6 +524,7 @@
     background: #FFF;
     @include placeholder($color-article);
     font-family: $font-light;
+    font-size: 12px;
   }
   .submit-button{
     @include el-button($main-color, $color-contrast, $main-color, $main-color-hover, $color-contrast, $main-color-hover, 121px);
@@ -502,7 +577,7 @@
   position: relative;
   background-size: auto 100%;
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   height: 224px;
 
   @media (min-width: $screen-sm-min) {
@@ -567,12 +642,21 @@
     text-align: center;
     margin-bottom: 25px;
     @media (min-width: $screen-sm-min) {
-      margin-bottom: 100px;
+      margin-bottom: 70px;
     }
 
     > img{
       @include center-block;
-      margin-bottom: 20px;
+    }
+    p{
+      @include center-block;
+
+      color: #FFF;
+      padding-right: 10px;
+      margin-top: -24px;
+      max-width: 248px;
+      text-align: right;
+      font-size: 18px;
     }
   }
 }
@@ -586,6 +670,7 @@
     @include make-sm-column(6);
     @include make-md-column(3);
     text-align: center;
+    line-height: 110px;
 
     margin-bottom: 25px;
     @media (min-width: $screen-sm-min) {
@@ -781,40 +866,60 @@
   }
 }
 // SECTION COLLECTION AUTHOR
-#el-collection-rotate{
+.el-collection-rotate{
   position: relative;
-  height: 525px;
   width: 100%;
   overflow: hidden;
   margin-top: 7px;
   margin-bottom: 7px;
 
   .el-section-collection-content{
-    display: none;
-    @media (min-width: $screen-sm-min) {
-      display: block;
-      position: absolute;
-      background: transparent url("../images/fake/collection-rotate.jpg") repeat-x top left;
-      height: 525px;
-      width: 7980px;
-      text-indent: -9999px;
-      top: 0;
-      left: 0;
-    }
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
-#el-collection-rotate.el-section-collection-state-one{
+.el-collection-rotate.el-section-collection-state-one{
   .el-section-collection-content{
-    left: 0px;
+    left: 0;
   }
 }
-#el-collection-rotate.el-section-collection-state-two{
+.el-collection-rotate.el-section-collection-state-two{
   .el-section-collection-content{
-    left: -3990px;
-    transition: left 10s ease-in-out  ;
+    transition: left 20s ease-in-out;
   }
 }
 // END SECTION COLLECTION AUTHOR
+
+// BEGIN PAGE FEATURES
+.el-page-features{
+  @include box-shadow-page;
+  margin-bottom: 100px;
+
+  h1{
+    margin-top: 0;
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+  p{
+    @include center-block;
+
+    font-size: 18px;
+    font-family: $font-light;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  img{
+    @include center-block;
+    margin-bottom: 50px;
+  }
+  .owl-item img{
+    margin-bottom: 0;
+  }
+}
+// END PAGE FEATURES
 
 .el-carousel-devices{
   margin-top: 15px;
@@ -822,5 +927,11 @@
 
   .owl-item {
     padding: 10px;
+  }
+}
+
+.el-text-left-1{
+  @media (min-width: $screen-sm-min) {
+    max-width: 350px; display: block; float: right;
   }
 }

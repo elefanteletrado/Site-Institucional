@@ -109,11 +109,12 @@
   ul{
     @include list-unstyled;
     display: block;
+    overflow: hidden;
 
     li{
       float: left;
       margin: 20px 30px 18px 0;
-      font-size: 16px;
+      font-size: 18px;
       height: 24px;
       line-height: 24px;
       display: none;
@@ -121,6 +122,7 @@
       a{
         color: $main-color;
         @include transition(all 0.5s linear);
+        padding: 2px 0;
       }
       a:hover{
         text-decoration: none;
@@ -139,7 +141,7 @@
       display: block;
       a{
         background: $main-color;
-        padding: 0 22px;
+        padding: 2px 22px;
         border-radius: 24px;
         color: $color-contrast;
       }

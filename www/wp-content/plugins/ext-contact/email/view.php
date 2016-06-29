@@ -23,9 +23,7 @@
 				<p><b>E-mail: </b><?php echo $insert['email']; ?></p>
 				<p><b>Telefone: </b><?php echo $insert['telefone']; ?></p>
 				<p><b>Escola: </b><?php echo $insert['escola']; ?></p>
-				<?php /*
 				<p><b>Assunto: </b><?php echo $option['subject_list'][$insert['assunto']]['title']; ?></p>
-				*/ ?>
  				<?php
 				if( isset( $insert['credor'] ) && $insert['credor'] ) {
 					echo '<p><b>Credor: </b>' . $insert['credor'] . '</p>';

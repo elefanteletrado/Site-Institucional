@@ -12,8 +12,11 @@ define( 'EXT_CONTACT_INCLUDE_DIR', __DIR__ . '/includes/' );
 define( 'EXT_CONTACT_ADMIN', is_admin() && isset( $_REQUEST['page'] ) && strpos( $_REQUEST['page'], 'ext_contact' ) !== false );
 define( 'EXT_CONTACT_CAPTCHA', 2 );
 define( 'EXT_CONTACT_RECAPTCHA', 1 );
-define( 'EXT_CONTACT_MULTIPLE_SUBJECTS', false );
+define( 'EXT_CONTACT_MULTIPLE_SUBJECTS', true );
 define( 'EXT_CONTACT_CODE_ALL_SUBJECTS', 9 );
+define( 'EXT_CONTACT_SUBJECT_EDIT', false );
+
+require_once EXT_CONTACT_INCLUDE_DIR . 'site-functions.php';
 
 if( EXT_CONTACT_ADMIN ) {
 	require EXT_CONTACT_INCLUDE_DIR . 'class-ext-contact-model.php';

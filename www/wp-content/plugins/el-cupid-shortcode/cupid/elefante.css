@@ -1,0 +1,23 @@
+div.vc_row_elefante div div.fullwidth div.vc_row {
+    margin-right: 0 !important;
+}
+
+div.cupid-call-action-elefante div{
+	vertical-align: top !important;
+}
+
+.mc4wp-response {
+    color: #e4348b;
+    text-align: center;
+}
+
+.mc4wp-form-fields .inputField {
+	width: 100%;
+}
+
+#rc-imageselect, .g-recaptcha {
+	transform:scale(0.77);
+	-webkit-transform:scale(0.77);
+	transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+}

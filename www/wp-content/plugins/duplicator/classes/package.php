@@ -31,14 +31,17 @@ class DUP_Package {
 	const OPT_ACTIVE   = 'duplicator_package_active';
 	
 	//Properties
-	public $ID;
-	public $Name;
-	public $Hash;
-	public $NameHash;
+	public $Created;
 	public $Version;
 	public $VersionWP;
 	public $VersionDB;
 	public $VersionPHP;
+	public $VersionOS;
+	
+	public $ID;
+	public $Name;
+	public $Hash;
+	public $NameHash;
 	public $Type;
 	public $Notes;
 	public $StorePath;
@@ -288,13 +291,15 @@ class DUP_Package {
 			$filter_exts	= isset($post['filter-exts']) ? $this->parseExtensionFilter($post['filter-exts']) : '';
 			$tablelist		= isset($post['dbtables'])    ? implode(',', $post['dbtables']) : '';
 			$compatlist		= isset($post['dbcompat'])    ? implode(',', $post['dbcompat']) : '';
-			$dbversion		= DUP_Util::MysqlVariableValue('version');
+			$dbversion		= preg_replace('/[^0-9.].*/', '', DUP_Util::MysqlVariableValue('version'));
 			$dbversion		= is_null($dbversion) ? '- unknown -' : $dbversion;
 
 			//PACKAGE
+			$this->Created		= date("Y-m-d H:i:s");
 			$this->Version		= DUPLICATOR_VERSION;
+			$this->VersionOS	= defined('PHP_OS') ? PHP_OS : 'unknown';
 			$this->VersionWP	= $wp_version;
-			$this->VersionPHP   = phpversion();
+			$this->VersionPHP	= phpversion();
 			$this->VersionDB	= $dbversion;
 			$this->Name			= $name;
 			$this->Hash			= $this->MakeHash();

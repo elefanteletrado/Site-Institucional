@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><link rel="stylesheet" type="text/css" href="http://local.elefanteletrado.com.br/wp-content/cache/minify/000000/bU9ZsgIhDLyQGN9NvIEVoZ3BAoIkPJ3bi2tplZ-9JN29Id9rDISEAxfD6u9BOJ2lmZcA-vcOF0MJxCVmtihlnWMZzljUeGqc3QEI5FVJ9-7NPl0K39s4nODO9RsNFayLM94nkM3IUAqjSU9Gaku69TnqzkuuomjEqjC9J33Qq3N1Xkb7YtRrEg5f8likJvnHtIlTQlteb2vq02hPx1Mf7Lo2mC3bWUzuiR_4Cg.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://local.elefanteletrado.com.br/wp-content/cache/minify/000000/M9BPLi3ITNFPLC5OLSnWL8gpTc_MK9ZPy88rKdZNLE8tzs9N1U8uhojABPRyM_MA.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://local.elefanteletrado.com.br/wp-content/cache/minify/000000/lYxJCoAwEAQ_ZDL5UoiDDkwW0gni71VcwJuemoKuchR6kZE8wA1UtE-SQHlRE3zNHawH2BtslDS4j1KbOfI_o_oEaZITHgdt1XeF1Vwh7HseNg.css" media="all" />
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta property="og:title" content="Página Inicial - Elefante Letrado">
+	<meta property="og:url" content="http://local.elefanteletrado.com.br/" />
+
+		<meta name="robots" content="index, follow" />
+
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://local.elefanteletrado.com.br/xmlrpc.php">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	
+	
+	<link rel="shortcut icon" href="http://local.elefanteletrado.com.br/wp-content/uploads/2015/08/elefante-letrado-biblioteca-virtual-livros-infantis-jogos-educativos-FAVICON.png" type="image/x-icon">
+	<link rel="icon" href="http://local.elefanteletrado.com.br/wp-content/uploads/2015/08/elefante-letrado-biblioteca-virtual-livros-infantis-jogos-educativos-FAVICON.png" type="image/x-icon">
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	
+	
+        <!--noptimize-->
+        <script type = "text/javascript">
+
+            // 
+            // Get screen dimensions, device pixel ration and set in a cookie.
+            // 
+            
+                            var screen_width = screen.width;
+            
+            var devicePixelRatio = window.devicePixelRatio ? window.devicePixelRatio : 1;
+
+            document.cookie = 'resolution=' + screen_width + ',' + devicePixelRatio + '; path=/';
+
+        </script> 
+        <!--/noptimize--> <title>Página Inicial - Elefante Letrado</title>
+<script type="text/javascript">
+				    var cupid_gallery_ajax_url="http://local.elefanteletrado.com.br/wp-content/themes/cupid/";
+		        </script>
+<!-- This site is optimized with the Yoast SEO plugin v3.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://local.elefanteletrado.com.br/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Página Inicial - Elefante Letrado" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","url":"http:\/\/local.elefanteletrado.com.br\/","name":"Elefante Letrado","potentialAction":{"@type":"SearchAction","target":"http:\/\/local.elefanteletrado.com.br\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="//connect.facebook.net">
+<link rel="alternate" type="application/rss+xml" title="Elefante Letrado &raquo; Feed" href="http://local.elefanteletrado.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Elefante Letrado &raquo; Comments Feed" href="http://local.elefanteletrado.com.br/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Elefante Letrado &raquo; Página Inicial Comments Feed" href="http://local.elefanteletrado.com.br/pagina-inicial/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/local.elefanteletrado.com.br\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+			var cupid_ajax_url ="http://local.elefanteletrado.com.br/wp-admin/admin-ajax.php?activate-multi=true";
+			var cupid_theme_url="http://local.elefanteletrado.com.br/wp-content/themes/cupid/";
+			var cupid_site_url="http://local.elefanteletrado.com.br";
+	</script><script type="text/javascript" src="http://local.elefanteletrado.com.br/wp-content/cache/minify/000000/ZYxbCoAwDAQv1BrFE8UaJSX10TSItxdFRPFvZ4fdFuJqlHfX3sEnHjMWqhJPrgGlYJkTjuS3BYS7b-NqCLZwDyQeVakozJtUAfNsSnKCf8Njrvv_OCr0NKBJOQA.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://local.elefanteletrado.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://local.elefanteletrado.com.br/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.2.7" />
+<link rel='shortlink' href='http://local.elefanteletrado.com.br/' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://local.elefanteletrado.com.br/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+<!-- BEGIN recaptcha, injected by plugin wp-recaptcha-integration  -->
+
+<!-- END recaptcha -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+<meta property="og:site_name" content="Elefante Letrado">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Página Inicial - Elefante Letrado">
+<meta property="og:description" content="Livros Infantis e Jogos Educativos">
+<meta property="og:url" content="http://local.elefanteletrado.com.br">
+<style type="text/css" media="screen">.fixed{-webkit-backface-visibility: visible;-moz-backface-visibility: visible;-ms-backface-visibility: visible;backface-visibility: visible;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0)}::selection{background-color: #e4348b}a:hover,a:focus,a:active,a.active{color: #e4348b}#go-top > i{background-color: #e4348b}#go-top > i:hover{background-color: #e4348b}#cupid-popup-login-wrapper input[type="text"]:focus,#cupid-popup-login-wrapper input[type="email"]:focus,#cupid-popup-login-wrapper input[type="password"]:focus{border: solid 1px #e4348b}#cupid-popup-login-wrapper input[type="checkbox"]:checked + label{background-color: #e4348b}#cupid-popup-login-wrapper .modal-footer-right button.button{background-color: #e4348b}.page404 .search-wrapper i:hover{color: #e4348b}.wpb_content_element .wpb_accordion_header a:hover{color: #e4348b}.site-top{background-color: #e4348b}.site-top .language-selector .title:hover{color: #e4348b}.site-top #lang_sel_list li > a > span:hover{color: #e4348b}header .icon-search-menu > i{background-color: #e4348b}header .icon-search-menu > i:hover{background-color: #e4348b}header .widget_shopping_cart_content .cart_list_wrapper{border-top: 5px solid #e4348b}header .widget_shopping_cart_content .cart_list_wrapper:after{border-bottom: solid 8px #e4348b}header .shopping-cart-wrapper .widget_shopping_cart_icon{background: #e4348b}header .shopping-cart-wrapper .widget_shopping_cart_icon:hover{background-color: #e4348b}header .widget_shopping_cart_content ul.cart_list.product_list_widget > li > a:hover{color: #e4348b}header .widget_shopping_cart_content ul.cart_list.product_list_widget > li > span.quantity{color: #e4348b}header .widget_shopping_cart_content p.total{border-bottom: solid 1px #eee}header .widget_shopping_cart_content p.total .amount{color: #e4348b}header .navbar-default ul.main-menu li > a > i.fa{color: #e4348b}header .widget_shopping_cart_content a.button.wc-forward{background: #e4348b}header .widget_shopping_cart_content a.button.wc-forward:hover{background: rgba(228,52,139,0.8)}header .widget_shopping_cart_content a.button.checkout.wc-forward{background: #e4348b}header .widget_shopping_cart_content a.button.checkout.wc-forward:hover{background: rgba(228,52,139,0.8)}header .navbar-default ul.main-menu li:hover > a,header .navbar-default ul.main-menu li.current-menu-ancestor > a,header .navbar-default ul.main-menu li.current-menu-item > a{color: #e4348b}header .navbar-default ul.main-menu > li.menu-item-has-children > a:after{border-bottom: solid 8px #e4348b}@media (min-width: 992px){header .navbar-default ul.dropdown-menu{border-top-color: #e4348b}}header .navbar-default ul.dropdown-menu a > b.caret:after{color: #e4348b}header.header-2 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover{color: #e4348b}header.header-3 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover{color: #e4348b}header.header-4 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover{color: #e4348b}header.header-4 .navbar-default ul.main-menu > li > a:hover{color: #e4348b}header.header-5 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover{color: #e4348b}header.header-6 .cupid-login-link li > a > i{color: #e4348b}header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search{background-color: #e4348b}header.header-6 .main-menu > li.icon-search-button > a > i.fa.fa-search:hover{background-color: #e4348b}header.header-6 .navbar-header .header_logo{background-color: #e4348b}header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i,header.header-3 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i,header.header-4 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i,header.header-5 .widget_shopping_cart_content .widget_shopping_cart_icon:hover > i{color: #e4348b}header.header-2 .widget_shopping_cart_content .widget_shopping_cart_icon > span,header.header-3 .widget_shopping_cart_content .widget_shopping_cart_icon > span,header.header-4 .widget_shopping_cart_content .widget_shopping_cart_icon > span,header.header-5 .widget_shopping_cart_content .widget_shopping_cart_icon > span{background: #e4348b}#cupid-modal-search .cupid-dismiss-modal:hover{color: #e4348b}@media screen and (max-width: 991px){header .navbar-default .navbar-toggle .icon-bar{background-color: #e4348b}header.header-4 .navbar-default ul.main-menu > li > a:hover{color: #e4348b}}.site-top.site-top-3 .language-selector .title:before,.site-top.site-top-3 .site-top-left i{color: #e4348b}.site-top.site-top-3 .cupid-login-link li > a > i.fa{color: #e4348b}.site-top.site-top-4 .language-selector .title:before,.site-top.site-top-4 .site-top-left i{color: #e4348b}.site-top.site-top-4 .cupid-login-link li > a > i.fa{color: #e4348b}@media (min-width: 992px){.site-top.site-top-2 .container{background-color: #e4348b}.site-top.site-top-2 .cupid-login-link ul li{background-color: #e4348b}}.footer-bottom{background-color: #e4348b}.footer-bottom ul.sub-menu li.menu-item-has-children:after{color: #e4348b}.footer-bottom ul.footer-menu li:hover > a,.footer-bottom ul.footer-menu ul.sub-menu > li:hover > a{color: #e4348b}.cupid-search-form input[type="text"]:focus + button i{color: #e4348b}#wp-calendar tbody td:hover{background-color: #e4348b}#wp-calendar tbody a{color: #e4348b}.widget_tag_cloud .tagcloud a:hover{background-color: #e4348b}.primary-sidebar .widget_archive li:hover > a,.primary-sidebar .widget_categories li:hover > a,.primary-sidebar .widget_nav_menu > div li:hover > a,.primary-sidebar .widget_meta li:hover > a,.primary-sidebar .widget_pages li:hover > a,.primary-sidebar .widget_recent_comments li:hover > a,.primary-sidebar .widget_recent_entries li:hover > a,.primary-sidebar .widget_rss li:hover > a{color: #e4348b}.footer-top-widget-area .widget_archive li:hover > a,.footer-top-widget-area .widget_categories li:hover > a,.footer-top-widget-area .widget_nav_menu > div li:hover > a,.footer-top-widget-area .widget_meta li:hover > a,.footer-top-widget-area .widget_pages li:hover > a,.footer-top-widget-area .widget_recent_comments li:hover > a,.footer-top-widget-area .widget_recent_entries li:hover > a,.footer-top-widget-area .widget_rss li:hover > a{color: #e4348b}.entry-thumbnail{position: relative}.entry-thumbnail .entry-thumbnail-hover{background: rgba(228,52,139,0.95)}.blog-wrapper .entry-categories ul.post-categories li a{background-color: #e4348b}.blog-wrapper h3.entry-title a:hover{color: #e4348b}.blog-wrapper .edit-link{color: #e4348b}.blog-wrapper .entry-meta-author a{color: #e4348b}.blog-wrapper .entry-read-more a{color: #e4348b}.blog-wrapper .jp-audio a:hover,.blog-wrapper .jp-play-bar,.blog-wrapper .jp-play-bar,.blog-wrapper .jp-volume-bar-value{color: #e4348b}.blog-wrapper .jp-play-bar,.blog-wrapper .jp-volume-bar-value{background-color: #e4348b}.blog-nav ul.breadcrumbs li a:hover{color: #e4348b}.blog-nav ul.breadcrumbs li:after{color: #e4348b}.blog-nav .blog-switcher:hover{color: #e4348b}.blog-nav .blog-switcher-active{color: #e4348b}.blog-wrapper .owl-theme .owl-controls .owl-buttons div:hover,.latest-post-wrapper .owl-theme .owl-controls .owl-buttons div:hover{background-color: #e4348b}.entry-share ul li a:hover i{color: #e4348b}.pagination > li > a:focus,.pagination > li > a:hover,.pagination > li > span:focus,.pagination > li > span:hover,.pagination > li > span.current{background-color: #e4348b}.comment .date a,.pingback .date a{color: #e4348b}.comment-navigation .page-numbers.current,.comment-navigation .page-numbers:hover{background-color: #e4348b}.cupid-page-links .cupid-page-link:hover,.cupid-page-links > .cupid-page-link{background-color: #e4348b}.post-navigation .post-navigation-icon{color: #e4348b}.post-navigation-label{color: #e4348b}.entry-content a{color: #e4348b}.format-quote .entry-content cite a{border-bottom: 1px dotted #e4348b}.format-link .entry-title a{color: #e4348b}.latest-post-wrapper h3.entry-title a:hover{color: #e4348b}.latest-post-wrapper .entry-read-more a{color: #e4348b}.cupid-our-staffs .our-staffs-item .our-staffs-name:hover{color: #e4348b}.cupid-button{background-color: #009e99}.cupid-btn-2{background-color: #009e99}.cupid-btn-2:hover{color: #e4348b}.cupid-icon-box.style1 a{color: #e4348b}.cupid-icon-box.style1 a:hover{background-color: #e4348b}.cupid-icon-box.style1:hover a{background-color: #e4348b}.cupid-icon-box.style1:hover a:after{border-top: 17px solid #e4348b}.cupid-icon-box.style2 i{background-color: #e4348b}.cupid-icon-box.style2 i:after{-webkit-box-shadow: 0 0 0 2px #e4348b;-moz-box-shadow: 0 0 0 2px #e4348b;-o-box-shadow: 0 0 0 2px #e4348b;-ms-box-shadow: 0 0 0 2px #e4348b;box-shadow: 0 0 0 2px #e4348b}.cupid-heading h2:before{background-color: #e4348b}.cupid-services:hover{background-color: #e4348b}.cupid-contact-info h4:after{border-bottom: 1px solid #eee}.wpb_tabs .wpb_tabs_nav li:hover a{color: #e4348b}.wpb_tabs .ui-tabs-active a{color: #e4348b !important}.classes-wrapper .classes-item h6 a:hover{color: #e4348b}.owl-theme .owl-controls .owl-page span{background-color: #e4348b !important}.archive-cupid-class .classes-nav .classes-search .keyword-wrapper span i.fa-close:hover{color: #e4348b}.archive-cupid-class .classes-nav .classes-search button{background-color: #e4348b}.archive-cupid-class .classes-switcher-wrapper a.classes-switcher-active{color: #e4348b}.archive-cupid-class .blog-load-more-wrapper button{color: #009e99}aside.cupid-calsses-popular-widget .popular-item .month-old{color: #e4348b}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+
+<body class="home page page-id-3595 page-template page-template-el-page-templates page-template-home page-template-el-page-templateshome-php custom-background wpb-js-composer js-comp-ver-4.5.3 vc_responsive">
+<!-- Document Wrapper
+   ============================================= -->
+<div class="el-layout">
+	<header class="el-header">
+	<div class="el-header-auxiliary">
+		<div class="el-header-phone">
+			<a href="tel:+555134078090">
+				<span class="el-icon-round-reverse el-icon-round-phone fa fa-phone"></span>
+				<span>+55 51 3407-8090</span>
+			</a>
+		</div>
+		<div class="pull-right">
+			<a href="https://www.youtube.com/channel/UC1E5WzU4ZURIjgSpSDT3H-w" title="Youtube">
+				<span class="el-icon-round el-icon-auxiliary fa fa-youtube"></span>
+			</a>
+			<a href="http://www.instagram.com/elefanteletrado" title="Instagram">
+				<span class="el-icon-round el-icon-auxiliary fa fa-instagram"></span>
+			</a>
+			<a href="http://www.facebook.com/elefanteletrado" title="Facebook">
+				<span class="el-icon-round el-icon-auxiliary fa fa-facebook"></span>
+			</a>
+			<a href="mailto:suporte@elefanteletrado.com.br" title="Email: suporte@elefanteletrado.com.br">
+				<span class="el-icon-round el-icon-auxiliary fa fa-envelope-o"></span>
+			</a>
+		</div>
+	</div>
+	<div class="el-header-main">
+		<a href="/" class="el-logo" title="Ir para Página Inicial">Elefante Letrado</a>
+		<nav class="el-header-menu">
+							<div class="menu-elefante-letrado-container"><ul id="main-menu" class="menu"><li id="menu-item-1972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1972"><a href="http://local.elefanteletrado.com.br/blog/">Blog</a></li>
+<li id="menu-item-1603" class="el-featured menu-item menu-item-type-custom menu-item-object-custom menu-item-1603"><a href="https://prod.elefanteletrado.com.br/">Entrar</a></li>
+</ul></div>					</nav>
+	</div>
+</header><main>
+	<section id="main-banner" class="el-banner-container">
+		<div class="el-content" style="background-image: url('http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/fake/banner-main.jpg');">
+			<div>
+				<div>
+					<h2>Incentive a formação de pequenos leitores com o Elefante Letrado</h2>
+					<p>Livros infantis nivelados e atividades pedagógicas em um ambiente digital lúdico e interativo para alunos do 1º ao 5º ano do ensino fundamental.</p>
+					<div class="el-buttons">
+						<a id="popup-contact-open" class="el-btn-contrast" href="">Agendar Demonstração</a>
+						<a class="el-btn-outline" href="http://local.elefanteletrado.com.br/acervo-de-livros">Conheça nosso acervo</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<article class="el-article">
+		<h1>O Elefante Letrado</h1>
+		<p>
+			Somos a primeira ferramenta pedagógica digital voltada ao desenvolvimento da formação e hábito da leitura nos
+			alunos do 1º ao 5º ano do Ensino Fundamental. Pensando em facilitar e também auxiliar os professores, proporcionamos
+			o acompanhamento do progresso da compreensão leitora de cada criança, através de relatórios e descritores baseados no Saeb.
+		</p>
+		<div class="visible-xs-block">
+			<div id="owl-carousel-devices" class="el-carousel-devices">
+				<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/fake/dispositivos/biblioteca.jpg" width="450" height="453" title="Biblioteca Elefante Letrado">
+				<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/fake/dispositivos/livro.jpg" width="450" height="453" title="Livro do Elefante Letrado">
+				<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/fake/dispositivos/relatorios.jpg" width="450" height="453" title="Relatórios do Elefante Letrado">
+			</div>
+		</div>
+		<div class="hidden-xs">
+			<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/fake/devices.jpg" alt="Todos os dispositivos são compatíveis com o Elefante Letrado" class="img-style-1" />
+		</div>
+		<div class="el-box-special">
+			<h2><span class="el-text-left-1">Nosso propósito</span><br style="clear: both"> </h2>
+			<div class="el-content">
+				<p>
+					Buscamos contribuir para o desenvolvimento da compreensão
+					leitora, integrando a criança à cultura letrada por meio de uma
+					plataforma de apoio ao ensino, sustentada por novas tecnologias digitais.
+				</p>
+			</div>
+		</div>
+				<div style="height: 80px;">&nbsp;</div>
+	</article>
+	<section class="el-section-quote fade-effect">
+		<div>
+			<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/layout/icon-book.svg" width="100" height="61" />
+			<p class="el-author-quote">
+				“Livros não mudam o mundo, quem muda o mundo
+				são as pessoas. Os livros só mudam as pessoas.”
+			</p>
+			<p class="el-author-name">
+				- Mário Quintana
+			</p>
+		</div>
+	</section>
+	<article class="el-article-style-2">
+		<h1>Uma biblioteca para alunos e professores</h1>
+		<div class="row" style="max-width: 1200px !important; margin: auto;">
+			<div class="col-sm-6">
+				<div class="el-icon-col-container">
+					<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/layout/icon-round-book.svg" width="90" height="90" aria-hidden="true">
+				</div>
+				<h2>Acervo literário digital</h2>
+				<p>
+					Trabalhe com centenas de obras e autores da literatura infantil
+					em aula. A biblioteca é dividida de A a Z, de acordo com os
+					níveis de proficiência em leitura de cada aluno.
+				</p>
+			</div>
+			<div class="col-sm-6">
+				<div class="el-icon-col-container">
+					<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/layout/icon-round-toga.svg" width="90" height="90" aria-hidden="true">
+				</div>
+				<h2>Atividades pedagógicas</h2>
+				<p>
+					Estimule a compreensão leitora dos alunos através de atividades
+					relacionadas aos descritores do Saeb. Ao ler e realizar os jogos,
+					a criança acumula pontos e avança de nível.
+				</p>
+			</div>
+		</div>
+		<div class="row" style="max-width: 1200px !important; margin: auto;">
+			<div class="col-sm-6">
+				<div class="el-icon-col-container">
+					<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/layout/icon-round-monitor-graph.svg" width="90" height="90" aria-hidden="true">
+				</div>
+				<span class="el-icon el-icon-"></span>
+				<h2>Relatórios para professores</h2>
+				<p>
+					Acompanhe o progresso de sua turma através de relatórios
+					sobre o desenvolvimento de cada aluno. Os dados fornecidos
+					permitem avaliar e replanejar as práticas em aula.
+				</p>
+			</div>
+			<div class="col-sm-6">
+				<div class="el-icon-col-container">
+					<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/layout/icon-round-tablet.svg" width="90" height="90" aria-hidden="true">
+				</div>
+				<h2>Acesso em qualquer lugar</h2>
+				<p>
+					Acesse os livros e relatórios da plataforma em notebooks, tablets
+					e computadores através da Internet. Seus alunos também podem
+					realizar as atividades aonde estiverem.
+				</p>
+			</div>
+		</div>
+		<div class="el-read-more">
+			<a href="http://local.elefanteletrado.com.br/funcionalidades" class="el-btn-contrast">Mais funcionalidades</a>
+		</div>
+	</article>
+					<section id="el-collection-rotate" class="el-section-collection-state-one fade-effect-rotate" aria-hidden="true">
+    <div class="el-section-collection-content">
+        Conheça o Acervo de Livros do elefante Letrado.
+    </div>
+</section>	<section class="el-section-contact">
+    <h1>Fale Conosco</h1>
+    <p>
+        +55 51 3407-8090<br />
+        suporte@elefanteletrado.com.br
+    </p>
+    <form class="form-contact" action="http://local.elefanteletrado.com.br/wp-admin/admin-ajax.php" method="post">
+        <input type="hidden" name="action" value="ext_contact_save">
+        <input type="hidden" name="subject" value="7">
+        <div class="el-section-contact-form row">
+            <div class="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-5 col-sm-6 col-xs-12">
+                <label for="contsct-name" class="sr-only">Nome</label>
+                <input class="form-control" id="contsct-name" name="name" type="text" maxlength="100" required placeholder="Nome:">
+                <label for="contsct-email" class="sr-only">E-mail</label>
+                <input class="form-control" id="contsct-email" name="email" type="email" maxlength="100" required placeholder="E-mail:">
+                <label for="contsct-phone" class="sr-only">Telefone</label>
+                <input class="form-control" id="contsct-phone" name="phone" type="tel" maxlength="20" required oninput="onInputTel(this)" placeholder="Telefone:">
+                <label for="contsct-school" class="sr-only">Escola</label>
+                <input class="form-control" id="contsct-school" name="school" type="text" maxlength="100" required placeholder="Escola:">
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
+                <label for="contact-message" class="sr-only">Mensagem</label>
+                <textarea class="form-control" id="contact-message" name="message" placeholder="Mensagem:" required></textarea>
+            </div>
+        </div>
+        <div class="el-buttons">
+            <button type="submit" class="el-btn-outline">Enviar</button>
+        </div>
+    </form>
+</section></main>
+<div id="popup-contact" class="el-modal" style="display: none">
+	<div>
+		<div class="el-modal-dialog">
+			<section class="el-modal-content">
+				<div class="el-modal-header">
+					<button type="button" class="el-close popup-contact-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
+					<h4 class="el-modal-title">Por favor preencha o formulário abaixo:</h4>
+				</div>
+				<div class="el-modal-body">
+					<form class="form-contact" action="http://local.elefanteletrado.com.br/wp-admin/admin-ajax.php" method="post">
+						<input type="hidden" name="action" value="ext_contact_save">
+						<input type="hidden" name="subject" value="6">
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="modal-contsct-name" class="sr-only">Nome completo</label>
+								<input class="form-control" id="modal-contsct-name" name="name" type="text" maxlength="100" placeholder="Nome completo" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<label for="modal-contsct-email" class="sr-only">E-mail</label>
+								<input class="form-control" id="modal-contsct-email" name="email" type="email" maxlength="100" required placeholder="E-mail">
+							</div>
+							<div class="col-sm-6">
+								<label for="modal-contsct-phone" class="sr-only">Telefone</label>
+								<input class="form-control" id="modal-contsct-phone" name="phone" type="tel" maxlength="20" required oninput="onInputTel(this)" placeholder="Telefone">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="modal-contsct-school" class="sr-only">Nome da Instituição</label>
+								<input class="form-control" id="modal-contsct-school" name="school" type="text" maxlength="100" required placeholder="Nome da Instituição">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<label for="modal-contact-message" class="sr-only">Mensagem</label>
+								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem" required></textarea>
+							</div>
+						</div>
+						<button type="submit" class="submit-button">Enviar</button>
+					</form>
+				</div>
+				<div class="el-modal-footer">
+
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+<div id="popup-contact-message" class="el-modal el-modal-confirm" style="display: none">
+	<div>
+		<div class="el-modal-dialog">
+			<section class="el-modal-content el-modal-content-msg">
+				<div class="el-modal-header">
+					<button type="button" class="el-close popup-contact-message-ok" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
+					<h4 class="el-modal-title">Obrigado!</h4>
+				</div>
+				<div class="el-modal-body">
+					<p class="el-modal-message">
+						Entraremos em contato o mais rápido possível.
+					</p>
+					<button class="submit-ok popup-contact-message-ok">OK</button>
+				</div>
+				<div class="el-modal-footer">
+
+				</div>
+			</section>
+		</div>
+	</div>
+</div>	<footer class="el-footer el-footer-page">
+		<div>
+			<div class="el-footer-logo">
+				<a href="" title="Ir para a Página Inicial">Elefante Letrado</a>
+			</div>
+			<nav class="row">
+				<div class="col-sm-3 hidden-xs">
+					<div class="menu-menu-rodape-principal-container"><ul id="main-menu" class="menu"><li id="menu-item-3607" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3595 current_page_item menu-item-3607"><a href="http://local.elefanteletrado.com.br/">O Elefante Letrado</a></li>
+<li id="menu-item-3627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3627"><a href="http://local.elefanteletrado.com.br/funcionalidades/">Como Funciona</a></li>
+<li id="menu-item-3613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3613"><a href="http://local.elefanteletrado.com.br/acervo-de-livros/">Acervo de Livros</a></li>
+</ul></div>				</div>
+				<div class="col-sm-3 hidden-xs">
+					<div class="menu-menu-rodape-auxiliar-container"><ul id="main-menu" class="menu"><li id="menu-item-3615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3615"><a href="http://local.elefanteletrado.com.br/privacidade/">Política de Privacidade</a></li>
+<li id="menu-item-3616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3616"><a href="http://local.elefanteletrado.com.br/termos/">Termos de Uso</a></li>
+</ul></div>				</div>
+								<div class="col-sm-3 hidden-xs">
+					<h3>Redes Sociais</h3>
+					<div class="menu-menu-rodape-redes-sociais-container"><ul id="main-menu" class="menu"><li id="menu-item-3598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3598"><a href="http://www.facebook.com/elefanteletrado">Facebook</a></li>
+<li id="menu-item-3599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3599"><a href="http://www.instagram.com/elefanteletrado">Instagram</a></li>
+<li id="menu-item-3600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3600"><a href="https://www.youtube.com/channel/UC1E5WzU4ZURIjgSpSDT3H-w">Youtube</a></li>
+</ul></div>				</div>
+				<div class="col-sm-3">
+					<p>
+						Realização
+					</p>
+					<img src="http://local.elefanteletrado.com.br/wp-content/themes/cupid/el-assets/images/layout/realizacao.jpg" width="228" height="48">
+					<p style="font-size: 9px; white-space: nowrap; margin-top: 10px;">
+						100 livros da plataforma foram apoiados pela Lei Rouanet.<br />
+						Em contrapartida, doamos acesso para 50 escolas públicas.
+					</p>
+				</div>
+			</nav>
+		</div>
+	</footer>
+</div>
+
+<!-- BEGIN recaptcha, injected by plugin wp-recaptcha-integration  -->
+<script type="text/javascript">
+				function get_form_submits(el){
+					var form,current=el,ui,type,slice = Array.prototype.slice,self=this;
+					this.submits=[];
+					this.form=false;
+
+					this.setEnabled=function(e){
+						for ( var s=0;s<self.submits.length;s++ ) {
+							if (e) self.submits[s].removeAttribute('disabled');
+							else  self.submits[s].setAttribute('disabled','disabled');
+						}
+						return this;
+					};
+					while ( current && current.nodeName != 'BODY' && current.nodeName != 'FORM' ) {
+						current = current.parentNode;
+					}
+					if ( !current || current.nodeName != 'FORM' )
+						return false;
+					this.form=current;
+					ui=slice.call(this.form.getElementsByTagName('input')).concat(slice.call(this.form.getElementsByTagName('button')));
+					for (var i = 0; i < ui.length; i++) if ( (type=ui[i].getAttribute('TYPE')) && type=='submit' ) this.submits.push(ui[i]);
+					return this;
+				}
+				</script><script type="text/javascript">
+		var recaptcha_widgets={};
+		function wp_recaptchaLoadCallback(){ 
+			try {
+				grecaptcha;
+			} catch(err){
+				return;
+			}
+			var e = document.querySelectorAll ? document.querySelectorAll('.g-recaptcha:not(.wpcf7-form-control)') : document.getElementsByClassName('g-recaptcha'),
+				form_submits;
+
+			for (var i=0;i<e.length;i++) {
+				(function(el){
+					var form_submits = get_form_submits(el).setEnabled(false), wid;
+					// check if captcha element is unrendered
+					if ( ! el.childNodes.length) {
+						wid = grecaptcha.render(el,{
+							'sitekey':'6LdAURoTAAAAAFuaUgFoQ1xNtlEJKmLoX82CHYL4',
+							'theme':el.getAttribute('data-theme') || 'light'
+							,
+							'callback' : function(r){ get_form_submits(el).setEnabled(true); /* enable submit buttons */ }
+						});
+						el.setAttribute('data-widget-id',wid);
+					} else {
+						wid = el.getAttribute('data-widget-id');
+						grecaptcha.reset(wid);
+					}
+				})(e[i]);
+			}
+		}
+		
+		// if jquery present re-render jquery/ajax loaded captcha elements 
+		if ( typeof jQuery !== 'undefined' )
+			jQuery(document).ajaxComplete( function(evt,xhr,set){
+				if( xhr.responseText && xhr.responseText.indexOf('6LdAURoTAAAAAFuaUgFoQ1xNtlEJKmLoX82CHYL4') !== -1)
+					wp_recaptchaLoadCallback();
+			} );
+		
+		</script><script src="https://www.google.com/recaptcha/api.js?onload=wp_recaptchaLoadCallback&#038;render=explicit&#038;hl=pt-BR" async defer></script>
+<!-- END recaptcha -->
+<script type="text/javascript" src="http://local.elefanteletrado.com.br/wp-content/cache/minify/000000/M9RPLi3ITNEtzsgvKknOT0nVL0vWTa0oSc1L0c9NzMzTy83MAwA.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sb_instagram_js_options = {"sb_instagram_at":"1361743228.97584da.4972980230b9452b983966867422b472"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://local.elefanteletrado.com.br/wp-content/cache/minify/000000/M9TPzCsuSUwvSszVTUtNTdHPKtYvTtKFC-rlZuYBAA.js"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var FB_WP=FB_WP||{};FB_WP.queue={_methods:[],flushed:false,add:function(fn){FB_WP.queue.flushed?fn():FB_WP.queue._methods.push(fn)},flush:function(){for(var fn;fn=FB_WP.queue._methods.shift();){fn()}FB_WP.queue.flushed=true}};window.fbAsyncInit=function(){FB.init({"xfbml":true});if(FB_WP && FB_WP.queue && FB_WP.queue.flush){FB_WP.queue.flush()}}
+/* ]]> */
+</script>
+<script type="text/javascript">(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="http:\/\/connect.facebook.net\/en_US\/all.js";fjs.parentNode.insertBefore(js,fjs)}(document,"script","facebook-jssdk"));</script>
+<script type="text/javascript" src="http://local.elefanteletrado.com.br/wp-content/cache/minify/000000/M9RPLi3ITNEtzsgvKknOT0nVT0_MyUktqtRPLC5OLSnWL8gpTc_MK9bPKiwFiuoVFKWWlFQGZOSX5OtnYRPVMSRkIlAbVEQvNzMPAA.js"></script>
+<div id="fb-root"></div><script type="text/javascript" async="true" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/7cb53d67-e1e5-499d-82ec-539141b6842b-loader.js"></script>
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-45568225-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '523749501121316');
+	fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+			   src="https://www.facebook.com/tr?id=523749501121316&ev=PageView&noscript=1"
+	/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk: enhanced
+
+ Served from: local.elefanteletrado.com.br @ 2016-06-26 04:25:20 by W3 Total Cache -->
