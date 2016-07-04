@@ -4424,13 +4424,22 @@ input[type="button"].btn-block {
 
 .el-page-team {
   -webkit-box-shadow: inset 0px 30px 28px -28px rgba(1, 1, 1, 0.4);
-  box-shadow: inset 0px 30px 28px -28px rgba(1, 1, 1, 0.4); }
+  box-shadow: inset 0px 30px 28px -28px rgba(1, 1, 1, 0.4);
+  padding-bottom: 90px; }
   .el-page-team h1 {
     margin-top: 0;
-    padding-top: 80px;
-    margin-bottom: 60px; }
+    padding-top: 80px; }
+    @media (min-width: 992px) {
+      .el-page-team h1 {
+        margin-bottom: 60px; } }
   .el-page-team h2 {
-    margin-bottom: 60px; }
+    margin-top: 60px;
+    margin-bottom: 30px; }
+    @media (min-width: 992px) {
+      .el-page-team h2 {
+        margin-bottom: 60px; } }
+  .el-page-team p {
+    font-size: 15px; }
 
 .el-list-team {
   padding-left: 0;
@@ -4440,7 +4449,8 @@ input[type="button"].btn-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px; }
+  max-width: 1300px;
+  margin-bottom: 0; }
   .el-list-team:before, .el-list-team:after {
     content: " ";
     display: table; }
@@ -4456,8 +4466,7 @@ input[type="button"].btn-block {
     padding-left: 15px;
     padding-right: 15px;
     position: relative;
-    text-align: center;
-    margin-bottom: 25px; }
+    text-align: left; }
     @media (min-width: 768px) {
       .el-list-team li {
         float: left;
@@ -4468,15 +4477,32 @@ input[type="button"].btn-block {
         width: 25%; } }
     @media (min-width: 768px) {
       .el-list-team li {
-        margin-bottom: 100px; } }
-    .el-list-team li > img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px; }
-  @media (min-width: 768px) {
+        margin-bottom: 30px; } }
+    .el-list-team li h3 {
+      font-family: "ProximaNovaA-Light";
+      font-size: 25px; }
+  @media (min-width: 992px) {
     .el-list-team li.el-first-3 {
       margin-left: 12.5%; } }
+
+.el-list-team-name-only li {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    .el-list-team-name-only li {
+      float: left;
+      width: 25%; } }
+  .el-list-team-name-only li h3 {
+    text-align: center; }
+  .el-list-team-name-only li img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+@media (min-width: 768px) {
+  .el-list-team-name-only li.el-first-3 {
+    margin-left: 12.5%; } }
 
 .el-page-use-recommendation > p {
   margin-bottom: 90px; }

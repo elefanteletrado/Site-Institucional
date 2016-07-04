@@ -16,94 +16,57 @@
 		<h2>Sócios</h2>
 		<ul class="el-list-team">
 			<li class="el-first-3">
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Scheila Vontobel
-					<div class="el-box-info">
-						<button type="button" class="el-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
-						<p>
-							“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”
-						</p>
-					</div>
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/scheila-vontobel.png" width="119" height="119">
+				<h3>Scheila Vontobel</h3>
+				<p>“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”</p>
 			</li>
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Magali Matsuda
-					<div class="el-box-info">
-						<button type="button" class="el-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
-						<p>
-							“Como mãe, acho fundamental investir na educação e na leitura das crianças. É lendo e interpretando que aprendemos quase tudo que sabemos. O Elefante Letrado é parte da minha vida todos os dias. Não é trabalho, é diversão!”
-						</p>
-					</div>
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/magali-matsuda.png" width="119" height="119">
+				<h3>Magali Matsuda</h3>
+				<p>“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”</p>
 			</li>
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Alexandre Borella
-					<div class="el-box-info">
-						<button type="button" class="el-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
-						<p>
-							“Como pai de uma menina em idade escolar, sei bem da importância da leitura para o seu crescimento, e nada melhor do que disponibilizarmos o acesso a uma biblioteca digital completa, a qualquer momento e em qualquer lugar.”
-						</p>
-					</div>
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/alexandre-borella.png" width="119" height="119">
+				<h3>Alexandre Borella</h3>
+				<p>“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”</p>
 			</li>
 		</ul>
 		<h2>Pesquisa e Desenvolvimento:</h2>
 		<ul class="el-list-team">
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Mônica Timm de Carvalho
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/monica-timm-de-carvalho.png" width="119" height="119">
+				<h3>Mônica Timm de Carvalho</h3>
+				<p>“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”</p>
 			</li>
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Rosália Saraiva
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/rosalia-saraiva.png" width="119" height="119">
+				<h3>Rosália Saraiva</h3>
+				<p>“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”</p>
 			</li>
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Annete Baldi
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/annete-baldi.png" width="119" height="119">
+				<h3>Annete Baldi</h3>
+				<p>“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”</p>
 			</li>
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Beth Baldi
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/beth-baldi.png" width="119" height="119">
+				<h3>Beth Baldi</h3>
+				<p>“Sou mãe de três filhos e estou sempre atenta à formação deles. Criar meios de facilitar e incentivar a qualificação de nossos pequenos foi o que imaginei como forma de contribuição para a sociedade quando iniciei o desenvolvimento desta plataforma.”</p>
 			</li>
 		</ul>
 		<h2>Equipe:</h2>
-		<ul class="el-list-team">
-			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Simone Sudbrack
-				</div>
+		<ul class="el-list-team el-list-team-name-only">
+			<li class="el-first-3">
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/simone-sudbrack.png" width="119" height="119">
+				<h3>Simone Sudbrack</h3>
 			</li>
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Vívian Thomassin
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/vivian-thomassin.png" width="119" height="119">
+				<h3>Vívian Thomassin</h3>
 			</li>
 			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Priscila de Sena Rio Branco
-				</div>
-			</li>
-			<li>
-				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/team-fake.jpg" width="119" height="119">
-				<div class="el-box-info-container">
-					Mariana Bertoluci
-				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/fake/equipe/mariana-bertoluci.png" width="119" height="119">
+				<h3>Mariana Bertoluci</h3>
 			</li>
 		</ul>
 	</article>

@@ -1,7 +1,0 @@
-div.vc_row_elefante div div.fullwidth div.vc_row {
-    margin-right: 0 !important;
-}
-
-div.cupid-call-action-elefante div{
-	vertical-align: top !important;
-}

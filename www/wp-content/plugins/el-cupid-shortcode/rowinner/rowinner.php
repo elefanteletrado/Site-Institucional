@@ -13,7 +13,9 @@ class El_Cupid_Row_Inner {
                 'param_name' => 'el_elefante_letrado',
                 'value' => array(
                     'Selecione' => '',
-                    'Sim' => 'row'
+                    'Sim' => 'row',
+                    'Lista de Equipe' => 'team',
+                    'Lista de Equipe (apenas nomes)' => 'team_only_name',
                 )
             )
         );
@@ -21,10 +23,23 @@ class El_Cupid_Row_Inner {
 
     public function cupid_vc_row_inner_shortcode($atts, $content = null){
         if(!empty($atts['el_elefante_letrado'])) {
-            $output = '<div class="'.$atts['el_elefante_letrado'].'">';
-            $output .= wpb_js_remove_wpautop( $content );
-            $output .= '</div>';
-            return $output;
+            switch ($atts['el_elefante_letrado']) {
+                case 'team':
+                    $output = '<ul class="el-list-team">';
+                    $output .= wpb_js_remove_wpautop( $content );
+                    $output .= '</ul>';
+                    return $output;
+                case 'team_only_name':
+                    $output = '<ul class="el-list-team el-list-team-name-only">';
+                    $output .= wpb_js_remove_wpautop( $content );
+                    $output .= '</ul>';
+                    return $output;
+                default:
+                    $output = '<div class="'.$atts['el_elefante_letrado'].'">';
+                    $output .= wpb_js_remove_wpautop( $content );
+                    $output .= '</div>';
+                    return $output;
+            }
         }
         $output = $style_css = $layout = $parallax_style = $parallax_scroll_effect = $parallax_speed = $overlay_set = $overlay_color = $overlay_image = $overlay_opacity = $el_id = $el_class = $bg_image = $bg_color = $bg_image_repeat = $pos = $font_color = $padding = $margin_bottom = $css = '';
         extract( shortcode_atts( array(

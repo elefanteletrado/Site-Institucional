@@ -23,6 +23,10 @@ require_once __DIR__.'/page-feature/page-feature.php';
 require_once __DIR__.'/collection-single/collection-single.php';
 require_once __DIR__.'/banner-main/banner-main.php';
 require_once __DIR__.'/textblock/textblock.php';
+require_once __DIR__.'/faqitem/faqitem.php';
+require_once __DIR__.'/image/image.php';
+require_once __DIR__.'/banner-page-content/banner-page-content.php';
+require_once __DIR__.'/team-item/team-item.php';
 
 class El_Cupid_Shortcode{
     function __construct(){
@@ -164,7 +168,16 @@ class El_Cupid_Shortcode{
                     'heading'    => 'Título',
                     'param_name' => 'content',
                     'value'      => '',
-                    'admin_label' => true
+                    'admin_label' =>  true
+                ),
+                array(
+                    'type'       => 'dropdown',
+                    'heading'    => 'Nível',
+                    'param_name' => 'level',
+                    'value'      => array(
+                        '1º nível' => '',
+                        '2º nível' => '2'
+                    )
                 )
             )
         ) );

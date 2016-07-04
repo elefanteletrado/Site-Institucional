@@ -18,7 +18,7 @@
 
 .el-icon-round{
   @include square(24px);
-  font-size: 15px !important;
+  font-size: $font-size-standard !important;
   line-height: 24px !important;
   text-align: center;
   border-radius: 12px;
@@ -181,7 +181,7 @@
 
     a{
       color: $color-article;
-      font-size: 15px;
+      font-size: $font-size-standard;
     }
   }
   .row{
@@ -195,12 +195,12 @@
     padding-right: 60px;
   }
   h3{
-    font-size: 15px;
+    font-size: $font-size-standard;
     margin-top: 0;
     margin-bottom: 0;
   }
   p{
-    font-size: 15px;
+    font-size: $font-size-standard;
   }
   &.el-footer-page{
     @include box-sizing(border-box);

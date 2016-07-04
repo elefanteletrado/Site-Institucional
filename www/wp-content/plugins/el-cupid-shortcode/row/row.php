@@ -14,9 +14,12 @@ class El_Cupid_Row {
                 'value' => array(
                     'Selecione' => '',
                     'Funcionalidades' => 'el-article-style-2',
-                    'Página de Funcionalidades' => 'page-features',
+                    'Lista de Dúvidas' => 'faq',
                     'Container de Banner Principal' => 'owl-carousel-main',
-                    'Sem estilo' => 'no'
+                    'Área de Conteúdo' => 'content-area',
+                    'Sem estilo' => 'no',
+                    'Página de Funcionalidades' => 'page-features',
+                    'Página de Equipe' => 'page-team'
                 )
             )
         );
@@ -41,6 +44,22 @@ class El_Cupid_Row {
                                 <img src="<?php echo get_template_directory_uri(); ?>/el-images-optimized/collection-rotate-mobile.jpg" width="1991" height="262" style="max-width: 1991px;" align="Conheça o Acervo de Livros do elefante Letrado.">
                             </div>
                         </section>';
+                    break;
+                case 'page-team':
+                    return '<article class="el-page-content el-page-team">
+                            '.wpb_js_remove_wpautop( $content ).'
+                        </article>';
+                    break;
+                case 'faq':
+                    return '<ol class="el-list-faq">
+                            '.wpb_js_remove_wpautop( $content ).'
+                        </ol>';
+                    break;
+                case 'content-area':
+                    return '<article class="el-page-content el-page-use-recommendation">
+                            '.wpb_js_remove_wpautop( $content ).'
+                        </article>';
+                    break;
                 default:
                     $output = '<div class="'.$atts['el_elefante_letrado'].'">';
                     $output .= wpb_js_remove_wpautop( $content );
