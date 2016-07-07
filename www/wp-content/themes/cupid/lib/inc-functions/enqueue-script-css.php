@@ -112,6 +112,8 @@ function cupid_script() {
 
     $elCupidAssets = (false === strpos(get_page_template(), 'el-page-templates'));
 
+    wp_enqueue_script( 'jquery' );
+
     if($elCupidAssets) {
         $min_suffix = defined( 'CUPID_SCRIPT_DEBUG' ) && CUPID_SCRIPT_DEBUG ? '' : '.min';
         $url_bootstrap = get_template_directory_uri() . '/assets/plugins/bootstrap/js/bootstrap.min.js';
