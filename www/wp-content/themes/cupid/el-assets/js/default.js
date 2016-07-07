@@ -120,8 +120,10 @@ function onInputTel(input) {
         });
         $(".popup-contact-close").click(function () {
             $("#popup-contact").fadeOut();
+            $("#el-layout-main").removeClass("el-layout-main-back-modal");
         });
         $("#popup-contact-open").click(function () {
+            $("#el-layout-main").addClass("el-layout-main-back-modal");
             $("#popup-contact").fadeIn();
 
             return false;

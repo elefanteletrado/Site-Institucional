@@ -56,6 +56,7 @@
 		</div>
 	</footer>
 </div>
+<?php get_template_part('el-templates/popup-contact'); ?>
 <?php wp_footer(); ?>
 <script type="text/javascript" async="true" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/7cb53d67-e1e5-499d-82ec-539141b6842b-loader.js"></script>
 <script>

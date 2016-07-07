@@ -129,5 +129,5 @@
 <body <?php body_class($body_class); ?>>
 <!-- Document Wrapper
    ============================================= -->
-<div class="el-layout">
+<div id="el-layout-main" class="el-layout">
 	<?php get_template_part('el-templates/header-content' ); ?>
