@@ -14,6 +14,7 @@ class El_Cupid_Row {
                 'value' => array(
                     'Selecione' => '',
                     'Funcionalidades' => 'el-article-style-2',
+                    'Clientes' => 'clients',
                     'Lista de Dúvidas' => 'faq',
                     'Container de Banner Principal' => 'owl-carousel-main',
                     'Área de Conteúdo' => 'content-area',
@@ -57,6 +58,11 @@ class El_Cupid_Row {
                     break;
                 case 'content-area':
                     return '<article class="el-page-content el-page-use-recommendation">
+                            '.wpb_js_remove_wpautop( $content ).'
+                        </article>';
+                    break;
+                case 'clients':
+                    return '<article class="el-section-clients">
                             '.wpb_js_remove_wpautop( $content ).'
                         </article>';
                     break;

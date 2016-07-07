@@ -3724,6 +3724,11 @@ input[type="button"].btn-block {
     @media (min-width: 768px) {
       .el-banner-container p {
         text-align: left; } }
+    @media (max-width: 768px) {
+      .el-banner-container p {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
   @media (min-width: 930px) {
     .el-banner-container .el-content {
       background-size: 100% auto; } }

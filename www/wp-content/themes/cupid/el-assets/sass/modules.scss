@@ -93,6 +93,9 @@
     @media (min-width: $screen-sm-min) {
       text-align: left;
     }
+    @media (max-width: $screen-sm-min) {
+      @include center-block;
+    }
   }
   @media (min-width: $screen-custom2) {
     .el-content {

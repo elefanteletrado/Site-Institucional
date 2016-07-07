@@ -17,6 +17,8 @@
                 <input class="form-control" id="contsct-phone" name="phone" type="tel" maxlength="20" required oninput="onInputTel(this)" placeholder="Telefone:">
                 <label for="contsct-school" class="sr-only">Escola</label>
                 <input class="form-control" id="contsct-school" name="school" type="text" maxlength="100" required placeholder="Escola:">
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-theme="dark" data-size="compact" data-sitekey="6LdRDgYTAAAAAD-x8cdLrhRwNqcXsxC1hScHCfaH"></div>
             </div>
             <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
                 <label for="contact-message" class="sr-only">Mensagem</label>
