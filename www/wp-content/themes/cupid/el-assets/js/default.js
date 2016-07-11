@@ -118,6 +118,9 @@ function onInputTel(input) {
         $(".popup-contact-message-ok").click(function () {
             $("#popup-contact-message").fadeOut();
         });
+        $(".message-404-ok").click(function () {
+            $("#message-404").fadeOut();
+        });
         $(".popup-contact-close").click(function () {
             $("#popup-contact").fadeOut();
             $("#el-layout-main").removeClass("el-layout-main-back-modal");

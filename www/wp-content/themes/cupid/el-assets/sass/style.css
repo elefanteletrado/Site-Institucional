@@ -4010,7 +4010,7 @@ input[type="button"].btn-block {
     border: none;
     border-radius: 0;
     background: #FFF; }
-  .el-section-contact input:last-child {
+  .el-section-contact input:last-child, .el-section-contact textarea:last-child {
     margin-bottom: 15px; }
   .el-section-contact textarea {
     height: 242px;
@@ -4090,11 +4090,9 @@ input[type="button"].btn-block {
   margin-right: auto;
   background: #F6F6F6;
   padding: 45px 25px;
-  position: relative;
-  min-height: 100%; }
+  position: relative; }
   @media (min-width: 992px) {
     .el-modal-content {
-      height: 100%;
       max-width: 558px;
       -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
       box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);

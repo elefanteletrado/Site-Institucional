@@ -426,7 +426,7 @@
 	border-radius: 0;
     background: #FFF;
   }
-  input:last-child{
+  input:last-child, textarea:last-child{
 	margin-bottom: 15px;
   }
   textarea{
@@ -514,10 +514,8 @@
   background: #F6F6F6;
   padding: 45px 25px;
   position: relative;
-  min-height: 100%;
 
   @media (min-width: $screen-md-min) {
-    height: 100%;
     max-width: 558px;
     @include box-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
     border-radius: 5px;

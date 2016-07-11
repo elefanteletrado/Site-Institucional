@@ -38,6 +38,13 @@
 								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem" required></textarea>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div style="width: 235px; height: 70px; margin: auto;">
+									<div class="g-recaptcha" id="recaptcha-contact-popup"></div>
+								</div>
+							</div>
+						</div>
 						<button type="submit" class="submit-button">Enviar</button>
 					</form>
 				</div>
