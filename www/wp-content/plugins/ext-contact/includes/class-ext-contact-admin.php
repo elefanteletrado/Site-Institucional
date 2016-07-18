@@ -682,13 +682,6 @@ class Ext_Contact_Admin {
 				</p>
 			</div>
 			<?php endif; ?>
-			<?php if( $this->option['active_captcha'] != Ext_Contact::filter_captcha_mode( $this->option['active_captcha'] ) ): ?>
-			<div class="error">
-				<p>
-					O mecanismo de captcha foi desativado automaticamente. Verifique as dependências do captcha selecionado.
-				</p>
-			</div>
-			<?php endif; ?>
 			<h3>
 				Conteúdo prévio ao enviar mensagem
 			</h3>
@@ -742,7 +735,9 @@ class Ext_Contact_Admin {
 							<select name="active_captcha" id="active_captcha">
 								<option value="0" <?php echo 0 == $this->option['active_captcha'] ? 'selected="selected"' : ''; ?>>Desativado</option>
 								<option value="<?php echo EXT_CONTACT_RECAPTCHA; ?>" <?php echo EXT_CONTACT_RECAPTCHA == $this->option['active_captcha'] ? 'selected="selected"' : ''; ?>>reCAPTCHA</option>
+								<?php if(defined('EXT_CAPTCHA_FILE')): ?>
 								<option value="<?php echo EXT_CONTACT_CAPTCHA; ?>" <?php echo EXT_CONTACT_CAPTCHA == $this->option['active_captcha'] ? 'selected="selected"' : ''; ?>>Ext Captcha</option>
+								<?php endif; ?>
 							</select>
 							<p>Habilita o captcha no formulário.</p>
 						</div>

@@ -90,11 +90,12 @@
     max-width: 550px;
     margin-top: 20px;
     padding: 0 $margin-lr;
+    @include center-block;
     @media (min-width: $screen-sm-min) {
       text-align: left;
-    }
-    @media (max-width: $screen-sm-min) {
-      @include center-block;
+      display: inherit;
+      margin-left: inherit;
+      margin-right: inherit;
     }
   }
   @media (min-width: $screen-md-min) {
@@ -968,5 +969,14 @@
 .el-text-left-1{
   @media (min-width: $screen-sm-min) {
     max-width: 350px; display: block; float: right;
+  }
+}
+
+.el-text-st-footer{
+  font-size: 9px !important;
+  margin-top: 10px;
+
+  @media (min-width: $screen-md-min) {
+    white-space: nowrap;
   }
 }

@@ -233,16 +233,15 @@
     }
     .el-footer-logo{
       text-align: center;
-
-      a{
-        background: transparent url("../images/layout/logo-footer-all.png") top left no-repeat;
-        background-size: 100% 100%;
-        width: 187px;
-        height: 64px;
-        text-indent: -9999px;
-        display: inline-block;
-        margin-bottom: 20px;
-      }
+    }
+    .el-footer-logo-link{
+      background: transparent url("../images/layout/logo-footer-all.png") top left no-repeat;
+      background-size: 100% 100%;
+      width: 187px;
+      height: 64px;
+      text-indent: -9999px;
+      display: inline-block;
+      margin-bottom: 20px;
     }
 
     @media (min-width: $screen-sm-min) {

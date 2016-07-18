@@ -53,7 +53,7 @@ class Ext_Base_Admin {
 	}
 	
 	public function menu() {
-		add_options_page( 'reCAPTCHA', 'reCAPTCHA', 'manage_options', 'ext_base_recaptcha', array( $this, 'recaptcha' ) );
+		add_options_page( 'EXT reCAPTCHA', 'EXT reCAPTCHA', 'manage_options', 'ext_base_recaptcha', array( $this, 'recaptcha' ) );
 	}
 	
 	public function recaptcha() {

@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Ext - Contato
-Description: Formulário de contato utilizado no portal institucional da Ext.
-Version: 1.2
+Description: Formulário de contato com consulta local de dados e aviso de novos contatos por e-mail.
+Version: 1.4
 Author: CWI Software - Luiz Felipe Bertoldi de Oliveira
 Author URI: http://www.cwi.com.br
 */

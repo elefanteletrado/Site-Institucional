@@ -11,15 +11,4 @@ class Ext_Contact {
 		$settings = get_option( 'exttheme_settings_options' );
 		wp_mail( $option_subject['to'], '[' . get_bloginfo('name') . '] ' . $option['title']  . ' - ' . $option_subject['title'], $content, 'Content-Type: text/html; charset=utf-8' );
 	}
-	
-	public static function filter_captcha_mode( $mode ) {
-		switch( $mode ) {
-			case EXT_CONTACT_CAPTCHA:
-				if( !defined( 'EXT_CAPTCHA_FILE' ) || !ext_captcha_check_dependencies() ) {
-					return 0;
-				}
-				break;
-		}
-		return $mode;
-	}
 }

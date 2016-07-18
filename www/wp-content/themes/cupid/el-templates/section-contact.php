@@ -1,3 +1,7 @@
+<?php
+$option_id = 1;
+$option = get_option( 'ext_contact_type_item_' . $option_id );
+?>
 <section class="el-section-contact">
     <h1>Fale Conosco</h1>
     <p>
@@ -23,9 +27,11 @@
                 <textarea class="form-control" id="contact-message" name="message" placeholder="Mensagem:" required></textarea>
             </div>
         </div>
-        <div style="width: 235px; height: 70px; margin: auto;">
-            <div class="g-recaptcha" id="recaptcha-contact-section"></div>
-        </div>
+        <?php if(!empty($option['active_captcha'])): ?>
+            <div style="width: 235px; height: 70px; margin: auto;">
+                <div class="g-recaptcha" id="recaptcha-contact-section"></div>
+            </div>
+        <?php endif; ?>
         <div class="el-buttons">
             <button type="submit" class="el-btn-outline">Enviar</button>
         </div>

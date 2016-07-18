@@ -49,21 +49,42 @@ function ext_contact_save() {
 		$error_list['message'] = 'O campo "Mensagem" é obrigatório.';
 	}
 
-	if( !$error_list && isset( $option['active_captcha'] ) ) {
+	if( !$error_list && !empty( $option['active_captcha'] ) ) {
 		switch( $option['active_captcha'] ) {
 			case 1:
-				require EXT_BASE_INCLUDE_DIR . '/class-ext-base-recaptcha.php';
-				$resp = Ext_Base_Recaptcha::check_answer();
-				if( !$resp->is_valid ) {
-					$error_list['captcha'] = 'Preencha o captcha corretamente.';
+				$optionRecaptcha = get_option( 'ext_base_recaptcha' );
+				$options = array(
+					CURLOPT_RETURNTRANSFER => true,     // return web page
+					CURLOPT_HEADER         => false,    // don't return headers
+					CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+					CURLOPT_ENCODING       => "",       // handle all encodings
+					CURLOPT_USERAGENT      => "spider", // who am i
+					CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+					CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
+					CURLOPT_TIMEOUT        => 120,      // timeout on response
+					CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+					CURLOPT_SSL_VERIFYPEER => false,    // Disabled SSL Cert checks
+					CURLOPT_RETURNTRANSFER => true,
+					CURLOPT_POSTFIELDS     => array(
+						'secret' => $optionRecaptcha['private_key'],
+						'response' => $_POST["g-recaptcha-response"],
+						'remoteip' => $_SERVER["REMOTE_ADDR"]
+					)
+				);
+
+				$ch = curl_init( 'https://www.google.com/recaptcha/api/siteverify' );
+				curl_setopt_array( $ch, $options );
+				$responseText = curl_exec( $ch );
+				curl_close( $ch );
+				$response = json_decode($responseText);
+				if(array_key_exists('success', $response)) {
+					if(!$response['success']) {
+						$error_list['captcha'] = 'Preencha o captcha corretamente.';
+					}
+				} else {
+					$error_list['captcha'] = 'Ocorreu um erro inesperado ao processar o captcha. Por favor, entre em contato pelo chat ou pelo telefone para reportar o problema.';
 				}
 				break;
-			case 2:
-				$id = $_REQUEST['siwp_captcha_id'];
-				$code = $_REQUEST['siwp_captcha_value'];
-				if( !ext_captcha_check( $id, $code ) ) {
-					$error_list['captcha'] = 'Preencha o captcha corretamente.';
-				}
 		}
 	}
 

@@ -1,9 +1,0 @@
-CREATE TABLE wp_ext_curriculo (
-				ext_curriculo_id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-				area_interesse_id bigint(20) NOT NULL,
-				regiao_id bigint(20) NOT NULL,
-				nome varchar(50) NOT NULL,
-				cpf varchar(11) NOT NULL ,
-				arquivo varchar(40) NOT NULL ,
-				PRIMARY KEY (ext_curriculo_id)
-			) ENGINE=MyISAM;

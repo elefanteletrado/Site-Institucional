@@ -1,7 +1,10 @@
+<?php
+global $is404;
+?>
 	<footer class="el-footer el-footer-page">
 		<div>
 			<div class="el-footer-logo">
-				<a href="" title="Ir para a Página Inicial">Elefante Letrado</a>
+				<a href="" title="Ir para a Página Inicial" class="el-footer-logo-link">Elefante Letrado</a>
 			</div>
 			<nav class="row">
 				<div class="col-sm-3 hidden-xs">
@@ -20,19 +23,6 @@
 					) );
 					?>
 				</div>
-				<?php
-				/*
-				<div class="col-sm-3">
-					<p>
-						Contato<br />
-						+55 51 3407-8090<br />
-						<span class="el-email">contato@elefanteletrado.com.br</span><br />
-						Av. Carlos Gomes, 1.492/709<br />
-						Porto Alegre/ RS
-					</p>
-				</div>
-				*/
-				?>
 				<div class="col-sm-3 hidden-xs">
 					<h3>Redes Sociais</h3>
 					<?php
@@ -47,25 +37,47 @@
 						Realização
 					</p>
 					<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/layout/realizacao.jpg" width="228" height="48">
-					<p style="font-size: 9px; white-space: nowrap; margin-top: 10px;">
+					<p class="el-text-st-footer">
 						100 livros da plataforma foram apoiados pela Lei Rouanet.<br />
 						Em contrapartida, doamos acesso para 50 escolas públicas.
 					</p>
+					<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #999;">
+						<a href="http://www.kidsafeseal.com/certifiedproducts/elefanteletrado.html" target="_blank"><img border="0" alt="ElefanteLetrado.com.br is certified by the kidSAFE Seal Program." src="http://www.kidsafeseal.com/sealimage/125654952451330744/elefanteletrado_small_darktm.png"></a>
+					</div>
 				</div>
 			</nav>
 		</div>
 	</footer>
 </div>
 <?php get_template_part('el-templates/popup-contact'); ?>
+<?php if(!empty($is404)): ?>
+	<div id="message-404" class="el-modal el-modal-confirm">
+		<div>
+			<div class="el-modal-dialog">
+				<section class="el-modal-content el-modal-content-msg">
+					<div class="el-modal-header">
+						<h4 class="el-modal-title">Página não encontrada</h4>
+					</div>
+					<div class="el-modal-body">
+						<p class="el-modal-message">
+							O link que você acessou não está disponível. Em caso de dúvidas entre em contato!
+						</p>
+						<button class="submit-ok message-404-ok">Voltar para o site</button>
+					</div>
+					<div class="el-modal-footer">
+
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+<?php endif; ?>
 <?php wp_footer(); ?>
 <script type="text/javascript" async="true" src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/7cb53d67-e1e5-499d-82ec-539141b6842b-loader.js"></script>
-<script type="text/javascript">
-	var CaptchaCallback = function() {
-		grecaptcha.render('recaptcha-contact-section', {'sitekey' : '6LdRDgYTAAAAAD-x8cdLrhRwNqcXsxC1hScHCfaH'});
-		grecaptcha.render('recaptcha-contact-popup', {'sitekey' : '6LdRDgYTAAAAAD-x8cdLrhRwNqcXsxC1hScHCfaH'});
-	};
-</script>
-<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+<?php
+$option_id = 1;
+$option = get_option( 'ext_contact_type_item_' . $option_id );
+?>
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

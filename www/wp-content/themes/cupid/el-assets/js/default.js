@@ -1,3 +1,5 @@
+var isAndroid = /(android)/i.test(navigator.userAgent);
+
 function telReplace(v) {
     v = v.replace(/\D/g,"");
     if (v.length <= 10) {
@@ -134,7 +136,9 @@ function onInputTel(input) {
 
         if($(".owl-carousel-main").length) {
             $(".owl-carousel-main").owlCarousel({items: 1, singleItem: true, autoPlay: true, autoPlay: 5000});
-            $(".owl-carousel-main").addClass("fade-in");
+            if(!isAndroid) {
+                $(".owl-carousel-main").addClass("fade-in");
+            }
             function resize() {
                 var _this = $(".el-banner-container:visible");
                 var offset = _this.offset();

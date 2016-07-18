@@ -1,3 +1,8 @@
+<?php
+$option_id = 1;
+$option = get_option( 'ext_contact_type_item_' . $option_id );
+$optionRecaptcha = get_option( 'ext_base_recaptcha' );
+?>
 <div id="popup-contact" class="el-modal" style="display: none">
 	<div>
 		<div class="el-modal-dialog">
@@ -38,13 +43,15 @@
 								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem" required></textarea>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<div style="width: 235px; height: 70px; margin: auto;">
-									<div class="g-recaptcha" id="recaptcha-contact-popup"></div>
+						<?php if(!empty($option['active_captcha'])): ?>
+							<div class="row">
+								<div class="col-sm-12">
+									<div style="width: 235px; height: 70px; margin: auto;">
+										<div class="g-recaptcha" id="recaptcha-contact-popup"></div>
+									</div>
 								</div>
 							</div>
-						</div>
+						<?php endif; ?>
 						<button type="submit" class="submit-button">Enviar</button>
 					</form>
 				</div>
@@ -76,3 +83,12 @@
 		</div>
 	</div>
 </div>
+<?php if(!empty($option['active_captcha'])): ?>
+	<script type="text/javascript">
+		var elCupidCaptchaCallback = function() {
+			grecaptcha.render('recaptcha-contact-section', {'sitekey': <?php echo json_encode($option['private_key']); ?>});
+			grecaptcha.render('recaptcha-contact-popup', {'sitekey' : <?php echo json_encode($option['private_key']); ?>});
+		};
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=elCupidCaptchaCallback&render=explicit" async defer></script>
+<?php endif; ?>
