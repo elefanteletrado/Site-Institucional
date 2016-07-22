@@ -41,7 +41,7 @@ global $is404;
 						100 livros da plataforma foram apoiados pela Lei Rouanet.<br />
 						Em contrapartida, doamos acesso para 50 escolas públicas.
 					</p>
-					<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #999;">
+					<div style="margin-top: 10px; padding-top: 10px; margin-bottom: 30px; border-top: 1px solid #999;">
 						<a href="http://www.kidsafeseal.com/certifiedproducts/elefanteletrado.html" target="_blank"><img border="0" alt="ElefanteLetrado.com.br is certified by the kidSAFE Seal Program." src="http://www.kidsafeseal.com/sealimage/125654952451330744/elefanteletrado_small_darktm.png"></a>
 					</div>
 				</div>

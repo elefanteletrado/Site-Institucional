@@ -45,8 +45,10 @@ function ext_contact_save() {
 		$error_list['escola'] = 'O campo "Escola" é obrigatório.';
 	}
 
-	if( strlen( trim( $_REQUEST['message'] ) ) < 4 ) {
-		$error_list['message'] = 'O campo "Mensagem" é obrigatório.';
+	if(!empty($_REQUEST['subject'])) {
+		if( EXT_CONTACT_SUBJECT_DEMO != $_REQUEST['subject'] && strlen( trim( $_REQUEST['message'] ) ) < 4 ) {
+			$error_list['message'] = 'O campo "Mensagem" é obrigatório.';
+		}
 	}
 
 	if( !$error_list && !empty( $option['active_captcha'] ) ) {
@@ -67,7 +69,7 @@ function ext_contact_save() {
 					CURLOPT_RETURNTRANSFER => true,
 					CURLOPT_POSTFIELDS     => array(
 						'secret' => $optionRecaptcha['private_key'],
-						'response' => $_POST["g-recaptcha-response"],
+						'response' => $_POST['g-recaptcha-response'],
 						'remoteip' => $_SERVER["REMOTE_ADDR"]
 					)
 				);
@@ -76,7 +78,7 @@ function ext_contact_save() {
 				curl_setopt_array( $ch, $options );
 				$responseText = curl_exec( $ch );
 				curl_close( $ch );
-				$response = json_decode($responseText);
+				$response = json_decode($responseText, true);
 				if(array_key_exists('success', $response)) {
 					if(!$response['success']) {
 						$error_list['captcha'] = 'Preencha o captcha corretamente.';
@@ -90,7 +92,7 @@ function ext_contact_save() {
 
 	if( $error_list ) {
 		$result['title'] = 'Erro';
-		$result['msg'] = 'Os seguintes erros foram encontrados:' . "\n" . implode( "\n", $error_list );
+		$result['msg'] = 'Os seguintes erros foram encontrados:' . "<br />" . implode( "<br />", $error_list );
 	} else {
 		require EXT_CONTACT_INCLUDE_DIR . 'class-ext-contact-model.php';
 

@@ -40,7 +40,7 @@ $optionRecaptcha = get_option( 'ext_base_recaptcha' );
 						<div class="row">
 							<div class="col-sm-12">
 								<label for="modal-contact-message" class="sr-only">Mensagem</label>
-								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem" required></textarea>
+								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem"></textarea>
 							</div>
 						</div>
 						<?php if(!empty($option['active_captcha'])): ?>
@@ -86,8 +86,8 @@ $optionRecaptcha = get_option( 'ext_base_recaptcha' );
 <?php if(!empty($option['active_captcha'])): ?>
 	<script type="text/javascript">
 		var elCupidCaptchaCallback = function() {
-			grecaptcha.render('recaptcha-contact-section', {'sitekey': <?php echo json_encode($option['private_key']); ?>});
-			grecaptcha.render('recaptcha-contact-popup', {'sitekey' : <?php echo json_encode($option['private_key']); ?>});
+			grecaptcha.render('recaptcha-contact-section', {'sitekey': <?php echo json_encode($optionRecaptcha['public_key']); ?>});
+			grecaptcha.render('recaptcha-contact-popup', {'sitekey' : <?php echo json_encode($optionRecaptcha['public_key']); ?>});
 		};
 	</script>
 	<script src="https://www.google.com/recaptcha/api.js?onload=elCupidCaptchaCallback&render=explicit" async defer></script>

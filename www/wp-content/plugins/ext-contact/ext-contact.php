@@ -15,6 +15,8 @@ define( 'EXT_CONTACT_RECAPTCHA', 1 );
 define( 'EXT_CONTACT_MULTIPLE_SUBJECTS', true );
 define( 'EXT_CONTACT_CODE_ALL_SUBJECTS', 9 );
 define( 'EXT_CONTACT_SUBJECT_EDIT', false );
+define( 'EXT_CONTACT_SUBJECT_DEMO', 6 );
+define( 'EXT_CONTACT_SUBJECT_CONTACT', 7 );
 
 require_once EXT_CONTACT_INCLUDE_DIR . 'site-functions.php';
 
