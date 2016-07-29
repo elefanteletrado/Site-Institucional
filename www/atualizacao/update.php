@@ -11,9 +11,7 @@ preg_match('@[\r\n]+\s*define.*[\'""]DB_NAME[\'""]\s*,\s*[\'""](.+)[\'""]@', $co
 $database = $matches[1];
 
 $replaces = array(
-	'http://www.elefanteletrado.com.br' => 'http://54.207.12.236/redesign',
-	'http://localhost/elefanteletrado.com.br/www' => 'http://54.207.12.236/redesign',
-	'wordpress@agencianico.com.br' => 'suporte@elefanteletrado.com.br'
+	'http://www.elefanteletrado.com.br' => 'http://local.elefanteletrado.com.br'
 );
 
-require 'inc.php';
+require 'inc.php';		

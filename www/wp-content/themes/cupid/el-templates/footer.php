@@ -1,10 +1,13 @@
 <?php
-global $is404;
+global $is404, $cupid_data;
+
 ?>
 	<footer class="el-footer el-footer-page">
 		<div>
 			<div class="el-footer-logo">
-				<a href="" title="Ir para a Página Inicial" class="el-footer-logo-link">Elefante Letrado</a>
+				<a href="" title="<?php echo $cupid_data['el_text_link_home']; ?>" class="el-footer-logo-link">
+					<?php echo $cupid_data['el_site_title']; ?>
+				</a>
 			</div>
 			<nav class="row">
 				<div class="col-sm-3 hidden-xs">
@@ -34,15 +37,16 @@ global $is404;
 				</div>
 				<div class="col-sm-3">
 					<p>
-						Realização
+						<?php echo $cupid_data['el_title_realization']; ?>
 					</p>
 					<img src="<?php echo get_template_directory_uri(); ?>/el-assets/images/layout/realizacao.jpg" width="228" height="48">
 					<p class="el-text-st-footer">
-						100 livros da plataforma foram apoiados pela Lei Rouanet.<br />
-						Em contrapartida, doamos acesso para 50 escolas públicas.
+						<?php echo $cupid_data['el_text_realization']; ?>
 					</p>
 					<div style="margin-top: 10px; padding-top: 10px; margin-bottom: 30px; border-top: 1px solid #999;">
-						<a href="http://www.kidsafeseal.com/certifiedproducts/elefanteletrado.html" target="_blank"><img border="0" alt="ElefanteLetrado.com.br is certified by the kidSAFE Seal Program." src="http://www.kidsafeseal.com/sealimage/125654952451330744/elefanteletrado_small_darktm.png"></a>
+						<a href="http://www.kidsafeseal.com/certifiedproducts/elefanteletrado.html" target="_blank">
+							<img border="0" alt="ElefanteLetrado.com.br is certified by the kidSAFE Seal Program." src="http://www.kidsafeseal.com/sealimage/125654952451330744/elefanteletrado_small_darktm.png">
+						</a>
 					</div>
 				</div>
 			</nav>
@@ -56,16 +60,13 @@ global $is404;
 			<div class="el-modal-dialog">
 				<section class="el-modal-content el-modal-content-msg">
 					<div class="el-modal-header">
-						<h4 class="el-modal-title">Página não encontrada</h4>
+						<h4 class="el-modal-title"><?php echo $cupid_data['page_404_title']; ?></h4>
 					</div>
 					<div class="el-modal-body">
 						<p class="el-modal-message">
-							O link que você acessou não está disponível. Em caso de dúvidas entre em contato!
+							<?php echo $cupid_data['page_404_message']; ?>
 						</p>
-						<button class="submit-ok message-404-ok">Voltar para o site</button>
-					</div>
-					<div class="el-modal-footer">
-
+						<button class="submit-ok message-404-ok"><?php echo $cupid_data['page_404_text_button']; ?></button>
 					</div>
 				</section>
 			</div>

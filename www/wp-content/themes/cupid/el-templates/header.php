@@ -124,6 +124,9 @@
 	?>
 
 	<?php wp_head(); ?>
+	<script>
+		var textContactLoading = <?php echo json_encode($cupid_data['el_section_contact_button_sending']); ?>;
+	</script>
 </head>
 
 <body <?php body_class($body_class); ?>>

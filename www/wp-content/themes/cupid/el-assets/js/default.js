@@ -86,7 +86,7 @@ function onInputTel(input) {
             var $button = $form.find("button[type='submit']");
             $button.attr("disabled", true);
             $button.attr("data-text-original", $button.text());
-            $button.html("Enviando...");
+            $button.html(textContactLoading);
 
             $.ajax({
                 url: $(this).attr("action"),

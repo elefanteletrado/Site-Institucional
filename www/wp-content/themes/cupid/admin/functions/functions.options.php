@@ -103,12 +103,64 @@ if ( ! function_exists( 'of_options' ) ) {
 		$of_options = array();
 
 		/*General Settings*/
-		$of_options[] = array( "name" => __( 'General Settings', 'cupid' ),
-							   "type" => "heading",
-							   "icon" => ADMIN_IMAGES . "icon-settings.png"
+		$of_options[] = array(
+			"name" => 'Configurações Gerais',
+			"type" => "heading",
+			"icon" => ADMIN_IMAGES . "icon-settings.png"
 		);
-		$logo         = THEME_URL . 'assets/images/logo.png';
+		$logo = THEME_URL . 'assets/images/logo.png';
 
+		$of_options[] = array(
+			'name' => 'Título Site',
+			'id'   => 'el_site_title',
+			'std'  => 'Elefante Letrado',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Telefone',
+			'id'   => 'el_phone',
+			'std'  => '+55 51 3407-8090',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Texto Link Página Inicial',
+			'id'   => 'el_text_link_home',
+			'std'  => 'Ir para Página Inicial',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título Realização',
+			'id'   => 'el_title_realization',
+			'std'  => 'Realização',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Texto Realização',
+			'id'   => 'el_text_realization',
+			'std'  => '100 livros da plataforma foram apoiados pela Lei Rouanet.<br />Em contrapartida, doamos acesso para 50 escolas públicas.',
+			'type' => 'text',
+			'desc' => 'Permite tags HTML. Use "'.htmlentities('<br />').'" para quebrar linhas.',
+		);
+
+		$of_options[] = array(
+			'name' => 'Url site português',
+			'id'   => 'el_link_portuguese',
+			'std'  => 'http://www.elefanteletrado.com.br',
+			'type' => 'text',
+		);
+
+		$of_options[] = array(
+			'name' => 'Url site inglês',
+			'id'   => 'el_link_english',
+			'std'  => 'http://www.elefanteletrado.com.br/en',
+			'type' => 'text',
+		);
+
+		/*
 		$of_options[] = array( "name" => __( 'Logo', 'cupid' ),
 							   "desc" => __( 'Enter URL or Upload an image file as your logo.', 'cupid' ),
 							   "id"   => "site-logo",
@@ -165,7 +217,7 @@ if ( ! function_exists( 'of_options' ) ) {
 							   "std"     => "right-sidebar",
 							   "type"    => "images",
 							   "options" => array(
-								  /* 'full-content'  => $url . '1col.png',*/
+								  // 'full-content'  => $url . '1col.png',
                                    'container-full-content'  => $url . '3cm.png',
                                    'left-sidebar'  => $url . '2cl.png',
 								   'right-sidebar' => $url . '2cr.png'
@@ -196,257 +248,9 @@ if ( ! function_exists( 'of_options' ) ) {
             "std"  => "",
             "type" => "text"
         );
+		*/
 
-        /*Page 404 Options*/
-        $of_options[] = array( "name" => __( '404 Options', 'cupid' ),
-            "type" => "heading",
-            "icon" => ADMIN_IMAGES . "icon-header.png"
-        );
-
-        $of_options[] = array( "name" => __( 'Url Support Forum', 'cupid' ),
-            "id"   => "url-support-forum",
-            "std"  => "",
-            "type" => "text"
-        );
-
-        $of_options[] = array( "name" => __( 'Phone Contact', 'cupid' ),
-            "id"   => "phone",
-            "std"  => "",
-            "type" => "text"
-        );
-        $page_404_bg = THEME_URL . 'assets/images/404.jpg';
-        $of_options[] = array( "name" => __( '404 Background', 'cupid' ),
-            "desc" => __( "Enter URL or upload an image to set background for 404 page", 'cupid' ),
-            "id"   => "page-404-background",
-            "std"  => $page_404_bg,
-            "type" => "media"
-        );
-
-		/*Site Top Options*/
-		$of_options[] = array( "name" => __( 'Site Top Options', 'cupid' ),
-							   "type" => "heading",
-							   "icon" => ADMIN_IMAGES . "icon-header.png"
-		);
-
-		$of_options[] = array( "name"  => __( 'Show Site Top', 'cupid' ),
-							   "desc"  => "",
-							   "id"    => "show-site-top",
-							   "std"   => 1,
-							   "type"  => "switch"
-		);
-
-		$of_options[] = array( "name"    => __( 'Site Top Layout', 'cupid' ),
-							   "desc"    => __( 'Select layout for Site Top', 'cupid' ),
-							   "id"      => "site-top-layout",
-							   "std"     => "1",
-							   "type"    => "images",
-							   "options" => array(
-								   '1' => $url . 'header/site-top-1.jpg',
-								   '2' => $url . 'header/site-top-2.jpg',
-								   '3' => $url . 'header/site-top-3.jpg',
-								   '4' => $url . 'header/site-top-4.jpg',
-							   )
-		);
-
-		$of_options[] = array( "name"  => __( 'Show Language Selector', 'cupid' ),
-							   "desc"  => "",
-							   "id"    => "show-language-selector",
-							   "std"   => 1,
-							   "type"  => "switch"
-		);
-
-		$of_options[] = array( "name"  => __( 'Show Login Link', 'cupid' ),
-							   "desc"  => "",
-							   "id"    => "show-login-link",
-							   "std"   => 1,
-							   "type"  => "switch"
-		);
-
-		$of_options[] = array( "name"  => __( 'Site Top Content', 'cupid' ),
-							   "desc"  => "",
-							   "id"    => "site-top-content",
-							   "std"   => '<ul><li><i class="fa fa-phone-square"></i>HOTLINE: (+84)98 902 9128</li></ul>',
-							   "type"  => "textarea"
-		);
-
-
-		/*Header Options*/
-		$of_options[] = array( "name" => __( 'Header Options', 'cupid' ),
-							   "type" => "heading",
-							   "icon" => ADMIN_IMAGES . "icon-header.png"
-		);
-
-
-		$of_options[] = array( "name"    => __( 'Header Layout', 'cupid' ),
-							   "desc"    => __( 'Select layout for Header', 'cupid' ),
-							   "id"      => "header-layout",
-							   "std"     => "1",
-							   "type"    => "images",
-							   "options" => array(
-								   '1' => $url . 'header/header-1.jpg',
-								   '2' => $url . 'header/header-2.jpg',
-                                   '3' => $url . 'header/header-3.jpg',
-                                   '4' => $url . 'header/header-4.jpg',
-                                   '5' => $url . 'header/header-5.jpg',
-                                   '6' => $url . 'header/header-6.jpg'
-							   )
-		);
-		$of_options[] = array( "name"  => __( 'Show Search Button', 'cupid' ),
-							   "desc"  => "",
-							   "id"    => "show-search-button",
-							   "std"   => 1,
-							   "type"  => "switch"
-		);
-
-		$of_options[] = array( "name"  => __( 'Show Mini Cart', 'cupid' ),
-							   "desc"  => "",
-							   "id"    => "show-mini-cart",
-							   "std"   => 1,
-							   "type"  => "switch"
-		);
-
-		/*Footer Options*/
-
-        $of_options[] = array( 	"name" 		=> __('Footer Options','cupid'),
-            "type" 		=> "heading",
-            "icon" 		=> ADMIN_IMAGES . "icon-footer.png"
-        );
-
-		$of_options[] = array( "name" => __( 'Copyright Text', 'cupid' ),
-							   "desc" => __( 'You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]', 'cupid' ),
-							   "id"   => "copyright-text",
-							   "std"  => "Powered by <a href=\"http://wordpress.org\">WordPress</a>. Built on the <a href=\"http://g5plus.net\">G5Plus</a>.",
-							   "type" => "textarea"
-		);
-		/*Styling Options*/
-		$of_options[] = array( "name" => __( 'Styling Options', 'cupid' ),
-							   "type" => "heading"
-		);
-
-		$of_options[] = array( "name"    => __( 'Layout Style', 'cupid' ),
-							   "desc"    => __( 'Select a layout', 'cupid' ),
-							   "id"      => "layout-style",
-							   "std"     => "wide",
-							   "type"    => "radio",
-							   "options" => array(
-								   'boxed' => 'Boxed',
-								   'wide'  => 'Wide',
-							   ) );
-
-
-		$of_options[] = array( "name"  => __( 'Background Images', 'cupid' ),
-							   "desc"  => "",
-							   "id"    => "use-bg-image",
-							   "std"   => 0,
-							   "folds" => 1,
-							   "type"  => "switch"
-		);
-
-		$of_options[] = array( "name"    => __( 'Background Pattern', 'cupid' ),
-							   "desc"    => __( 'Select a background pattern.', 'cupid' ),
-							   "id"      => "bg-pattern",
-							   "type"    => "tiles",
-							   "options" => $bg_images,
-							   "fold"    => "use-bg-image",
-							   "std"     => $bg_images[1]
-		);
-
-		$of_options[] = array( "name" => __( 'Upload Background', 'cupid' ),
-							   "desc" => __( 'Upload your own background', 'cupid' ),
-							   "id"   => "bg-pattern-upload",
-							   "std"  => THEME_URL . '/assets/images/bg-images/bg-0.jpg',
-							   "type" => "upload",
-							   "fold" => "use-bg-image"
-		);
-
-		$of_options[] = array( "name"    => __( 'Background Repeat', 'cupid' ),
-							   "desc"    => "",
-							   "id"      => "bg-repeat",
-							   "std"     => "no-repeat",
-							   "type"    => "select",
-							   "options" => array( 'repeat' => __( 'repeat', 'cupid' ), 'repeat-x' => __( 'repeat-x', 'cupid' ), 'repeat-y' => __( 'repeat-y', 'cupid' ), 'no-repeat' => __( 'no-repeat', 'cupid' ) ),
-							   "fold"    => "use-bg-image"
-		);
-		$of_options[] = array( "name"    => __( 'Background Position', 'cupid' ),
-							   "desc"    => "",
-							   "id"      => "bg-position",
-							   "std"     => "center center",
-							   "type"    => "select",
-							   "options" => array( 'left top'      => __( 'left top', 'cupid' ),
-												   'left center'   => __( 'left center', 'cupid' ),
-												   'left bottom'   => __( 'left bottom', 'cupid' ),
-												   'right top'     => __( 'right top', 'cupid' ),
-												   'right center'  => __( 'right center', 'cupid' ),
-												   'right bottom'  => __( 'right bottom', 'cupid' ),
-												   'center top'    => __( 'center top', 'cupid' ),
-												   'center center' => __( 'center center', 'cupid' ),
-												   'center bottom' => __( 'center bottom', 'cupid' )
-							   ),
-							   "fold"    => "use-bg-image"
-		);
-		$of_options[] = array( "name"    => __( 'Background Attachment', 'cupid' ),
-							   "desc"    => "",
-							   "id"      => "bg-attachment",
-							   "std"     => "fixed",
-							   "type"    => "select",
-							   "options" => array( 'scroll'  => __( 'scroll', 'cupid' ),
-												   'fixed'   => __( 'fixed', 'cupid' ),
-												   'local'   => __( 'local', 'cupid' ),
-												   'initial' => __( 'initial', 'cupid' ),
-												   'inherit' => __( 'inherit', 'cupid' )
-							   ),
-							   "fold"    => "use-bg-image"
-		);
-		$of_options[] = array( "name"    => __( 'Background Size', 'cupid' ),
-							   "desc"    => "",
-							   "id"      => "bg-size",
-							   "std"     => "cover",
-							   "type"    => "select",
-							   "options" => array( 'auto'    => __( 'auto', 'cupid' ),
-												   'cover'   => __( 'cover', 'cupid' ),
-												   'contain' => __( 'contain', 'cupid' ),
-												   'initial' => __( 'initial', 'cupid' ),
-												   'inherit' => __( 'inherit', 'cupid' )
-							   ),
-							   "fold"    => "use-bg-image"
-		);
-
-		$of_options[] = array( "name" => __( 'Primary Color', 'cupid' ),
-							   "desc" => __( 'Pick a primary color for the theme.', 'cupid' ),
-							   "id"   => "primary-color",
-							   "std"  => "#D93F63",
-							   "type" => "color"
-		);
-
-		$of_options[] = array( "name" => __( 'Secondary Color', 'cupid' ),
-							   "desc" => __( 'Pick a secondary color for the theme.', 'cupid' ),
-							   "id"   => "secondary-color",
-							   "std"  => "#FFA73C",
-							   "type" => "color"
-		);
-
-		$of_options[] = array( "name" => __( 'Button Color', 'cupid' ),
-							   "desc" => __( 'Pick a button color for the theme.', 'cupid' ),
-							   "id"   => "button-color",
-							   "std"  => "#D93F63",
-							   "type" => "color"
-		);
-
-		$of_options[] = array( "name" => __( 'Bullet Color', 'cupid' ),
-							   "desc" => __( 'Pick a bullet color for the theme.', 'cupid' ),
-							   "id"   => "bullet-color",
-							   "std"  => "#A273B9",
-							   "type" => "color"
-		);
-
-		$of_options[] = array( "name" => __( 'Icon Box Color', 'cupid' ),
-							   "desc" => __( 'Pick a icon box color for the theme.', 'cupid' ),
-							   "id"   => "icon-box-color",
-							   "std"  => "#FFA73C",
-							   "type" => "color"
-		);
-
-		/*Social Sharing Box*/
+        /*Social Sharing Box*/
 		$of_options[] = array( "name" => __( 'Social', 'cupid' ),
 							   "type" => "heading",
 							   "icon" => ADMIN_IMAGES . "icon-header.png"
@@ -466,17 +270,19 @@ if ( ! function_exists( 'of_options' ) ) {
 							   "std"  => "#",
 							   "type" => "text"
 		);
+		/*
 		$of_options[] = array( "name" => __( 'LinkedIn Link', 'cupid' ),
 							   "id"   => "social-linkedin-link",
 							   "std"  => "#",
 							   "type" => "text"
 		);
+		*/
 		$of_options[] = array( "name" => __( 'Facebook Link', 'cupid' ),
 							   "id"   => "social-face-link",
 							   "std"  => "#",
 							   "type" => "text"
 		);
-
+		/*
 		$of_options[] = array( "name" => __( 'Twitter Link', 'cupid' ),
 							   "id"   => "social-twitter-link",
 							   "std"  => "#",
@@ -487,14 +293,11 @@ if ( ! function_exists( 'of_options' ) ) {
 							   "std"  => "#",
 							   "type" => "text"
 		);
-
-
 		$of_options[] = array( "name" => __( 'Google Link', 'cupid' ),
 							   "id"   => "social-google-link",
 							   "std"  => "",
 							   "type" => "text"
 		);
-
 		$of_options[] = array( "name" => __( 'Vimeo Link', 'cupid' ),
 							   "id"   => "social-vimeo-link",
 							   "std"  => "",
@@ -505,154 +308,202 @@ if ( ! function_exists( 'of_options' ) ) {
 							   "std"  => "",
 							   "type" => "text"
 		);
+		*/
+		$of_options[] = array( "name" => __( 'Instagram Link', 'cupid' ),
+			"id"   => "social-instagram-link",
+			"std"  => "",
+			"type" => "text"
+		);
 		$of_options[] = array( "name" => __( 'Youtube Link', 'cupid' ),
 							   "id"   => "social-youtube-link",
 							   "std"  => "",
 							   "type" => "text"
 		);
-		$of_options[] = array( "name" => __( 'Instagram Link', 'cupid' ),
-							   "id"   => "social-instagram-link",
-							   "std"  => "",
-							   "type" => "text"
+
+		$of_options[] = array(
+			'name' => 'Fale Conosco',
+			'type' => 'heading',
+			'icon' => ADMIN_IMAGES . 'icon-settings.png'
 		);
 
-
-        /*WooCommerce*/
-        $of_options[] = array( "name" => __( 'WooCommerce', 'cupid' ),
-            "type" => "heading",
-            "icon" => ADMIN_IMAGES . "woo_icon.png"
-        );
-
-        $of_options[] = array( "name"    => __( 'Archive Product Layout', 'cupid' ),
-            "desc"    => __( 'Select layout for Archive Product Page', 'cupid' ),
-            "id"      => "product-archive-layout",
-            "std"     => "left-sidebar",
-            "type"    => "images",
-            "options" => array(
-                'full-content'  => $url . '1col.png',
-                'left-sidebar'  => $url . '2cl.png',
-                'right-sidebar' => $url . '2cr.png'
-            )
-        );
-
-
-
-		/*Typography*/
-		$of_options[] = array( "name" => __( 'Typography', 'cupid' ),
-							   "type" => "heading",
-							   "icon" => ADMIN_IMAGES . "icon-typography.gif"
-
-		);
-		$of_options[] = array( "name" => __( 'Body Font', 'cupid' ),
-							   "desc" => __( 'Specify the body font properties', 'cupid' ),
-							   "id"   => "body-font",
-							   "std"  => array( 'face' => 'Proxima Nova', 'size' => '15px', 'weight' => 'normal', 'face-type' => '0' ),
-							   "type" => "typography"
+		$of_options[] = array(
+			'name' => 'Título',
+			'id'   => 'el_section_contact_title',
+			'std'  => 'Fale Conosco',
+			'type' => 'text'
 		);
 
-		$of_options[] = array( "name" => __( 'Heading Options', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "heading-font",
-							   "std"  => array( 'face' => 'Proxima Nova', 'face-type' => '0' ),
-							   "type" => "typography"
+		$of_options[] = array(
+			'name' => 'Título campo "Nome"',
+			'id'   => 'el_section_contact_input_name',
+			'std'  => 'Nome',
+			'type' => 'text'
 		);
 
-		$of_options[] = array( "name" => __( 'Font H1', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "h1-font",
-							   "std"  => array( 'face' => '', 'size' => '30px', 'style' => 'normal', 'weight' => '600', 'text-transform' => 'none' ),
-							   "type" => "typography"
-		);
-		$of_options[] = array( "name" => __( 'Font H2', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "h2-font",
-							   "std"  => array( 'face' => '', 'size' => '28px', 'style' => 'normal', 'weight' => '600', 'text-transform' => 'none' ),
-							   "type" => "typography"
-		);
-		$of_options[] = array( "name" => __( 'Font H3', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "h3-font",
-							   "std"  => array( 'face' => '', 'size' => '26px', 'style' => 'normal', 'weight' => '600', 'text-transform' => 'none' ),
-							   "type" => "typography"
-		);
-		$of_options[] = array( "name" => __( 'Font H4', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "h4-font",
-							   "std"  => array( 'face' => '', 'size' => '24px', 'style' => 'normal', 'weight' => '600', 'text-transform' => 'none' ),
-							   "type" => "typography"
-		);
-		$of_options[] = array( "name" => __( 'Font H5', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "h5-font",
-							   "std"  => array( 'face' => '', 'size' => '22px', 'style' => 'normal', 'weight' => '600', 'text-transform' => 'none' ),
-							   "type" => "typography"
-		);
-		$of_options[] = array( "name" => __( 'Font H6', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "h6-font",
-							   "std"  => array( 'face' => '', 'size' => '19px', 'style' => 'normal', 'weight' => '600', 'text-transform' => 'none' ),
-							   "type" => "typography"
+		$of_options[] = array(
+			'name' => 'Título campo "E-mail"',
+			'id'   => 'el_section_contact_input_email',
+			'std'  => 'E-mail',
+			'type' => 'text'
 		);
 
-		/*Resources Options*/
-		$of_options[] = array( "name" => __( 'Resources Options', 'cupid' ),
-							   "type" => "heading",
-							   "icon" => ADMIN_IMAGES . "icon-bootstrap.png"
-		);
-		$of_options[] = array( "name" => __( 'CDN Bootstrap Script', 'cupid' ),
-							   "desc" => "Empty using theme resources",
-							   "id"   => "bootstrap-js",
-							   "std"  => "",
-							   "type" => "text"
+		$of_options[] = array(
+			'name' => 'Título campo "Telefone"',
+			'id'   => 'el_section_contact_input_phone',
+			'std'  => 'Telefone',
+			'type' => 'text'
 		);
 
-		$of_options[] = array( "name" => __( 'CDN Bootstrap StyleSheet', 'cupid' ),
-							   "desc" => "Empty using theme resources",
-							   "id"   => "bootstrap-css",
-							   "std"  => "",
-							   "type" => "text"
+		$of_options[] = array(
+			'name' => 'Título campo "Escola"',
+			'id'   => 'el_section_contact_input_school',
+			'std'  => 'Escola',
+			'type' => 'text'
 		);
 
-		$of_options[] = array( "name" => __( 'CDN Font Awesome', 'cupid' ),
-							   "desc" => "Empty using theme resources",
-							   "id"   => "font-awesome",
-							   "std"  => "",
-							   "type" => "text",
+		$of_options[] = array(
+			'name' => 'Título campo "Mensagem"',
+			'id'   => 'el_section_contact_input_message',
+			'std'  => 'Mensagem',
+			'type' => 'text'
 		);
 
-		/*Custom CSS*/
-		$of_options[] = array( "name" => __( 'Custom CSS', 'cupid' ),
-							   "type" => "heading",
-							   "icon" => ADMIN_IMAGES . "css.png"
+		$of_options[] = array(
+			'name' => 'Título botão "Enviar"',
+			'id'   => 'el_section_contact_button_send',
+			'std'  => 'Enviar',
+			'type' => 'text'
 		);
 
-		$of_options[] = array( "name" => __( 'Custom CSS', 'cupid' ),
-							   "desc" => "",
-							   "id"   => "css-custom",
-							   "std"  => ".class-custom{}",
-							   "type" => "textarea"
+		$of_options[] = array(
+			'name' => 'Título botão em carregamento "Enviando..."',
+			'id'   => 'el_section_contact_button_sending',
+			'std'  => 'Enviando..."',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Demonstração',
+			'type' => 'heading',
+			'icon' => ADMIN_IMAGES . 'icon-settings.png'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título botão "Fechar"',
+			'id'   => 'el_section_demo_button_close',
+			'std'  => 'Fechar',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título',
+			'id'   => 'el_section_demo_title',
+			'std'  => 'Por favor preencha o formulário abaixo:',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título campo "Nome completo"',
+			'id'   => 'el_section_demo_input_name',
+			'std'  => 'Nome completo',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título campo "E-mail"',
+			'id'   => 'el_section_demo_input_email',
+			'std'  => 'E-mail',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título campo "Telefone"',
+			'id'   => 'el_section_demo_input_phone',
+			'std'  => 'Telefone',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título campo "Nome da Instituição"',
+			'id'   => 'el_section_demo_input_school',
+			'std'  => 'Nome da Instituição',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título campo "Mensagem"',
+			'id'   => 'el_section_demo_input_message',
+			'std'  => 'Mensagem',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título botão "Enviar"',
+			'id'   => 'el_section_demo_button_send',
+			'std'  => 'Enviar',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título Mensagem Sucesso',
+			'id'   => 'el_section_demo_msg_success_title',
+			'std'  => 'Obrigado!',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Texto Mensagem Sucesso',
+			'id'   => 'el_section_demo_msg_success_text',
+			'std'  => 'Entraremos em contato o mais rápido possível.',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Página 404',
+			'type' => 'heading',
+			'icon' => ADMIN_IMAGES . 'icon-settings.png'
+		);
+
+		$of_options[] = array(
+			'name' => 'Título',
+			'id'   => 'page_404_title',
+			'std'  => 'Página não encontrada',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Mensagem',
+			'id'   => 'page_404_message',
+			'std'  => 'O link que você acessou não está disponível. Em caso de dúvidas entre em contato!',
+			'type' => 'text'
+		);
+
+		$of_options[] = array(
+			'name' => 'Texto botão Voltar',
+			'id'   => 'page_404_text_button',
+			'std'  => 'Voltar para o site',
+			'type' => 'text'
 		);
 
 		/*Backup Options*/
 		$of_options[] = array( "name" => __( 'Backup Options', 'cupid' ),
-							   "type" => "heading",
-							   "icon" => ADMIN_IMAGES . "icon-slider.png"
+			"type" => "heading",
+			"icon" => ADMIN_IMAGES . "icon-slider.png"
 		);
 
 		$of_options[] = array( "name" => __( 'Backup and Restore Options', 'cupid' ),
-							   "id"   => "of-backup",
-							   "std"  => "",
-							   "type" => "backup",
-							   "desc" => __( 'You can use the two buttons below to backup your current options, and then restore it back at a later time. This is useful if you want to experiment on the options but would like to keep the old settings in case you need it back.', 'cupid' ),
+			"id"   => "of-backup",
+			"std"  => "",
+			"type" => "backup",
+			"desc" => __( 'You can use the two buttons below to backup your current options, and then restore it back at a later time. This is useful if you want to experiment on the options but would like to keep the old settings in case you need it back.', 'cupid' ),
 		);
 
 		$of_options[] = array( "name" => __( 'Transfer Theme Options Data', 'cupid' ),
-							   "id"   => "of-transfer",
-							   "std"  => "",
-							   "type" => "transfer",
-							   "desc" => __( 'You can tranfer the saved options data between different installs by copying the text inside the text box. To import data from another install, replace the data in the text box with the one from another install and click "Import Options".', 'cupid' ),
+			"id"   => "of-transfer",
+			"std"  => "",
+			"type" => "transfer",
+			"desc" => __( 'You can tranfer the saved options data between different installs by copying the text inside the text box. To import data from another install, replace the data in the text box with the one from another install and click "Import Options".', 'cupid' ),
 		);
-
 	}
 	//End function: of_options()
 }//End chack if function exists: of_options()

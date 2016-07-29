@@ -3406,6 +3406,30 @@ input[type="button"].btn-block {
   line-height: 22px !important;
   margin-right: 16px; }
 
+.el-icon-round-portuguese {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-indent: -9999px;
+  display: inline-block;
+  background: transparent url("../images/layout/flag-portuguese.png") no-repeat -5px -2px; }
+
+.el-icon-round-english {
+  margin-right: 16px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-indent: -9999px;
+  display: inline-block;
+  background: transparent url("../images/layout/flag-english.png") no-repeat -5px -2px; }
+
+.el-box-phone {
+  display: none; }
+  @media (min-width: 480px) {
+    .el-box-phone {
+      display: inline-block; } }
+
 .el-icon-auxiliary {
   float: right;
   margin-left: 12px;
@@ -3436,11 +3460,8 @@ input[type="button"].btn-block {
     color: #FFF; }
 
 .el-header-phone {
-  display: none;
+  display: block;
   float: left; }
-  @media (min-width: 480px) {
-    .el-header-phone {
-      display: block; } }
 
 .el-header-main {
   z-index: 1000; }
@@ -4609,6 +4630,10 @@ input[type="button"].btn-block {
   margin-bottom: 20px; }
   .el-carousel-devices .owl-item {
     padding: 10px; }
+    .el-carousel-devices .owl-item img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block; }
 
 @media (min-width: 768px) {
   .el-text-left-1 {

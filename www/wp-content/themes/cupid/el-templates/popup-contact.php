@@ -1,4 +1,6 @@
 <?php
+global $cupid_data;
+
 $option_id = 1;
 $option = get_option( 'ext_contact_type_item_' . $option_id );
 $optionRecaptcha = get_option( 'ext_base_recaptcha' );
@@ -8,8 +10,10 @@ $optionRecaptcha = get_option( 'ext_base_recaptcha' );
 		<div class="el-modal-dialog">
 			<section class="el-modal-content">
 				<div class="el-modal-header">
-					<button type="button" class="el-close popup-contact-close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
-					<h4 class="el-modal-title">Por favor preencha o formulário abaixo:</h4>
+					<button type="button" class="el-close popup-contact-close" data-dismiss="modal" aria-label="<?php echo $cupid_data['el_section_demo_button_close']; ?>">
+						<span aria-hidden="true">X</span>
+					</button>
+					<h4 class="el-modal-title"><?php echo $cupid_data['el_section_demo_title']; ?></h4>
 				</div>
 				<div class="el-modal-body">
 					<form class="form-contact" action="<?php echo admin_url('admin-ajax.php'); ?>" method="post">
@@ -17,30 +21,30 @@ $optionRecaptcha = get_option( 'ext_base_recaptcha' );
 						<input type="hidden" name="subject" value="6">
 						<div class="row">
 							<div class="col-sm-12">
-								<label for="modal-contsct-name" class="sr-only">Nome completo</label>
-								<input class="form-control" id="modal-contsct-name" name="name" type="text" maxlength="100" placeholder="Nome completo" required>
+								<label for="modal-contsct-name" class="sr-only"><?php echo $cupid_data['el_section_demo_input_name']; ?></label>
+								<input class="form-control" id="modal-contsct-name" name="name" type="text" maxlength="100" placeholder="<?php echo $cupid_data['el_section_demo_input_name']; ?>" required>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-6">
-								<label for="modal-contsct-email" class="sr-only">E-mail</label>
-								<input class="form-control" id="modal-contsct-email" name="email" type="email" maxlength="100" required placeholder="E-mail">
+								<label for="modal-contsct-email" class="sr-only"><?php echo $cupid_data['el_section_demo_input_email']; ?></label>
+								<input class="form-control" id="modal-contsct-email" name="email" type="email" maxlength="100" required placeholder="<?php echo $cupid_data['el_section_demo_input_email']; ?>">
 							</div>
 							<div class="col-sm-6">
-								<label for="modal-contsct-phone" class="sr-only">Telefone</label>
-								<input class="form-control" id="modal-contsct-phone" name="phone" type="tel" maxlength="20" required oninput="onInputTel(this)" placeholder="Telefone">
+								<label for="modal-contsct-phone" class="sr-only"><?php echo $cupid_data['el_section_demo_input_phone']; ?></label>
+								<input class="form-control" id="modal-contsct-phone" name="phone" type="tel" maxlength="20" required oninput="onInputTel(this)" placeholder="<?php echo $cupid_data['el_section_demo_input_phone']; ?>">
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">
-								<label for="modal-contsct-school" class="sr-only">Nome da Instituição</label>
-								<input class="form-control" id="modal-contsct-school" name="school" type="text" maxlength="100" required placeholder="Nome da Instituição">
+								<label for="modal-contsct-school" class="sr-only"><?php echo $cupid_data['el_section_demo_input_school']; ?></label>
+								<input class="form-control" id="modal-contsct-school" name="school" type="text" maxlength="100" required placeholder="<?php echo $cupid_data['el_section_demo_input_school']; ?>">
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">
-								<label for="modal-contact-message" class="sr-only">Mensagem</label>
-								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="Mensagem"></textarea>
+								<label for="modal-contact-message" class="sr-only"><?php echo $cupid_data['el_section_demo_input_message']; ?></label>
+								<textarea class="form-control" id="modal-contact-message" name="message" placeholder="<?php echo $cupid_data['el_section_demo_input_message']; ?>"></textarea>
 							</div>
 						</div>
 						<?php if(!empty($option['active_captcha'])): ?>
@@ -52,7 +56,7 @@ $optionRecaptcha = get_option( 'ext_base_recaptcha' );
 								</div>
 							</div>
 						<?php endif; ?>
-						<button type="submit" class="submit-button">Enviar</button>
+						<button type="submit" class="submit-button"><?php echo $cupid_data['el_section_demo_button_send']; ?></button>
 					</form>
 				</div>
 				<div class="el-modal-footer">
@@ -67,12 +71,12 @@ $optionRecaptcha = get_option( 'ext_base_recaptcha' );
 		<div class="el-modal-dialog">
 			<section class="el-modal-content el-modal-content-msg">
 				<div class="el-modal-header">
-					<button type="button" class="el-close popup-contact-message-ok" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">X</span></button>
-					<h4 class="el-modal-title">Obrigado!</h4>
+					<button type="button" class="el-close popup-contact-message-ok" data-dismiss="modal" aria-label="<?php echo $cupid_data['el_section_demo_button_close']; ?>"><span aria-hidden="true">X</span></button>
+					<h4 class="el-modal-title"><?php echo $cupid_data['el_section_demo_msg_success_title']; ?></h4>
 				</div>
 				<div class="el-modal-body">
 					<p class="el-modal-message">
-						Entraremos em contato o mais rápido possível.
+						<?php echo $cupid_data['el_section_demo_msg_success_text']; ?>
 					</p>
 					<button class="submit-ok popup-contact-message-ok">OK</button>
 				</div>
