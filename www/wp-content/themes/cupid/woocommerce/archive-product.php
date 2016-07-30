@@ -83,5 +83,6 @@ get_header(); ?>
             ?>
         </div>
     </div>
+    <?php get_template_part('el-templates/section-contact'); ?>
 </main>
 <?php get_footer(); ?>

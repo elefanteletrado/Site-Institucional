@@ -19,7 +19,7 @@ if(!isset($_COOKIE['cupid-classes-style'])) {
 $image_size ='thumbnail-350x350';
 global $wp_query;
 ?>
-<main role="main" class="site-content-archive">
+<main role="main">
     <div class="container clearfix">
         <div class="row clearfix">
             <div class="<?php echo esc_attr($class_col)?>" >
@@ -94,5 +94,6 @@ global $wp_query;
 
         </div>
     </div>
+    <?php get_template_part('el-templates/section-contact'); ?>
 </main>
 

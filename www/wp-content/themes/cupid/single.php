@@ -24,7 +24,7 @@ if (get_post_format() == 'audio') {
     wp_enqueue_script( 'cupid-jplayer', get_template_directory_uri() . '/assets/plugins/jquery.jPlayer/jquery.jplayer.min.js', array( 'jquery' ), false, true );
 }
 ?>
-<main role="main" class="site-content-archive">
+<main role="main">
     <div class="container clearfix">
         <div class="row clearfix">
             <div class="<?php echo esc_attr($class_col); ?>">
@@ -67,6 +67,7 @@ if (get_post_format() == 'audio') {
             ?>
         </div>
     </div>
+    <?php get_template_part('el-templates/section-contact'); ?>
 </main>
 
 

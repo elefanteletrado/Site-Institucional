@@ -27,7 +27,7 @@ global $is404, $cupid_data;
 					?>
 				</div>
 				<div class="col-sm-3 hidden-xs">
-					<h3>Redes Sociais</h3>
+					<h3><?php echo $cupid_data['el_social_title']; ?></h3>
 					<?php
 					wp_nav_menu( array(
 						'menu_id' => 'main-menu',

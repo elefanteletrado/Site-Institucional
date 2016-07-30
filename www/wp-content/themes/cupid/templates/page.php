@@ -30,6 +30,7 @@ if ($page_layout == 'left-sidebar') {
             get_template_part( 'content', 'page' );
         endwhile;
         ?>
+        <?php get_template_part('el-templates/section-contact'); ?>
     </main>
 <?php else: ?>
     <main role="main" class="site-content site-content-page">
@@ -62,5 +63,6 @@ if ($page_layout == 'left-sidebar') {
                 ?>
             </div>
         </div>
+        <?php get_template_part('el-templates/section-contact'); ?>
     </main>
 <?php endif; ?>

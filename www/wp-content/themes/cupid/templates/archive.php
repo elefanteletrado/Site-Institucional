@@ -33,7 +33,7 @@ if (is_search()) {
 }
 
 ?>
-<main role="main" class="site-content-archive">
+<main role="main">
     <div class="container clearfix">
         <div class="row clearfix">
             <div class="<?php echo esc_attr($class_col); ?>">
@@ -100,5 +100,6 @@ if (is_search()) {
             ?>
         </div>
     </div>
+    <?php get_template_part('el-templates/section-contact'); ?>
 </main>
 

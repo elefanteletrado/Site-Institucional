@@ -40,7 +40,7 @@ if(count($enroll)>0 && $enroll!='')
     $enroll_link =$enroll[0]
 
 ?>
-<main role="main" class="site-content-archive cupid-classes-content">
+<main role="main" class="cupid-classes-content">
     <div class="container clearfix">
         <div class="row clearfix">
             <div class="<?php echo esc_attr($class_col); ?>">

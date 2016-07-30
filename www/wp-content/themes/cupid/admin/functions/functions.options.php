@@ -265,6 +265,12 @@ if ( ! function_exists( 'of_options' ) ) {
 							   "options" => array( "sharing-facebook" => __( 'Facebook', 'cupid' ), "sharing-twitter" => __( 'Twitter', 'cupid' ), "sharing-google" => __( 'Google', 'cupid' ), "sharing-linkedin" => __( 'LinkedIn', 'cupid' ), "sharing-tumblr" => __( 'Tumblr', 'cupid' ), "sharing-pinterest" => __( 'Pinterest', 'cupid' ) )
 		);
 		/*Social Link*/
+		$of_options[] = array(
+			"name" => 'Título',
+			"id"   => 'el_social_title',
+			"std"  => 'Redes Sociais',
+			"type" => "text"
+		);
 		$of_options[] = array( "name" => __( 'Email Link', 'cupid' ),
 							   "id"   => "social-email-link",
 							   "std"  => "#",

@@ -6,7 +6,7 @@
         </div>
     </div>
 </section>
-<main role="main" class="site-content-archive">
+<main role="main">
     <div class="container clearfix">
         <div class="blog-wrapper">
             <div  class="blog-inner blog-single clearfix">

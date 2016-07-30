@@ -22,5 +22,6 @@ get_header(); ?>
             <?php wc_get_template_part( 'content', 'single-product' ); ?>
         <?php endwhile; // end of the loop. ?>
     </div>
+    <?php get_template_part('el-templates/section-contact'); ?>
 </main>
 <?php get_footer(); ?>

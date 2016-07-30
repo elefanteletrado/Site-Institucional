@@ -144,7 +144,7 @@ function wpReplaceIterable($params, $from, $to, $removeNotUpdated = false) {
 foreach($replaces as $from => $to) {
 	echo "FROM $from TO $to".PHP_EOL.PHP_EOL.PHP_EOL;
 
-	$table = 'wp_revslider_slides';
+	$table = $tablePrefix . 'revslider_slides';
 	$sth = $dbh->prepare("SELECT * FROM $table");
 	$sth->execute();
 	$rows = $sth->fetchAll(PDO::FETCH_CLASS, 'stdClass');
@@ -188,7 +188,7 @@ foreach($replaces as $from => $to) {
 		}
 	}
 
-	$tables = array('wp_options');
+	$tables = array($tablePrefix . 'options');
 	foreach($tables as $table) {
 		$sth = $dbh->prepare("SELECT * FROM $table");
 		$sth->execute();
@@ -212,7 +212,7 @@ foreach($replaces as $from => $to) {
 		}
 	}
 
-	$tables = array('wp_posts');
+	$tables = array($tablePrefix . 'posts');
 	foreach($tables as $table) {
 		$sth = $dbh->prepare("SELECT * FROM $table");
 		$sth->execute();
@@ -234,7 +234,7 @@ foreach($replaces as $from => $to) {
 		}
 	}
 
-	$tables = array('wp_postmeta');
+	$tables = array($tablePrefix . 'postmeta');
 	foreach($tables as $table) {
 		$sth = $dbh->prepare("SELECT * FROM $table");
 		$sth->execute();
