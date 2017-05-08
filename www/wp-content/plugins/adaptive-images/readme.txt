@@ -5,8 +5,8 @@ Contributors: nevma
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCES7V9D45HDS
 Tags: adaptive images, responsive images, mobile images, resize images, optimize images, adaptive, responsive, mobile, resize, optimize, images
 Requires at least: 4.0
-Tested up to: 4.5
-Stable tag: 0.6.51
+Tested up to: 4.7
+Stable tag: 0.6.62
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,8 +42,8 @@ render them.
 
 = Supported formats =
 
- - JPEG (adjustable quality)
- - PNG (is transformed to PNG8)
+ - JPEG
+ - PNG
  - GIF (not animated)
 
 = CDN/Varnish/external caching service support =
@@ -97,7 +97,11 @@ specified breakpoints!
 
  - Cannot work with installations where the `/wp-content` directory is not in its default position, which is inside the 
    root directory of the WordPress installation, along with `/wp-admin` and `/wp-includes`.
- - The plugin supports Nginx, but it must be manually configured.
+ - The plugin supports Nginx, but it must be manually configured like this:
+  ```location / {
+    rewrite \.(?:jpe?g|gif|png)$ /wp-content/plugins/adaptive-images/adaptive-images-script.php;
+  }```
+ - Windows IIS is not supported, but could be manually configured.
 
  = Stuff to keep in mind = 
 
@@ -121,6 +125,8 @@ specified breakpoints!
    solution specially adapted for WordPress.
  - Many-many thanks to "railgunner" for the initial idea in the forum and to the Pressidium team for helping with 
    debugging the CDN/Varnish/external caching service feature.
+ - Also, many thanks to my good friend and colleague Antonis Zachopoulos for the countless times that he provided ideas
+   and debugging hints.
 
 Thank you for using the plugin and, please, do let us know how it works (or doesn't work) for you. We love comments 
 and creative feedback!
@@ -177,6 +183,11 @@ their server resources.
 
 == Upgrade Notice ==
 
+= 0.6.62 =
+
+It is recommended for users to save one&apos;s settings anew, especially if their installation is in a subdirectory or
+if they have renamed their wp-content or uploads directory.
+
 = 0.5.0 =
 
 It is recommended, but not absolutely necessary, to save one&apos;s settings anew, due to the big changes in the image 
@@ -198,6 +209,25 @@ as intended. We try to minimize the hassle between these versions. This is not e
 
 
 == Changelog ==
+
+= 0.6.62 =
+
+ - Bug fix handling decimal device pixel density.
+ - Bug fix when the wp-content and/or uploads directories have been renamed.
+ - Bug fix when WordPress installation is in a subdirectory, but the website url remains in the root directory.
+ - Settings page user interface corrections.
+
+= 0.6.61 =
+
+ - Added notice for NginX's manual configuration.
+ - Minor bug fixes.
+
+= 0.6.60 =
+
+ - Removed PNG8 compression for PNGs because it was not peoducing acceptable quality results. PNGs are now simply
+   resized and compressed via normal 32bit PNG compression. In future versions there will be an option to enable and
+   disable PNG8 compression at will and perhaps a way for the plugin to detect in which images it should apply PNG8
+   compression and in which others to apply 32bit PNG compression.
 
 = 0.6.51 =
 

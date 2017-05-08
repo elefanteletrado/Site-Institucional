@@ -17,7 +17,7 @@
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
 //define('DB_NAME', 'WPelefante');
-define('DB_NAME', 'elefanteletrado');
+define('DB_NAME', 'wpelefante');
 
 /** Usuário do banco de dados MySQL */
 /* define('DB_USER', 'root'); */
@@ -26,7 +26,7 @@ define('DB_USER', 'root');
 
 /** Senha do banco de dados MySQL */
 //define('DB_PASSWORD', 'RTpw20el15*7715');
-define('DB_PASSWORD', '1234');
+define('DB_PASSWORD', '');
 
 /** nome do host do MySQL */
 /* define('DB_HOST', 'localhost'); */

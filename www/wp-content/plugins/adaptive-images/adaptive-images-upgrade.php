@@ -168,7 +168,7 @@
         echo 
             '<div class = "updated settings-error notice is-dismissible adaptive-images-settings-error">' .
                 '<p>' . 
-                    'Adaptive Images &mdash; Upgraded' . 
+                    '<strong>Adaptive Images &mdash; Upgraded</strong>' . 
                 '</p>' . 
                 '<hr />' . 
                 '<p>' . 
@@ -196,7 +196,7 @@
         echo 
             '<div class = "updated settings-error notice is-dismissible adaptive-images-settings-error">' .
                 '<p>' . 
-                    'Adaptive Images &mdash; Upgrade notice' . 
+                    '<strong>Adaptive Images &mdash; Upgrade notice</strong>' . 
                 '</p>' . 
                 '<hr />' . 
                 '<p>' . 
@@ -232,7 +232,7 @@
         echo 
             '<div class = "updated settings-error notice is-dismissible adaptive-images-settings-error">' .
                 '<p>' . 
-                    'Adaptive Images &mdash; New version ' . $current_version .
+                    '<strong>Adaptive Images &mdash; New version ' . $current_version . '</strong>' . 
                 '</p>' . 
                 '<hr />' . 
                 '<p>' . 

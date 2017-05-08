@@ -13,7 +13,7 @@ class Zopim_Widget
       return;
     }
 
-    echo "<!--Embed from Zopim Live Chat Wordpress Plugin v" . VERSION_NUMBER . "-->
+    echo "<!--Embed from Zendesk Chat Chat Wordpress Plugin v" . VERSION_NUMBER . "-->
   <!--Start of Zopim Live Chat Script-->
   <script type=\"text/javascript\">
   window.\$zopim||(function(d,s){var z=\$zopim=function(c){z._.push(c)},$=z.s=
@@ -34,6 +34,6 @@ class Zopim_Widget
 
     echo Zopim_Options::get_widget_options();
     echo '</script>';
-    echo "<!--End of Zopim Live Chat Script-->";
+    echo "<!--End of Zendesk Chat Script-->";
   }
 }

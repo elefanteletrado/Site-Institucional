@@ -3,8 +3,13 @@
 <br/>
 <div class="zopim-linked-view-wrapper">
     <span>
-      <a
-        href="admin.php?page=zopim_account_config&action=deactivate"><?php echo $messages[ 'deactivate' ] ?></a>
+      <form method="post" action="admin.php?page=zopim_account_config">
+        <?php wp_nonce_field('zopim_plugin_deactivate') ?>
+        <input type="hidden" name="action" value="deactivate"/>
+        <button class="zopim-deactivate-button">
+          <?php echo $messages[ 'deactivate' ] ?>
+        </button>
+      </form>
     </span>
   <?php echo $messages[ 'current-account-label' ] ?> &rarr;
   <b><?php echo get_option( Zopim_Options::ZOPIM_OPTION_USERNAME ); ?></b>

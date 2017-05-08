@@ -36,7 +36,7 @@ class Zopim_Admin
   public function zopim_create_menu()
   {
     //create new top-level menu
-    add_menu_page( __( 'Account Configuration', 'zopim-live-chat' ), __( 'Zopim Chat', 'zopim-live-chat' ), 'access_zopim', 'zopim_account_config', array( &$this, 'zopim_account_config' ), ZOPIM_SMALL_LOGO );
+    add_menu_page( __( 'Account Configuration', 'zopim-live-chat' ), __( 'Zendesk Chat', 'zopim-live-chat' ), 'access_zopim', 'zopim_account_config', array( &$this, 'zopim_account_config' ), ZOPIM_SMALL_LOGO );
   }
 
 
@@ -66,9 +66,9 @@ class Zopim_Admin
     ?>
     <div class="wrap">
     <?php
-    if ( isset( $_GET[ 'action' ] ) && $_GET[ 'action' ] == 'deactivate' ) {
-      update_option( Zopim_Options::ZOPIM_OPTION_SALT, '' );
-      update_option( Zopim_Options::ZOPIM_OPTION_CODE, 'zopim' );
+
+    if ( isset( $_POST[ 'action' ] ) && $_POST[ 'action' ] == 'deactivate' ) {
+      $linkedView->deactivate_plugin();
     }
 
     $authenticated = FALSE;
@@ -86,7 +86,7 @@ class Zopim_Admin
 	<div class="postbox">
 		<h3 class="hndle"><span>' . __( 'Account no longer linked!', 'zopim-live-chat' ) . '</span></h3>
 		<div class="zopim-auth-error-message">' .
-          __( 'We could not verify your Zopim account. Please check your password and try again.', 'zopim-live-chat' )
+          __( 'We could not verify your Zendesk Chat account. Please check your password and try again.', 'zopim-live-chat' )
           . '</div>
 	</div>
 	 </div>';
@@ -108,7 +108,7 @@ class Zopim_Admin
   }
 
   /**
-   * Makes a POST request to the Zopim API.
+   * Makes a POST request to the Zendesk Chat API.
    *
    * @param $url The full url endpoint to access.
    * @param $_data The data to pass to the request.
@@ -131,7 +131,7 @@ class Zopim_Admin
   }
 
   /**
-   * Gets the current user's Zopim account details.
+   * Gets the current user's Zendesk Chat account details.
    *
    * @return array|mixed
    */

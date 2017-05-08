@@ -40,7 +40,7 @@ $notices->do_notices( 'before_login' );
           <p class="submit">
             <input id="linkup" type="submit" onclick="animateButton()" class="button-primary"
                    value="<?php echo $messages[ 'link-up-button' ] ?>"/>
-            &nbsp;<?php _e( 'Don\'t have a Zopim account?', 'zopim-live-chat' ); ?> <a
+            &nbsp;<?php _e( 'Don\'t have a Zendesk Chat account?', 'zopim-live-chat' ); ?> <a
               href="<?php echo ZOPIM_SIGNUP_REDIRECT_URL; ?>" target="_blank"
               data-popup="true"><?php echo $messages[ 'sign-up-link' ]; ?></a>.
           </p>

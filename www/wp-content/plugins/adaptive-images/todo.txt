@@ -88,10 +88,10 @@
 
 
 
-    NEXT
-    ====
+  NEXT
+  ====
 
-    - TIPNG AS A SERVICE FOR PNGs
+    - TINYPNG AS A SERVICE FOR PNGs
       https://tinypng.com/developers
 
     - WP Multisite
@@ -180,87 +180,87 @@
     
 
 
-    Responsive image art direction
-    ==============================
+  Responsive image art direction
+  ==============================
 
-      Default anchors and zoom levels
+    Default anchors and zoom levels
 
-        1. zoom level 1, 2, 3...
-        2. anchor in image
+      1. zoom level 1, 2, 3...
+      2. anchor in image
 
-          ---------------- 
-          | tl   tc   tr |
-          |              |
-          | ml   mc   mr |
-          |              |
-          | bl   bc   br |
-          ----------------
+        ---------------- 
+        | tl   tc   tr |
+        |              |
+        | ml   mc   mr |
+        |              |
+        | bl   bc   br |
+        ----------------
 
-        3. different aspect ratio/dimensions
+      3. different aspect ratio/dimensions
 
-          - by breakpoint
-          - by orientation
+        - by breakpoint
+        - by orientation
 
-          https://usecases.responsiveimages.org/#art-direction/
-          http://davidwalsh.name/responsive-images/
-          https://developers.google.com/web/fundamentals/media/images/images-in-markup/
-          https://css-tricks.com/which-responsive-images-solution-should-you-use/
-          http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution/
-
-
-
-    Compatibility
-    =============
-
-    - NginX
-
-        location assets {
-        }
-          
-        location ai-cache { ==> *** THE CACHE DIR ***
-        }
-          
-        location / {
-          rewrite \.(?:jpe?g|gif|png)$ /adaptive-images.php; ==> *** THE PHP SCRIPT ***
-        }
-
-    - Varnish
-
-      Pressidium for configuration
-
-      Or
-
-      The ingenious idea to use url parameters on the image sources via Javascript, as proposed by a guy in the forum.
+        https://usecases.responsiveimages.org/#art-direction/
+        http://davidwalsh.name/responsive-images/
+        https://developers.google.com/web/fundamentals/media/images/images-in-markup/
+        https://css-tricks.com/which-responsive-images-solution-should-you-use/
+        http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution/
 
 
 
-    Unit tests for image generation
-    ===============================
+  Compatibility
+  =============
 
-    - PNG
-    - PNG8
-    - PNG256
-    - PNG with alpha
-    - PNG with trasparency
-    - GIF
-    - GIF with trasparency
-    - JPEG
+  - NginX
 
-    (Compare with services like TinyPNG, etc.)
+      location assets {
+      }
+        
+      location ai-cache { ==> *** THE CACHE DIR ***
+      }
+        
+      location / {
+        rewrite \.(?:jpe?g|gif|png)$ /adaptive-images.php; ==> *** THE PHP SCRIPT ***
+      }
+
+  - Varnish
+
+    Pressidium for configuration
+
+    Or
+
+    The ingenious idea to use url parameters on the image sources via Javascript, as proposed by a guy in the forum.
 
 
 
-    Also check
-    ==========
+  Unit tests for image generation
+  ===============================
 
-    - https://wordpress.org/plugins/ricg-responsive-images/
-    - https://wordpress.org/plugins/responsify-wp/
-    - WURFL.IO service (and my plugin)
-    - https://usecases.responsiveimages.org/#art-direction/
-    - http://davidwalsh.name/responsive-images/
-    - https://developers.google.com/web/fundamentals/media/images/images-in-markup/
-    - https://css-tricks.com/which-responsive-images-solution-should-you-use/
-    - http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution/
+  - PNG
+  - PNG8
+  - PNG256
+  - PNG with alpha
+  - PNG with trasparency
+  - GIF
+  - GIF with trasparency
+  - JPEG
+
+  (Compare with services like TinyPNG, etc.)
+
+
+
+  Also check
+  ==========
+
+  - https://wordpress.org/plugins/ricg-responsive-images/
+  - https://wordpress.org/plugins/responsify-wp/
+  - WURFL.IO service (and my plugin)
+  - https://usecases.responsiveimages.org/#art-direction/
+  - http://davidwalsh.name/responsive-images/
+  - https://developers.google.com/web/fundamentals/media/images/images-in-markup/
+  - https://css-tricks.com/which-responsive-images-solution-should-you-use/
+  - http://www.smashingmagazine.com/2013/07/08/choosing-a-responsive-image-solution/
 
 
 

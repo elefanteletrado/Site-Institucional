@@ -10,11 +10,11 @@ class Zopim_Linked_View extends Zopim_Base_View
       'plan'                   => __( ' Plan', 'zopim-live-chat' ),
       'deactivate'             => __( 'Deactivate', 'zopim-live-chat' ),
       'current-account-label'  => __( 'Currently Activated Account', 'zopim-live-chat' ),
-      'dashboard-access-label' => __( 'To start using Zopim chat, launch our dashboard for access to all features, including widget customization!', 'zopim-live-chat' ),
+      'dashboard-access-label' => __( 'To start using Zendesk chat, launch our dashboard for access to all features, including widget customization!', 'zopim-live-chat' ),
       'launch-dashboard'       => __( 'Launch Dashboard', 'zopim-live-chat' ),
       'open-tab-label'         => __( 'This will open up a new browser tab', 'zopim-live-chat' ),
-      'textarea-label'         => __( 'Optional code for customization with Zopim API:', 'zopim-live-chat' ),
-      'page-header'            => __( 'Set up your Zopim Account', 'zopim-live-chat' ),
+      'textarea-label'         => __( 'Optional code for customization with Zendesk Chat API:', 'zopim-live-chat' ),
+      'page-header'            => __( 'Set up your Zendesk Chat Account', 'zopim-live-chat' ),
     );
   }
 
@@ -37,9 +37,22 @@ class Zopim_Linked_View extends Zopim_Base_View
   }
 
   /**
-   * Renders the Zopim update options form.
+   * Handles POST request when deactivating the plugin
+   */
+  public function deactivate_plugin()
+  {
+    if (!( isset($_POST['_wpnonce'] ) ) || (! wp_verify_nonce($_POST['_wpnonce'], 'zopim_plugin_deactivate'))) {
+      update_option( Zopim_Options::ZOPIM_OPTION_SALT, 'wronglogin' );
+    } else {
+      update_option( Zopim_Options::ZOPIM_OPTION_SALT, '' );
+      update_option( Zopim_Options::ZOPIM_OPTION_CODE, 'zopim' );
+    }
+  }
+
+  /**
+   * Renders the Zendesk Chat update options form.
    *
-   * @param object Account details retrieved from the Zopim API
+   * @param object Account details retrieved from the Zendesk Chat API
    */
   public function display_linked_view( $accountDetails )
   {

@@ -1,8 +1,8 @@
-# Copyright (C) 2015 Zopim Widget
-# This file is distributed under the same license as the Zopim Widget package.
+# Copyright (C) 2015 Zendesk Chat Widget
+# This file is distributed under the same license as the Zendesk Chat Widget package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zopim Widget 1.3.6\n"
+"Project-Id-Version: Zendesk Chat Widget 1.3.6\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/zopim-live-chat\n"
 "POT-Creation-Date: 2015-05-05 09:02:33+00:00\n"
 "MIME-Version: 1.0\n"
@@ -13,12 +13,12 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: accountconfig.php:22 accountconfig.php:47
-msgid "Could not log in to Zopim. Please check your login details."
+msgid "Could not log in to Zendesk Chat. Please check your login details."
 msgstr ""
 
 #: accountconfig.php:41
 msgid ""
-"Could not log in to Zopim. We were unable to contact Zopim servers. Please "
+"Could not log in to Zendesk Chat. We were unable to contact Zendesk Chat. servers. Please "
 "check with your server administrator to ensure that <a href='http://www.php."
 "net/manual/en/book.curl.php'>PHP Curl</a> is installed and permissions are "
 "set correctly"
@@ -37,7 +37,7 @@ msgstr ""
 #: accountconfig.php:69
 msgid ""
 "Could not activate account. The wordpress installation was unable to contact "
-"Zopim servers. Please check with your server administrator to ensure that <a "
+"Zendesk Chat. servers. Please check with your server administrator to ensure that <a "
 "href='http://www.php.net/manual/en/book.curl.php'>PHP Curl</a> is installed "
 "and permissions are set correctly."
 msgstr ""
@@ -48,7 +48,7 @@ msgstr ""
 
 #: accountconfig.php:83
 msgid ""
-"We could not verify your Zopim account. Please check your password and try "
+"We could not verify your Zendesk Chat account. Please check your password and try "
 "again."
 msgstr ""
 
@@ -61,7 +61,7 @@ msgid " Package"
 msgstr ""
 
 #: accountconfig.php:102 accountconfig.php:132
-msgid "Set up your Zopim Account"
+msgid "Set up your Zendesk Chat Account"
 msgstr ""
 
 #: accountconfig.php:105
@@ -74,7 +74,7 @@ msgstr ""
 
 #: accountconfig.php:108
 msgid ""
-"To start using Zopim chat, launch our dashboard for access to all features, "
+"To start using Zendesk Chat., launch our dashboard for access to all features, "
 "including widget customization!"
 msgstr ""
 
@@ -91,28 +91,28 @@ msgid "Widget options updated."
 msgstr ""
 
 #: accountconfig.php:122
-msgid "Optional code for customization with Zopim API:"
+msgid "Optional code for customization with Zendesk Chat API:"
 msgstr ""
 
 #: accountconfig.php:136
-msgid "Congratulations on successfully installing the Zopim WordPress plugin!"
+msgid "Congratulations on successfully installing the Zendesk Chat WordPress plugin!"
 msgstr ""
 
 #: accountconfig.php:142
-msgid "Link up with your Zopim account"
+msgid "Link up with your Zendesk Chat account"
 msgstr ""
 
 #: accountconfig.php:150
-msgid "Zopim Username (E-mail)"
+msgid "Zendesk Chat Username (E-mail)"
 msgstr ""
 
 #: accountconfig.php:155
-msgid "Zopim Password"
+msgid "Zendesk Chat Password"
 msgstr ""
 
 #: accountconfig.php:165
 msgid ""
-"The Zopim chat widget will display on your blog after your account is linked "
+"The Zendesk Chat widget will display on your blog after your account is linked "
 "up."
 msgstr ""
 
@@ -121,7 +121,7 @@ msgid "Link Up"
 msgstr ""
 
 #: accountconfig.php:169
-msgid "Don't have a Zopim account?"
+msgid "Don't have a Zendesk Chat account?"
 msgstr ""
 
 #: accountconfig.php:169
@@ -133,26 +133,26 @@ msgid "Account Configuration"
 msgstr ""
 
 #: zopim.php:162
-msgid "Zopim Chat"
+msgid "Zendesk Chat"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Zopim Widget"
+msgid "Zendesk Chat Widget"
 msgstr ""
 
-#. #-#-#-#-#  zopim.pot (Zopim Widget 1.3.6)  #-#-#-#-#
+#. #-#-#-#-#  zopim.pot (Zendesk Chat Widget 1.3.6)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  zopim.pot (Zopim Widget 1.3.6)  #-#-#-#-#
+#. #-#-#-#-#  zopim.pot (Zendesk Chat Widget 1.3.6)  #-#-#-#-#
 #. Author URI of the plugin/theme
-msgid "http://www.zopim.com/?iref=wp_plugin"
+msgid "http://www.zendesk.com/chat?iref=wp_plugin"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Zopim is an award winning chat solution that helps website owners to engage "
+"Zendesk Chat is an award winning chat solution that helps website owners to engage "
 "their visitors and convert customers into fans!"
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Zopim"
+msgid "Zendesk"
 msgstr ""
