@@ -1,13 +1,25 @@
-<?php get_header(); ?>
-<?php get_template_part('content','top');?>
 <?php
-global $cupid_data,$cupid_archive_loop;
+global $cupid_data, $cupid_archive_loop;
+
+$postFormat = get_post_format();
+
+get_header();
+
+if ('image' == $postFormat) {
+    $contentTopName = 'image-top';
+    $archiveLayoutDefault = '';
+} else {
+    $contentTopName = 'top';
+    $archiveLayoutDefault = $cupid_data['post-archive-layout'];
+}
+
+get_template_part('content',$contentTopName);
 
 $use_custom_layout = get_post_meta(get_the_ID(),'use-custom-layout',true);
 $archive_layout = get_post_meta(get_the_ID(),'page-layout',true);
 
 if (!isset($archive_layout) || empty($archive_layout) || $archive_layout == 'none' || $use_custom_layout == '0') {
-    $archive_layout = $cupid_data['post-archive-layout'];
+    $archive_layout = $archiveLayoutDefault;
 }
 
 $class_col = 'col-md-12';
@@ -29,9 +41,11 @@ if (get_post_format() == 'audio') {
         <div class="row clearfix">
             <div class="<?php echo esc_attr($class_col); ?>">
                 <div class="blog-wrapper">
-                    <div class="blog-nav">
-                        <?php cupid_the_breadcrumb(); ?>
-                    </div>
+                    <?php if ('image' != $postFormat): ?>
+                        <div class="blog-nav">
+                            <?php cupid_the_breadcrumb(); ?>
+                        </div>
+                    <?php endif; ?>
                     <div  class="blog-inner blog-single clearfix">
                         <?php
                         if ( have_posts() ) :
