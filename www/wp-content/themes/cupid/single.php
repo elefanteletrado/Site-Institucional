@@ -8,9 +8,11 @@ get_header();
 if ('image' == $postFormat) {
     $contentTopName = 'image-top';
     $archiveLayoutDefault = '';
+    $classBlogInner = 'el-blog-inner';
 } else {
     $contentTopName = 'top';
     $archiveLayoutDefault = $cupid_data['post-archive-layout'];
+    $classBlogInner = '';
 }
 
 get_template_part('content',$contentTopName);
@@ -46,7 +48,7 @@ if (get_post_format() == 'audio') {
                             <?php cupid_the_breadcrumb(); ?>
                         </div>
                     <?php endif; ?>
-                    <div  class="blog-inner blog-single clearfix">
+                    <div  class="<?=$classBlogInner; ?> blog-inner blog-single clearfix">
                         <?php
                         if ( have_posts() ) :
                             // Start the Loop.

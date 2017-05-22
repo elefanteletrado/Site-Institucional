@@ -102,7 +102,6 @@ function cupid_stylesheet(){
     }
 
     wp_enqueue_style( 'el_cupid', get_template_directory_uri().'/el-assets/sass/style.css' );
-    //wp_enqueue_style( 'cupid_style', get_stylesheet_uri() );
 }
 add_action('wp_enqueue_scripts','cupid_stylesheet', 11);
 

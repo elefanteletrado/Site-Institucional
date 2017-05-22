@@ -38,7 +38,7 @@ if (is_search()) {
         <div class="row clearfix">
             <div class="<?php echo esc_attr($class_col); ?>">
                 <div class="blog-wrapper">
-                    <div class="blog-nav">
+                    <div class="blog-nav hidden-xs">
                         <?php cupid_the_breadcrumb(); ?>
                         <?php if (!is_search() ) : ?>
                         <div class="blog-switcher-wrapper">

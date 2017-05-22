@@ -93,10 +93,14 @@
 .el-header-auxiliary{
   @extend .layout-featured;
   @include clearfix;
-  padding: 12px 30px;
+  padding: 12px 10px;
 
   a:hover{
     color: $color-contrast;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    padding: 12px 30px;
   }
 }
 
@@ -111,11 +115,11 @@
 }
 
 .el-logo{
-  margin: 8px 0 8px 30px;
+  margin: 8px 0 8px 10px;
   float: left;
   display: block;
-  width: 146px;
-  height: 50px;
+  width: 136px;
+  height: 46px;
   text-indent: -9999px;
   background: transparent url("../images/layout/logo.png") no-repeat top left;
   background-size: 100% 100%;
@@ -135,18 +139,18 @@
     display: block;
     overflow: hidden;
 
+
     li{
       float: left;
-      margin: 20px 30px 18px 0;
+      margin: 20px 10px 18px 0;
       font-size: 18px;
       height: 24px;
       line-height: 24px;
-      display: none;
 
       a{
         color: $main-color;
         @include transition(all 0.5s linear);
-        padding: 2px 0;
+        padding: 2px 10px;
       }
       a:hover{
         text-decoration: none;
@@ -154,24 +158,29 @@
         @include transition(all 0.5s linear);
       }
     }
-    @media (min-width: $screen-sm-min) {
-      li{
-        display: block;
-        margin-right: 45px;
-        margin-top: 28px;
-      }
-    }
     .el-featured{
-      display: block;
       a{
         background: $main-color;
-        padding: 2px 22px;
+        padding: 2px 16px;
         border-radius: 24px;
         color: $color-contrast;
       }
       a:hover{
         color: $color-contrast;
         background: $main-color-hover;
+      }
+    }
+    @media (min-width: $screen-sm-min) {
+      ul{
+        margin-bottom: 10px;
+      }
+      li{
+        margin: 28px 45px 18px 0;
+      }
+      .el-featured{
+        a{
+          padding: 2px 22px;
+        }
       }
     }
   }
@@ -294,4 +303,111 @@
 }
 .el-email{
   word-wrap: break-word;
+}
+.el-page-title-wrapper-blog-layout{
+  padding: 0 !important;
+}
+.el-blog-heading{
+  max-width: 606px;
+  width: 100%;
+  position: relative;
+  margin: 15px auto 0 auto;
+}
+.el-blog-heading h2{
+  width: 67%;
+  display: block;
+  font-size: $font-blog-size-title;
+  font-family: $font-blog-title;
+  color: $color-contrast;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.el-blog-content{
+  max-width: 410px;
+  width: 100%;
+  margin: auto;
+  font-size: $font-blog-size-text;
+  font-family: $font-blog-text;
+}
+.el-blog-content h3{
+  font-size: $font-blog-size-title-h3;
+  font-family: $font-blog-title;
+  color: $font-blog-text-color;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.el-blog-content p{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.el-blog-content p:last-child{
+  margin-bottom: 0;
+}
+.el-blog-blockquote{
+  font-family: $font-blog-title;
+  font-size: $font-blog-size-title-h3-full;
+  line-height: $font-blog-size-title-h3-full + 8px;
+  color: $font-blog-blockquote;
+  border-left: none;
+  margin: 0;
+  padding: 0;
+}
+.el-blog-blockquote2{
+  @extend .el-blog-blockquote;
+  color: $font-blog-blockquote2-color;
+}
+.el-blog-full .el-blog-heading{
+  max-width: 1000px;
+}
+.el-blog-full .el-blog-heading h2{
+  font-size: $font-blog-size-title-full;
+}
+.el-blog-full .el-blog-content h3{
+  font-size: $font-blog-size-title-h3-full;
+  line-height: $font-blog-size-title-h3-full + 8px;
+}
+.el-blog-full .el-blog-content{
+  max-width: 670px;
+  font-size: $font-blog-size-text-full;
+  line-height: $font-blog-size-text-full + 8px;
+}
+.el-blog-content h1{
+  margin-top: 14px;
+  font-size: $font-blog-size-title-full;
+  font-family: $font-blog-title;
+  color: $font-blog-text-color;
+}
+.el-blog-content .el-image-legend{
+  font-size: 11px;
+}
+.el-blog-inner{
+  margin-top: 0;
+  padding: 10px 0 !important;
+}
+@media (max-width: $screen-sm-max) {
+  .el-blog-heading{
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  .el-blog-heading > h2{
+    font-size: $font-blog-size-title;
+    position: static;
+    bottom: 0;
+    left: 50%;
+    transform: none;
+    padding: 20px 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .el-blog-full .el-blog-heading h2{
+    width: 100%;
+    font-size: $font-blog-size-title;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .el-blog-content h1{
+    font-size: $font-blog-size-title;
+  }
 }
